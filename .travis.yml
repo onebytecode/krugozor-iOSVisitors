@@ -1,5 +1,6 @@
 language: objective-c
 osx_image: xcode9
 xcode_project: krugozor-visitorsApp.xcodeproj
-xcode_scheme: krugozor-visitorsApp 
-xcode_sdk: iphonesimulator10
+xcode_scheme: krugozor-visitorsApp
+script:
+  - xcodebuild -scheme krugozor-visitorsApp -project krugozor-visitorsApp.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=10.0' build test
