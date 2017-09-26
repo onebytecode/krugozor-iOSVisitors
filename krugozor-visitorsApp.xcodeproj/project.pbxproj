@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
+		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
+		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
+		D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */; };
+		D26497371F79448D004C19A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26497361F79448D004C19A9 /* Assets.xcassets */; };
+		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
+		D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26497441F79448E004C19A9 /* krugozor_visitorsAppTests.swift */; };
+		D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D26497411F79448E004C19A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D26497211F79448D004C19A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D26497281F79448D004C19A9;
+			remoteInfo = "krugozor-visitorsApp";
+		};
+		D264974C1F79448E004C19A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D26497211F79448D004C19A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D26497281F79448D004C19A9;
+			remoteInfo = "krugozor-visitorsApp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D264972E1F79448D004C19A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D26497311F79448D004C19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D26497341F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = krugozor_visitorsApp.xcdatamodel; sourceTree = "<group>"; };
+		D26497361F79448D004C19A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D26497391F79448D004C19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D264973B1F79448D004C19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26497401F79448E004C19A9 /* krugozor-visitorsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "krugozor-visitorsAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26497441F79448E004C19A9 /* krugozor_visitorsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krugozor_visitorsAppTests.swift; sourceTree = "<group>"; };
+		D26497461F79448E004C19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D264974B1F79448E004C19A9 /* krugozor-visitorsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "krugozor-visitorsAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krugozor_visitorsAppUITests.swift; sourceTree = "<group>"; };
+		D26497511F79448E004C19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D26497261F79448D004C19A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D264973D1F79448E004C19A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26497481F79448E004C19A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D26497201F79448D004C19A9 = {
+			isa = PBXGroup;
+			children = (
+				D264972B1F79448D004C19A9 /* krugozor-visitorsApp */,
+				D26497431F79448E004C19A9 /* krugozor-visitorsAppTests */,
+				D264974E1F79448E004C19A9 /* krugozor-visitorsAppUITests */,
+				D264972A1F79448D004C19A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D264972A1F79448D004C19A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */,
+				D26497401F79448E004C19A9 /* krugozor-visitorsAppTests.xctest */,
+				D264974B1F79448E004C19A9 /* krugozor-visitorsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D264972B1F79448D004C19A9 /* krugozor-visitorsApp */ = {
+			isa = PBXGroup;
+			children = (
+				D264972C1F79448D004C19A9 /* AppDelegate.swift */,
+				D264972E1F79448D004C19A9 /* ViewController.swift */,
+				D26497301F79448D004C19A9 /* Main.storyboard */,
+				D26497361F79448D004C19A9 /* Assets.xcassets */,
+				D26497381F79448D004C19A9 /* LaunchScreen.storyboard */,
+				D264973B1F79448D004C19A9 /* Info.plist */,
+				D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */,
+			);
+			path = "krugozor-visitorsApp";
+			sourceTree = "<group>";
+		};
+		D26497431F79448E004C19A9 /* krugozor-visitorsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D26497441F79448E004C19A9 /* krugozor_visitorsAppTests.swift */,
+				D26497461F79448E004C19A9 /* Info.plist */,
+			);
+			path = "krugozor-visitorsAppTests";
+			sourceTree = "<group>";
+		};
+		D264974E1F79448E004C19A9 /* krugozor-visitorsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */,
+				D26497511F79448E004C19A9 /* Info.plist */,
+			);
+			path = "krugozor-visitorsAppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D26497281F79448D004C19A9 /* krugozor-visitorsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26497541F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsApp" */;
+			buildPhases = (
+				D26497251F79448D004C19A9 /* Sources */,
+				D26497261F79448D004C19A9 /* Frameworks */,
+				D26497271F79448D004C19A9 /* Resources */,
+				D264975D1F7944C4004C19A9 /* Build Version Up */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "krugozor-visitorsApp";
+			productName = "krugozor-visitorsApp";
+			productReference = D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D264973F1F79448E004C19A9 /* krugozor-visitorsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26497571F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsAppTests" */;
+			buildPhases = (
+				D264973C1F79448E004C19A9 /* Sources */,
+				D264973D1F79448E004C19A9 /* Frameworks */,
+				D264973E1F79448E004C19A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D26497421F79448E004C19A9 /* PBXTargetDependency */,
+			);
+			name = "krugozor-visitorsAppTests";
+			productName = "krugozor-visitorsAppTests";
+			productReference = D26497401F79448E004C19A9 /* krugozor-visitorsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D264974A1F79448E004C19A9 /* krugozor-visitorsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D264975A1F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsAppUITests" */;
+			buildPhases = (
+				D26497471F79448E004C19A9 /* Sources */,
+				D26497481F79448E004C19A9 /* Frameworks */,
+				D26497491F79448E004C19A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D264974D1F79448E004C19A9 /* PBXTargetDependency */,
+			);
+			name = "krugozor-visitorsAppUITests";
+			productName = "krugozor-visitorsAppUITests";
+			productReference = D264974B1F79448E004C19A9 /* krugozor-visitorsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D26497211F79448D004C19A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = oneByteCode;
+				TargetAttributes = {
+					D26497281F79448D004C19A9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D264973F1F79448E004C19A9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D26497281F79448D004C19A9;
+					};
+					D264974A1F79448E004C19A9 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D26497281F79448D004C19A9;
+					};
+				};
+			};
+			buildConfigurationList = D26497241F79448D004C19A9 /* Build configuration list for PBXProject "krugozor-visitorsApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D26497201F79448D004C19A9;
+			productRefGroup = D264972A1F79448D004C19A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D26497281F79448D004C19A9 /* krugozor-visitorsApp */,
+				D264973F1F79448E004C19A9 /* krugozor-visitorsAppTests */,
+				D264974A1F79448E004C19A9 /* krugozor-visitorsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D26497271F79448D004C19A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */,
+				D26497371F79448D004C19A9 /* Assets.xcassets in Resources */,
+				D26497321F79448D004C19A9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D264973E1F79448E004C19A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26497491F79448E004C19A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D264975D1F7944C4004C19A9 /* Build Version Up */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Version Up";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$(expr $bN + 1)\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D26497251F79448D004C19A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
+				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
+				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D264973C1F79448E004C19A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D26497471F79448E004C19A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D26497421F79448E004C19A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D26497281F79448D004C19A9 /* krugozor-visitorsApp */;
+			targetProxy = D26497411F79448E004C19A9 /* PBXContainerItemProxy */;
+		};
+		D264974D1F79448E004C19A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D26497281F79448D004C19A9 /* krugozor-visitorsApp */;
+			targetProxy = D264974C1F79448E004C19A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D26497301F79448D004C19A9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D26497311F79448D004C19A9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D26497381F79448D004C19A9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D26497391F79448D004C19A9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D26497521F79448E004C19A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D26497531F79448E004C19A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D26497551F79448E004C19A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D26497561F79448E004C19A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D26497581F79448E004C19A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/krugozor-visitorsApp.app/krugozor-visitorsApp";
+			};
+			name = Debug;
+		};
+		D26497591F79448E004C19A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsAppTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/krugozor-visitorsApp.app/krugozor-visitorsApp";
+			};
+			name = Release;
+		};
+		D264975B1F79448E004C19A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsAppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "krugozor-visitorsApp";
+			};
+			name = Debug;
+		};
+		D264975C1F79448E004C19A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8953S4D45L;
+				INFOPLIST_FILE = "krugozor-visitorsAppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "krugozor-visitorsApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D26497241F79448D004C19A9 /* Build configuration list for PBXProject "krugozor-visitorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26497521F79448E004C19A9 /* Debug */,
+				D26497531F79448E004C19A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26497541F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26497551F79448E004C19A9 /* Debug */,
+				D26497561F79448E004C19A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26497571F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26497581F79448E004C19A9 /* Debug */,
+				D26497591F79448E004C19A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D264975A1F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D264975B1F79448E004C19A9 /* Debug */,
+				D264975C1F79448E004C19A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D26497341F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodel */,
+			);
+			currentVersion = D26497341F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodel */;
+			path = krugozor_visitorsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D26497211F79448D004C19A9 /* Project object */;
+}
