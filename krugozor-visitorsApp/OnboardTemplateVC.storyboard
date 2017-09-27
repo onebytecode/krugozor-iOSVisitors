@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Onboard TemplateVC-->
+        <scene sceneID="ttc-Si-TtZ">
+            <objects>
+                <viewController storyboardIdentifier="OnboardTemplateVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="erk-kK-Xon" customClass="OnboardTemplateVC" customModule="krugozor_visitorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JdO-Kr-85k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KM-EI-b05">
+                                <rect key="frame" x="16" y="90" width="343" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9KM-EI-b05" secondAttribute="height" multiplier="343:65" id="S1l-ce-Xik"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9KM-EI-b05" firstAttribute="top" secondItem="Jnm-88-p3f" secondAttribute="top" constant="70" id="Xt4-XT-D49"/>
+                            <constraint firstItem="9KM-EI-b05" firstAttribute="leading" secondItem="Jnm-88-p3f" secondAttribute="leading" constant="16" id="fxV-Ea-9V5"/>
+                            <constraint firstItem="Jnm-88-p3f" firstAttribute="trailing" secondItem="9KM-EI-b05" secondAttribute="trailing" constant="16" id="iup-kr-uqH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jnm-88-p3f"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentLabel" destination="9KM-EI-b05" id="10e-06-Za1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEY-Td-mYm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
