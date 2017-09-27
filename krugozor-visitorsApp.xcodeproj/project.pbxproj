@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4251F7ACE1300154DFF /* LogInVC.swift */; };
+		52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
 		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
+		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D264972E1F79448D004C19A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52F3A4241F7ACDC100154DFF /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
+				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
+			);
+			name = AuthorizationModule;
+			sourceTree = "<group>";
+		};
 		D26497201F79448D004C19A9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		D264972B1F79448D004C19A9 /* krugozor-visitorsApp */ = {
 			isa = PBXGroup;
 			children = (
+				52F3A4241F7ACDC100154DFF /* AuthorizationModule */,
 				D264972C1F79448D004C19A9 /* AppDelegate.swift */,
 				D264972E1F79448D004C19A9 /* ViewController.swift */,
 				D26497301F79448D004C19A9 /* Main.storyboard */,
@@ -282,6 +296,8 @@
 			files = (
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
+				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
+				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,7 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8953S4D45L;
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -465,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8953S4D45L;
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
