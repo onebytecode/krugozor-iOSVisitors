@@ -118,6 +118,7 @@
 			children = (
 				D264972E1F79448D004C19A9 /* ViewController.swift */,
 				D294FC911F7BCC6700828782 /* Modules */,
+				D294FC9C1F7BCDE900828782 /* Layers */,
 				D294FC8F1F7BCC2F00828782 /* Supporting Files */,
 			);
 			path = "krugozor-visitorsApp";
@@ -177,6 +178,29 @@
 				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
 			);
 			name = Registration;
+			sourceTree = "<group>";
+		};
+		D294FC9C1F7BCDE900828782 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				D294FC9D1F7BCDFB00828782 /* API */,
+				D294FC9F1F7BCE1D00828782 /* Data Base */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		D294FC9D1F7BCDFB00828782 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		D294FC9F1F7BCE1D00828782 /* Data Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Data Base";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
