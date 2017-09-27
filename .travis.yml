@@ -15,8 +15,11 @@ script:
   - xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
   - xcodebuild test -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
 notifications:
+  email:
+    on_success: never
+    on_failure: always
   slack:
     rooms:
       - onebytecode:UoT6TxGzAanTUazB3gMAUw00#ios-team
-    on_success: always
+    on_success: never
     on_failure: always
