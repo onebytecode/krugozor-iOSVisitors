@@ -23,7 +23,7 @@ struct UserDataStruct {
     var photoURLOrigin: String?
     /// Image of largest avatar
     var photoImageOrigin: Data?
-    
+
     // Returns of state of object
     var isEmpty: Bool
 
