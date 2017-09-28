@@ -47,6 +47,7 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
         let itemController = viewController as! OnboardTemplateVC
         
         if itemController.itemIndex > 0 {
+            
             return getItemController(itemController.itemIndex - 1)
         }
         
@@ -54,28 +55,36 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let itemController = viewController as! OnboardTemplateVC
+        
+        if let itemController = viewController as? OnboardTemplateVC {
         
         if itemController.itemIndex + 1 < contentImages.count {
+            
             return getItemController(itemController.itemIndex + 1)
-        }
-        
-        if itemController.itemIndex == contentImages.count - 1 {
-            UIView.animate(withDuration: 3.0, animations: {
-                // TODO show registration VC here
-            })
+            
+        } else if itemController.itemIndex + 1 == contentImages.count {
+            
+            let itemController2 = LogInVC.storyboardInstance()!
+            
+            return getItemController(itemController2.itemIndex + contentImages.count)
+            }
         }
         
         return nil
     }
     
-    func getItemController(_ itemIndex: Int) -> OnboardTemplateVC? {
+    func getItemController(_ itemIndex: Int) -> UIViewController? {
         
         if itemIndex < contentImages.count {
             if let pageVC = OnboardTemplateVC.storyboardInstance() {
                 pageVC.itemIndex = itemIndex
                 pageVC.contentModel = contentImages[itemIndex]
                 return pageVC
+            }
+        } else if itemIndex == contentImages.count {
+                if let loginVC = LogInVC.storyboardInstance() {
+                
+                return loginVC
             }
         }
         
@@ -84,7 +93,7 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
     
     // MARK: - Page Indicator -
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return contentImages.count
+        return contentImages.count + 1
     }
     
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
