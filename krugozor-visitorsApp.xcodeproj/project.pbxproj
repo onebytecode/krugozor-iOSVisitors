@@ -14,6 +14,9 @@
 		52B8AC081F7C158C0081FA29 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B8AC071F7C158C0081FA29 /* OnboardPageVC.swift */; };
 		52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4251F7ACE1300154DFF /* LogInVC.swift */; };
 		52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */; };
+		52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */; };
+		52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */; };
+		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
 		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
@@ -52,6 +55,11 @@
 		52B8AC071F7C158C0081FA29 /* OnboardPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardPageVC.swift; sourceTree = "<group>"; };
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardPageVC.storyboard; sourceTree = "<group>"; };
+		52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageVC.swift; sourceTree = "<group>"; };
+		52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardTemplateVC.storyboard; sourceTree = "<group>"; };
+		52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTemplateVC.swift; sourceTree = "<group>"; };
+		52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
 		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
@@ -109,6 +117,18 @@
 			name = Authorization;
 			sourceTree = "<group>";
 		};
+		52F53F781F7D41CC0001BA17 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				52331C411F7C1849002D365A /* UIColor+Extension.swift */,
+				52331C441F7C196B002D365A /* OnboardTemplateVC.swift */,
+				52B8AC071F7C158C0081FA29 /* OnboardPageVC.swift */,
+				5223426E1F7C335100CDC9DE /* OnboardTemplateVC.storyboard */,
+				5223426C1F7C321500CDC9DE /* OnboardPageVC.storyboard */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		8059EBD81F7BE9B600159EFA /* UserModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +164,7 @@
 				D26497431F79448E004C19A9 /* krugozor-visitorsAppTests */,
 				D264974E1F79448E004C19A9 /* krugozor-visitorsAppUITests */,
 				D264972A1F79448D004C19A9 /* Products */,
+				52F53F781F7D41CC0001BA17 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +242,11 @@
 			isa = PBXGroup;
 			children = (
 				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
+				52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */,
+				52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */,
+				52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */,
+				52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */,
+				52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */,
 			);
 			name = Registration;
 			sourceTree = "<group>";
@@ -404,13 +430,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				52331C421F7C1849002D365A /* UIColor+Extension.swift in Sources */,
+				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
+				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				52331C451F7C196B002D365A /* OnboardTemplateVC.swift in Sources */,
 				52B8AC081F7C158C0081FA29 /* OnboardPageVC.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
+				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
