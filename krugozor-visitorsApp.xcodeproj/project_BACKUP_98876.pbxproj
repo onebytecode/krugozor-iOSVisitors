@@ -94,11 +94,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
+		52331C431F7C185A002D365A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				52331C411F7C1849002D365A /* UIColor+Extension.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		525C845F1F7C1CEC00E195C9 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5223426C1F7C321500CDC9DE /* OnboardPageVC.storyboard */,
+				5223426E1F7C335100CDC9DE /* OnboardTemplateVC.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		52F3A4241F7ACDC100154DFF /* AuthorizationModule */ = {
+=======
 		52F3A4241F7ACDC100154DFF /* Authorization */ = {
+>>>>>>> 716ea0e196c6f185429e0306b6d97a4b761cae32
 			isa = PBXGroup;
 			children = (
 				D294FC921F7BCC8500828782 /* Registration */,
 				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
+<<<<<<< HEAD
+				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
+				52B8AC071F7C158C0081FA29 /* OnboardPageVC.swift */,
+				52331C441F7C196B002D365A /* OnboardTemplateVC.swift */,
+				525C845F1F7C1CEC00E195C9 /* StoryBoards */,
+				52331C431F7C185A002D365A /* Helpers */,
+=======
+>>>>>>> 716ea0e196c6f185429e0306b6d97a4b761cae32
 			);
 			name = Authorization;
 			sourceTree = "<group>";

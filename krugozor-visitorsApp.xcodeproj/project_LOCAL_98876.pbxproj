@@ -22,9 +22,6 @@
 		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
 		D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26497441F79448E004C19A9 /* krugozor_visitorsAppTests.swift */; };
 		D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */; };
-		D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D294FC971F7BCCEF00828782 /* LandingVC.swift */; };
-		D294FC991F7BCCEF00828782 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D294FC971F7BCCEF00828782 /* LandingVC.swift */; };
-		D294FC9A1F7BCCEF00828782 /* LandingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D294FC971F7BCCEF00828782 /* LandingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +63,6 @@
 		D264974B1F79448E004C19A9 /* krugozor-visitorsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "krugozor-visitorsAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krugozor_visitorsAppUITests.swift; sourceTree = "<group>"; };
 		D26497511F79448E004C19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D294FC971F7BCCEF00828782 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,13 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		52F3A4241F7ACDC100154DFF /* Authorization */ = {
+		52331C431F7C185A002D365A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D294FC921F7BCC8500828782 /* Registration */,
-				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
+				52331C411F7C1849002D365A /* UIColor+Extension.swift */,
 			);
-			name = Authorization;
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		525C845F1F7C1CEC00E195C9 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				5223426C1F7C321500CDC9DE /* OnboardPageVC.storyboard */,
+				5223426E1F7C335100CDC9DE /* OnboardTemplateVC.storyboard */,
+			);
+			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		52F3A4241F7ACDC100154DFF /* AuthorizationModule */ = {
+			isa = PBXGroup;
+			children = (
+				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
+				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
+				52B8AC071F7C158C0081FA29 /* OnboardPageVC.swift */,
+				52331C441F7C196B002D365A /* OnboardTemplateVC.swift */,
+				525C845F1F7C1CEC00E195C9 /* StoryBoards */,
+				52331C431F7C185A002D365A /* Helpers */,
+			);
+			name = AuthorizationModule;
 			sourceTree = "<group>";
 		};
 		D26497201F79448D004C19A9 = {
@@ -126,10 +143,14 @@
 		D264972B1F79448D004C19A9 /* krugozor-visitorsApp */ = {
 			isa = PBXGroup;
 			children = (
+				52F3A4241F7ACDC100154DFF /* AuthorizationModule */,
+				D264972C1F79448D004C19A9 /* AppDelegate.swift */,
 				D264972E1F79448D004C19A9 /* ViewController.swift */,
-				D294FC911F7BCC6700828782 /* Modules */,
-				D294FC9C1F7BCDE900828782 /* Layers */,
-				D294FC8F1F7BCC2F00828782 /* Supporting Files */,
+				D26497301F79448D004C19A9 /* Main.storyboard */,
+				D26497361F79448D004C19A9 /* Assets.xcassets */,
+				D26497381F79448D004C19A9 /* LaunchScreen.storyboard */,
+				D264973B1F79448D004C19A9 /* Info.plist */,
+				D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */,
 			);
 			path = "krugozor-visitorsApp";
 			sourceTree = "<group>";
@@ -150,67 +171,6 @@
 				D26497511F79448E004C19A9 /* Info.plist */,
 			);
 			path = "krugozor-visitorsAppUITests";
-			sourceTree = "<group>";
-		};
-		D294FC8F1F7BCC2F00828782 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D264972C1F79448D004C19A9 /* AppDelegate.swift */,
-				D26497301F79448D004C19A9 /* Main.storyboard */,
-				D26497381F79448D004C19A9 /* LaunchScreen.storyboard */,
-				D26497361F79448D004C19A9 /* Assets.xcassets */,
-				D264973B1F79448D004C19A9 /* Info.plist */,
-				D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D294FC901F7BCC5B00828782 /* Landing  */ = {
-			isa = PBXGroup;
-			children = (
-				D294FC971F7BCCEF00828782 /* LandingVC.swift */,
-			);
-			name = "Landing ";
-			sourceTree = "<group>";
-		};
-		D294FC911F7BCC6700828782 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D294FC901F7BCC5B00828782 /* Landing  */,
-				52F3A4241F7ACDC100154DFF /* Authorization */,
-			);
-			name = Modules;
-			sourceTree = "<group>";
-		};
-		D294FC921F7BCC8500828782 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
-			);
-			name = Registration;
-			sourceTree = "<group>";
-		};
-		D294FC9C1F7BCDE900828782 /* Layers */ = {
-			isa = PBXGroup;
-			children = (
-				D294FC9D1F7BCDFB00828782 /* API */,
-				D294FC9F1F7BCE1D00828782 /* Data Base */,
-			);
-			name = Layers;
-			sourceTree = "<group>";
-		};
-		D294FC9D1F7BCDFB00828782 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
-			sourceTree = "<group>";
-		};
-		D294FC9F1F7BCE1D00828782 /* Data Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Data Base";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,7 +334,6 @@
 				52331C451F7C196B002D365A /* OnboardTemplateVC.swift in Sources */,
 				52B8AC081F7C158C0081FA29 /* OnboardPageVC.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
-				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +342,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D294FC991F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D294FC9A1F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
