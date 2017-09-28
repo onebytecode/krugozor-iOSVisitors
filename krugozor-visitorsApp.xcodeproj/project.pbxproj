@@ -42,6 +42,12 @@
 /* Begin PBXFileReference section */
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
+		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
+		8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Network.swift"; sourceTree = "<group>"; };
+		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
+		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D264972E1F79448D004C19A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,34 @@
 			name = Authorization;
 			sourceTree = "<group>";
 		};
+		8059EBD81F7BE9B600159EFA /* UserModule */ = {
+			isa = PBXGroup;
+			children = (
+				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
+				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
+				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
+				8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */,
+			);
+			name = UserModule;
+			sourceTree = "<group>";
+		};
+		8059EBDE1F7BE9F400159EFA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */,
+				8059EBDF1F7BEA0700159EFA /* UserData */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		8059EBDF1F7BEA0700159EFA /* UserData */ = {
+			isa = PBXGroup;
+			children = (
+				8059EBE01F7BEA1100159EFA /* UserData.swift */,
+			);
+			name = UserData;
+			sourceTree = "<group>";
+		};
 		D26497201F79448D004C19A9 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +154,7 @@
 				D294FC911F7BCC6700828782 /* Modules */,
 				D294FC9C1F7BCDE900828782 /* Layers */,
 				D294FC8F1F7BCC2F00828782 /* Supporting Files */,
+				8059EBDE1F7BE9F400159EFA /* CoreData */,
 			);
 			path = "krugozor-visitorsApp";
 			sourceTree = "<group>";
@@ -150,7 +185,6 @@
 				D26497381F79448D004C19A9 /* LaunchScreen.storyboard */,
 				D26497361F79448D004C19A9 /* Assets.xcassets */,
 				D264973B1F79448D004C19A9 /* Info.plist */,
-				D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,6 +200,7 @@
 		D294FC911F7BCC6700828782 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				8059EBD81F7BE9B600159EFA /* UserModule */,
 				D294FC901F7BCC5B00828782 /* Landing  */,
 				52F3A4241F7ACDC100154DFF /* Authorization */,
 			);
@@ -199,6 +234,7 @@
 		D294FC9F1F7BCE1D00828782 /* Data Base */ = {
 			isa = PBXGroup;
 			children = (
+				8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */,
 			);
 			name = "Data Base";
 			sourceTree = "<group>";
