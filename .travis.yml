@@ -2,17 +2,17 @@ language: objective-c
 osx_image: xcode9
 xcode_project: krugozor-visitorsApp.xcodeproj
 xcode_scheme: krugozor-visitorsApp
-script: travis_wait
-  - xcodebuild clean -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
-  - xcodebuild analyze -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
-  - xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
-  - xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' | xcpretty
-  - xcodebuild test -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' | xcpretty
-  - xcodebuild clean -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
-  - xcodebuild analyze -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
-  - xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
-  - xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
-  - xcodebuild test -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
+script:
+  - travis_wait xcodebuild clean -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
+  - travis_wait xcodebuild analyze -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
+  - travis_wait xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator10.0 | xcpretty
+  - travis_wait xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' | xcpretty
+  - travis_wait xcodebuild test -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.0' | xcpretty
+  - travis_wait xcodebuild clean -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
+  - travis_wait xcodebuild analyze -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
+  - travis_wait xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -sdk iphonesimulator11.0 | xcpretty
+  - travis_wait xcodebuild build -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
+  - travis_wait xcodebuild test -project krugozor-visitorsApp.xcodeproj -scheme krugozor-visitorsApp -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' | xcpretty
 notifications:
   email:
     on_success: never
