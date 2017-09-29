@@ -7,7 +7,6 @@
 //
 
 import CoreData
-import UIKit
 
 protocol UserModuleProtocol {
     func saveUserData (newUserInfo: UserDataStruct)
@@ -31,4 +30,3 @@ class UserModule: UserModuleProtocol {
     }
 }
 
-// context should be a Singletone

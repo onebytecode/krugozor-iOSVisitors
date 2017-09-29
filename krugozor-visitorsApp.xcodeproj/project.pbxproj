@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4251F7ACE1300154DFF /* LogInVC.swift */; };
 		52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */; };
+		803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */; };
 		80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691271F7D570A0011EC9D /* ResponseError.swift */; };
 		80D6912A1F7D595F0011EC9D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691291F7D595F0011EC9D /* Response.swift */; };
 		80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Sesion.swift"; sourceTree = "<group>"; };
 		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
 		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
 				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
+				803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */,
 				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
 				8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */,
 			);
@@ -417,6 +420,7 @@
 				80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
+				803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 				80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */,
