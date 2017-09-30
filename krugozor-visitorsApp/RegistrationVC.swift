@@ -50,16 +50,14 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        phoneTF.addTarget(self, action: #selector(RegistrationVC.textFieldDidChange(textField:)), for: .editingChanged)
         phoneTF?.addPoleForButtonsToKeyboard(myAction: #selector(phoneTF.resignFirstResponder), buttonNeeds: true)
         ageTF?.addPoleForButtonsToKeyboard(myAction: #selector(ageTF.resignFirstResponder), buttonNeeds: true)
         
-        //registerForKeyboardNotifications()
+        registerForKeyboardNotifications()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        scrollView.contentSize = CGSize(width: 375, height: 1500)
     }
     
     deinit {
@@ -82,7 +80,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         kbFrameSize = kbFrame.height
         UIView.animate(withDuration:0.3) {
             if !self.isKBShown {
-                self.view.frame.origin.y -= self.kbFrameSize
+                let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: self.kbFrameSize, right: 0)
+                self.scrollView.contentInset = contentInsets
             }
         }
         self.isKBShown = true
@@ -91,7 +90,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     @objc func kbWillHide() {
         UIView.animate(withDuration:0.3) {
             if self.isKBShown {
-                self.view.frame.origin.y += self.kbFrameSize
+                self.scrollView.contentInset = .zero
             }
         }
         self.isKBShown = false
@@ -126,8 +125,9 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == phoneTF {
-            
             return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
+        } else if textField == ageTF {
+            return checkAge(textField, shouldChangeCharactersIn: range, replacementString: string)
         }
         
         return true
@@ -141,10 +141,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         let okAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
         alertView.addAction(okAction)
         present(alertView, animated: true, completion: nil)
-    }
-    
-    @objc func textFieldDidChange(textField: UITextField){
-        
     }
     
     func checkPhoneNumber(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -199,6 +195,62 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             let countryCodeLength = min((newString.count - localNumberMaxLength - areaCodeMaxLength), countryCodeMaxLength)
             let countryCode = "+\(newString[newString.index(newString.startIndex, offsetBy: 0)..<newString.index(newString.startIndex, offsetBy: countryCodeLength)]) "
             resultString = "\(countryCode)\(resultString)"
+        }
+        
+        textField.text = resultString
+        
+        return false
+    }
+    
+    func checkAge(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let validationSet = NSCharacterSet.decimalDigits.inverted
+        let components = string.components(separatedBy: validationSet)
+        print(components)
+        
+        guard components.count == 1 else { return false }
+        
+        guard var newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
+        
+        let validComponents = newString.components(separatedBy: validationSet)
+        newString = validComponents.joined(separator: "")
+        
+        let dateMaxLength = 2
+        let monthMaxLength = 2
+        let yearMaxLength = 4
+        
+        if newString.count > (dateMaxLength + monthMaxLength + yearMaxLength) {
+            return false
+        }
+        
+        var resultString = ""
+        let dateLength = min(newString.count, dateMaxLength)
+        
+        if dateLength > 0 {
+            let start = newString.index(newString.startIndex, offsetBy: 0)
+            let end = newString.index(newString.startIndex, offsetBy: dateLength)
+            resultString = "\(newString[start..<end])"
+            
+            if resultString.count == 2 {
+                resultString.append(".")
+            }
+        }
+        
+        if newString.count > dateLength {
+            let monthLength = min((newString.count - dateMaxLength), monthMaxLength)
+            print(monthLength)
+            
+            let start = newString.index(newString.startIndex, offsetBy: dateLength)
+            let end = newString.index(newString.startIndex, offsetBy: dateLength + monthLength)
+            let number = "\(newString[start..<end])."
+            
+            resultString = "\(resultString)\(number)"
+        }
+        
+        if newString.count > dateLength + monthMaxLength {
+            let number = "\(newString[newString.index(newString.startIndex, offsetBy: (dateLength + monthMaxLength))..<newString.index(newString.startIndex, offsetBy: newString.count)])"
+            resultString = "\(resultString)\(number)"
+            
         }
         
         textField.text = resultString
