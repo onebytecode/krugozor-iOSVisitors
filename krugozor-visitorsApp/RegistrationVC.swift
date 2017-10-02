@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController, UITextFieldDelegate {
+class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     static func storyboardInstance() -> RegistrationVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -45,13 +45,17 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var avatarImg: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         phoneTF?.addPoleForButtonsToKeyboard(myAction: #selector(phoneTF.resignFirstResponder), buttonNeeds: true)
         ageTF?.addPoleForButtonsToKeyboard(myAction: #selector(ageTF.resignFirstResponder), buttonNeeds: true)
+        // imgUser gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        avatarImg?.isUserInteractionEnabled = true
+        avatarImg?.addGestureRecognizer(tapGestureRecognizer)
         
         registerForKeyboardNotifications()
     }
@@ -96,9 +100,44 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         self.isKBShown = false
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        avatarImg.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        avatarImg.contentMode = .scaleAspectFill
+        avatarImg.layer.cornerRadius = avatarImg.frame.height / 2
+        avatarImg.clipsToBounds = true
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func chooseImagePickerAction(source: UIImagePickerControllerSourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(source) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = source
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: - Actions -
     @IBAction func registerBtn(_ sender: UIButton) {
+        self.view.endEditing(true)
         print("register button pressed")
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        
+        let ac = UIAlertController(title: "Select images source", message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+            self.chooseImagePickerAction(source: .camera)
+        }
+        let photoLibAction = UIAlertAction(title: "Photos", style: .default) { (action) in
+            self.chooseImagePickerAction(source: .photoLibrary)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cameraAction)
+        ac.addAction(photoLibAction)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
     }
     
     // MARK: - TextFieldDelegate -
@@ -147,7 +186,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         
         let validationSet = NSCharacterSet.decimalDigits.inverted
         let components = string.components(separatedBy: validationSet)
-        print(components)
         
         guard components.count == 1 else { return false }
         
@@ -206,7 +244,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         
         let validationSet = NSCharacterSet.decimalDigits.inverted
         let components = string.components(separatedBy: validationSet)
-        print(components)
         
         guard components.count == 1 else { return false }
         
@@ -231,18 +268,14 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             let end = newString.index(newString.startIndex, offsetBy: dateLength)
             resultString = "\(newString[start..<end])"
             
-            if resultString.count == 2 {
-                resultString.append(".")
-            }
         }
         
         if newString.count > dateLength {
             let monthLength = min((newString.count - dateMaxLength), monthMaxLength)
-            print(monthLength)
             
             let start = newString.index(newString.startIndex, offsetBy: dateLength)
             let end = newString.index(newString.startIndex, offsetBy: dateLength + monthLength)
-            let number = "\(newString[start..<end])."
+            let number = "\(newString[start..<end])"
             
             resultString = "\(resultString)\(number)"
         }
@@ -251,6 +284,14 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             let number = "\(newString[newString.index(newString.startIndex, offsetBy: (dateLength + monthMaxLength))..<newString.index(newString.startIndex, offsetBy: newString.count)])"
             resultString = "\(resultString)\(number)"
             
+        }
+        
+        if resultString.count > 2 {
+            resultString.insert(".", at: String.Index.init(encodedOffset: 2))
+            
+            if resultString.count > 4 {
+                resultString.insert(".", at: String.Index.init(encodedOffset: 5))
+            }
         }
         
         textField.text = resultString

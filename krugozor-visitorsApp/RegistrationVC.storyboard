@@ -181,6 +181,7 @@
                     </view>
                     <connections>
                         <outlet property="ageTF" destination="mQX-re-NEf" id="Vif-cx-cRy"/>
+                        <outlet property="avatarImg" destination="E8w-He-bpK" id="dJA-Ly-iJd"/>
                         <outlet property="lastNameTF" destination="JvG-0I-HBd" id="UMr-PS-511"/>
                         <outlet property="nameTF" destination="eg7-Id-bDX" id="wVq-oD-kYN"/>
                         <outlet property="phoneTF" destination="rhD-u3-GMG" id="Ben-jH-F4L"/>
