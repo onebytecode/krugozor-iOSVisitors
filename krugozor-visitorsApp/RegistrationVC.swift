@@ -8,18 +8,297 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController {
+class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    static func storyboardInstance() -> RegistrationVC? {
+        let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "RegistrationVC") as? RegistrationVC
+    }
+    
+    // MARK: - Properties -
+    var isKBShown: Bool = false
+    var kbFrameSize: CGFloat = 0
+    
+    // MARK: - Outlets -
+    @IBOutlet weak var nameTF: UITextField! {
+        didSet {
+            nameTF.useUnderline()
+        }
+    }
+    
+    @IBOutlet weak var lastNameTF: UITextField! {
+        didSet {
+            lastNameTF.useUnderline()
+        }
+    }
+    
+    @IBOutlet weak var phoneTF: UITextField! {
+        didSet {
+            phoneTF.useUnderline()
+        }
+    }
+    
+    @IBOutlet weak var ageTF: UITextField! {
+        didSet {
+            ageTF.useUnderline()
+        }
+    }
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var avatarImg: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        phoneTF?.addPoleForButtonsToKeyboard(myAction: #selector(phoneTF.resignFirstResponder), buttonNeeds: true)
+        ageTF?.addPoleForButtonsToKeyboard(myAction: #selector(ageTF.resignFirstResponder), buttonNeeds: true)
+        // imgUser gesture
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        avatarImg?.isUserInteractionEnabled = true
+        avatarImg?.addGestureRecognizer(tapGestureRecognizer)
+        
+        registerForKeyboardNotifications()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
+<<<<<<< HEAD
+    
+    deinit {
+        removeKeyboardNotifications()
+    }
+    
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(kbWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func removeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func kbWillShow(_ notification: Notification) {
+        let userInfo = notification.userInfo
+        let kbFrame = (userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        kbFrameSize = kbFrame.height
+        UIView.animate(withDuration:0.3) {
+            if !self.isKBShown {
+                let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: self.kbFrameSize, right: 0)
+                self.scrollView.contentInset = contentInsets
+            }
+        }
+        self.isKBShown = true
+    }
+    
+    @objc func kbWillHide() {
+        UIView.animate(withDuration:0.3) {
+            if self.isKBShown {
+                self.scrollView.contentInset = .zero
+            }
+        }
+        self.isKBShown = false
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        avatarImg.image = info[UIImagePickerControllerEditedImage] as? UIImage
+        avatarImg.contentMode = .scaleAspectFill
+        avatarImg.layer.cornerRadius = avatarImg.frame.height / 2
+        avatarImg.clipsToBounds = true
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func chooseImagePickerAction(source: UIImagePickerControllerSourceType) {
+        if UIImagePickerController.isSourceTypeAvailable(source) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = true
+            imagePicker.sourceType = source
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    // MARK: - Actions -
+    @IBAction func registerBtn(_ sender: UIButton) {
+        self.view.endEditing(true)
+        print("register button pressed")
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        
+        let ac = UIAlertController(title: "Select images source", message: nil, preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+            self.chooseImagePickerAction(source: .camera)
+        }
+        let photoLibAction = UIAlertAction(title: "Photos", style: .default) { (action) in
+            self.chooseImagePickerAction(source: .photoLibrary)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        ac.addAction(cameraAction)
+        ac.addAction(photoLibAction)
+        ac.addAction(cancelAction)
+        self.present(ac, animated: true, completion: nil)
+    }
+    
+    // MARK: - TextFieldDelegate -
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == nameTF {
+            nameTF.resignFirstResponder()
+            lastNameTF.becomeFirstResponder()
+        } else if textField == lastNameTF {
+            lastNameTF.resignFirstResponder()
+            phoneTF.becomeFirstResponder()
+        } else if textField == phoneTF {
+            phoneTF.resignFirstResponder()
+            ageTF.becomeFirstResponder()
+        } else {
+            ageTF.resignFirstResponder()
+        }
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if textField == phoneTF {
+            return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
+        } else if textField == ageTF {
+            return checkAge(textField, shouldChangeCharactersIn: range, replacementString: string)
+        }
+        
+        return true
+    }
+    
+    // MARK: - Private methods -
+    func errorAlert(title: String, message: String, actionTitle: String) {
+        let alertView = UIAlertController(title: title,
+                                          message: message,
+                                          preferredStyle:. alert)
+        let okAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
+        alertView.addAction(okAction)
+        present(alertView, animated: true, completion: nil)
+    }
+    
+    func checkPhoneNumber(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let validationSet = NSCharacterSet.decimalDigits.inverted
+        let components = string.components(separatedBy: validationSet)
+        
+        guard components.count == 1 else { return false }
+        
+        guard var newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
+        
+        let validComponents = newString.components(separatedBy: validationSet)
+        newString = validComponents.joined(separator: "")
+        
+        let localNumberMaxLength = 7
+        let areaCodeMaxLength = 3
+        let countryCodeMaxLength = 3
+        
+        if newString.count > (localNumberMaxLength + areaCodeMaxLength + countryCodeMaxLength) {
+            return false
+        }
+        
+        var resultString = ""
+        let localNumberLength = min(newString.count, localNumberMaxLength)
+        
+        if localNumberLength > 0 {
+            let offset = newString.count - localNumberLength
+            let number = String(describing: newString.suffix(from: String.Index.init(encodedOffset: offset)))
+            resultString.append(number)
+            
+            if resultString.count > 5 {
+                resultString.insert("-", at: String.Index.init(encodedOffset: 5)) // XXXXX-XX
+            }
+            
+            if resultString.count > 3 {
+                resultString.insert("-", at: String.Index.init(encodedOffset: 3)) // XXX-XX-XX
+            }
+        }
+        
+        if newString.count > localNumberLength {
+            let areaCodeLength = min((newString.count - localNumberMaxLength), areaCodeMaxLength)
+            let start = newString.index(newString.startIndex, offsetBy: (newString.count - localNumberMaxLength - areaCodeLength))
+            let end = newString.index(newString.startIndex, offsetBy: (newString.count - localNumberMaxLength))
+            let area = "(\(newString[start..<end])) "
+            
+            resultString = "\(area)\(resultString)"
+        }
+        
+        if newString.count > localNumberLength + areaCodeMaxLength {
+            
+            let countryCodeLength = min((newString.count - localNumberMaxLength - areaCodeMaxLength), countryCodeMaxLength)
+            let countryCode = "+\(newString[newString.index(newString.startIndex, offsetBy: 0)..<newString.index(newString.startIndex, offsetBy: countryCodeLength)]) "
+            resultString = "\(countryCode)\(resultString)"
+        }
+        
+        textField.text = resultString
+        
+        return false
+    }
+    
+    func checkAge(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        let validationSet = NSCharacterSet.decimalDigits.inverted
+        let components = string.components(separatedBy: validationSet)
+        
+        guard components.count == 1 else { return false }
+        
+        guard var newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
+        
+        let validComponents = newString.components(separatedBy: validationSet)
+        newString = validComponents.joined(separator: "")
+        
+        let dateMaxLength = 2
+        let monthMaxLength = 2
+        let yearMaxLength = 4
+        
+        if newString.count > (dateMaxLength + monthMaxLength + yearMaxLength) {
+            return false
+        }
+        
+        var resultString = ""
+        let dateLength = min(newString.count, dateMaxLength)
+        
+        if dateLength > 0 {
+            let start = newString.index(newString.startIndex, offsetBy: 0)
+            let end = newString.index(newString.startIndex, offsetBy: dateLength)
+            resultString = "\(newString[start..<end])"
+            
+        }
+        
+        if newString.count > dateLength {
+            let monthLength = min((newString.count - dateMaxLength), monthMaxLength)
+            
+            let start = newString.index(newString.startIndex, offsetBy: dateLength)
+            let end = newString.index(newString.startIndex, offsetBy: dateLength + monthLength)
+            let number = "\(newString[start..<end])"
+            
+            resultString = "\(resultString)\(number)"
+        }
+        
+        if newString.count > dateLength + monthMaxLength {
+            let number = "\(newString[newString.index(newString.startIndex, offsetBy: (dateLength + monthMaxLength))..<newString.index(newString.startIndex, offsetBy: newString.count)])"
+            resultString = "\(resultString)\(number)"
+            
+        }
+        
+        if resultString.count > 2 {
+            resultString.insert(".", at: String.Index.init(encodedOffset: 2))
+            
+            if resultString.count > 4 {
+                resultString.insert(".", at: String.Index.init(encodedOffset: 5))
+            }
+        }
+        
+        textField.text = resultString
+        
+        return false
+=======
 
     /*
     // MARK: - Navigation
@@ -28,7 +307,6 @@ class RegistrationVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+>>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
     }
-    */
-
 }
