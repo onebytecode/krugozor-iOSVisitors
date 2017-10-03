@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4251F7ACE1300154DFF /* LogInVC.swift */; };
 		52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */; };
+		803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */; };
+		80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691271F7D570A0011EC9D /* ResponseError.swift */; };
+		80D6912A1F7D595F0011EC9D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691291F7D595F0011EC9D /* Response.swift */; };
+		80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
+		80D6912E1F7D5BAA0011EC9D /* TaskPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
 		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
@@ -42,12 +47,17 @@
 /* Begin PBXFileReference section */
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Sesion.swift"; sourceTree = "<group>"; };
 		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
 		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
 		8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Network.swift"; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
 		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		80D691271F7D570A0011EC9D /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		80D691291F7D595F0011EC9D /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		80D6912B1F7D5A730011EC9D /* DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
+		80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPull.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D264972E1F79448D004C19A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +114,7 @@
 			children = (
 				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
 				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
+				803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */,
 				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
 				8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */,
 			);
@@ -125,6 +136,17 @@
 				8059EBE01F7BEA1100159EFA /* UserData.swift */,
 			);
 			name = UserData;
+			sourceTree = "<group>";
+		};
+		80D691261F7D569F0011EC9D /* SessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				80D691271F7D570A0011EC9D /* ResponseError.swift */,
+				80D691291F7D595F0011EC9D /* Response.swift */,
+				80D6912B1F7D5A730011EC9D /* DataTask.swift */,
+				80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */,
+			);
+			name = SessionManager;
 			sourceTree = "<group>";
 		};
 		D26497201F79448D004C19A9 = {
@@ -200,6 +222,7 @@
 		D294FC911F7BCC6700828782 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				80D691261F7D569F0011EC9D /* SessionManager */,
 				8059EBD81F7BE9B600159EFA /* UserModule */,
 				D294FC901F7BCC5B00828782 /* Landing  */,
 				52F3A4241F7ACDC100154DFF /* Authorization */,
@@ -391,12 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D6912A1F7D595F0011EC9D /* Response.swift in Sources */,
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
+				80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
+				803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
+				80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */,
+				80D6912E1F7D5BAA0011EC9D /* TaskPull.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,6 @@
 //
 
 import CoreData
-import UIKit
 
 protocol UserModuleProtocol {
     func saveUserData (newUserInfo: UserDataStruct)
@@ -16,10 +15,10 @@ protocol UserModuleProtocol {
 }
 
 class UserModule: UserModuleProtocol {
-    
+
     var container: NSPersistentContainer? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
     var network: NetworkConnectionProtocol?
-    
+
     /// Checks the presence of the user in CoreData, if it is not there, goes to the server checks there.
     /// Need response in GCD not main treads
     func checkUserByUID (_ id: String) -> UserDataStruct {
@@ -31,4 +30,3 @@ class UserModule: UserModuleProtocol {
     }
 }
 
-// context should be a Singletone
