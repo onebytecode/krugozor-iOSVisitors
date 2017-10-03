@@ -63,7 +63,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
-<<<<<<< HEAD
     
     deinit {
         removeKeyboardNotifications()
@@ -298,15 +297,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         textField.text = resultString
         
         return false
-=======
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
->>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
     }
 }

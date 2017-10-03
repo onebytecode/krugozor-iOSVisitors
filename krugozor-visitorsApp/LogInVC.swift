@@ -67,7 +67,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
             
         }
     }
-<<<<<<< HEAD
+
     
     @IBAction func forgotPswdBtn(_ sender: UIButton) {
         if let passwordVC = PasswordRepairVC.storyboardInstance() {
@@ -111,15 +111,6 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     @objc func textFieldDidChange(textField: UITextField){
         // TODO check server for registered users by email
         print("ask server to check email: \(textField.text!)")
-=======
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
->>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
     }
 }

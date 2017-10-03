@@ -17,17 +17,9 @@
 		52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */; };
 		52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4251F7ACE1300154DFF /* LogInVC.swift */; };
 		52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */; };
-<<<<<<< HEAD
 		52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */; };
 		52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */; };
 		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
-=======
-		803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */; };
-		80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691271F7D570A0011EC9D /* ResponseError.swift */; };
-		80D6912A1F7D595F0011EC9D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691291F7D595F0011EC9D /* Response.swift */; };
-		80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
-		80D6912E1F7D5BAA0011EC9D /* TaskPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */; };
->>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
 		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
@@ -67,15 +59,11 @@
 		52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInVC.storyboard; sourceTree = "<group>"; };
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardPageVC.storyboard; sourceTree = "<group>"; };
 		52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardPageVC.swift; sourceTree = "<group>"; };
 		52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardTemplateVC.storyboard; sourceTree = "<group>"; };
 		52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTemplateVC.swift; sourceTree = "<group>"; };
 		52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-=======
-		803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Sesion.swift"; sourceTree = "<group>"; };
->>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
 		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
 		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
@@ -148,7 +136,6 @@
 			children = (
 				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
 				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
-				803BC1411F7EB8590021FC3B /* UserModule+Sesion.swift */,
 				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
 				8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */,
 			);
@@ -466,26 +453,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
-=======
-				80D6912A1F7D595F0011EC9D /* Response.swift in Sources */,
->>>>>>> 1c0861956480693fc2ee0b370541243e35156ed5
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
-				80D6912C1F7D5A730011EC9D /* DataTask.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
-				803BC1421F7EB8590021FC3B /* UserModule+Sesion.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
-				80D691281F7D570A0011EC9D /* ResponseError.swift in Sources */,
-				80D6912E1F7D5BAA0011EC9D /* TaskPull.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -653,13 +632,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTYV272Z4;
+				DEVELOPMENT_TEAM = 8953S4D45L;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -669,13 +650,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTYV272Z4;
+				DEVELOPMENT_TEAM = 8953S4D45L;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "onebytecode.krugozor-visitorsApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
