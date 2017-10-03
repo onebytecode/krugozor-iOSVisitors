@@ -13,6 +13,7 @@ struct UserDataStruct {
     var surname: String?
     var email: String?
     var gender: Bool?
+    var session : Bool?
     var age: Int?
 
     /// URL of smallest avatar image
@@ -23,7 +24,7 @@ struct UserDataStruct {
     var photoURLOrigin: String?
     /// Image of largest avatar
     var photoImageOrigin: Data?
-    
+
     // Returns of state of object
     var isEmpty: Bool
 
@@ -33,6 +34,7 @@ struct UserDataStruct {
         self.age = Int(userData.age)
         self.email = userData.email
         self.gender = userData.gender
+        self.session = userData.session
         self.photoImageBanner = userData.photoImageBanner
         self.photoImageOrigin = userData.photoImageOrigin
         self.photoURLBanner = userData.photoURLBanner

@@ -9,7 +9,7 @@
 import Foundation
 
 extension UserModule {
-    
+
     func checkUserInServer (byUID id: String) -> UserDataStruct {
         network = NetworkConnection.shared()
         return (network?.checkUserOnServer(byUID: id))!

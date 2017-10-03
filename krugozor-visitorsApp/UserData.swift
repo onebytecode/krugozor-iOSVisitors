@@ -29,7 +29,13 @@ class UserData: NSManagedObject {
         let request: NSFetchRequest<UserData> = UserData.fetchRequest()
         return requestToData(request: request, context: context)
     }
-
+    
+    static func restoreLastSession (context: NSManagedObjectContext) -> UserDataStruct {
+        let request: NSFetchRequest<UserData> = UserData.fetchRequest()
+        request.predicate = NSPredicate(format: "session == true")
+        return requestToData(request: request, context: context)
+    }
+    
     fileprivate static func requestToData (request: NSFetchRequest<UserData>, context: NSManagedObjectContext) -> UserDataStruct {
         do {
             let matches = try context.fetch(request)
@@ -54,6 +60,7 @@ class UserData: NSManagedObject {
         let save = userSave
         save.name = userInfo.name
         save.surname = userInfo.surname
+        save.session = userInfo.session
         if let age = userInfo.age {
             save.age = Int16(age)
         }
@@ -70,5 +77,21 @@ class UserData: NSManagedObject {
             save.gender = gender
         }
         return save
+    }
+    
+    /// Delete All User's
+    static func deleteAllUsers(context: NSManagedObjectContext) {
+        let request: NSFetchRequest<UserData> = UserData.fetchRequest()
+        do {
+            let results = try? context.fetch(request)
+            if let users = results {
+                for user in users {
+                    context.delete(user)
+                }
+            }
+            try context.save()
+        } catch {
+            print ("Error in deleteAllUsers")
+        }
     }
 }
