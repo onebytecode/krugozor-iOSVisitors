@@ -29,4 +29,3 @@ class UserModule: UserModuleProtocol {
         }
     }
 }
-

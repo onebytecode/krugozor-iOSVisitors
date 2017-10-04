@@ -13,7 +13,7 @@ struct UserDataStruct {
     var surname: String?
     var email: String?
     var gender: Bool?
-    var session : Bool?
+    var session: Bool?
     var age: Int?
 
     /// URL of smallest avatar image

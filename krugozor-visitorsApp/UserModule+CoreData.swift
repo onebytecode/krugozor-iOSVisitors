@@ -9,7 +9,7 @@
 import CoreData
 
 extension UserModule {
-    
+
     func saveUserData (newUserInfo: UserDataStruct) {
         if let context = container?.viewContext {
             UserData.saveUserData(userInfo: newUserInfo, context: context)

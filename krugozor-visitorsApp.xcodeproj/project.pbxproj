@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CF1C3012D43FC4E875B40C5 /* Pods_krugozor_visitorsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04536747ED48264BA062E0E5 /* Pods_krugozor_visitorsApp.framework */; };
 		5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */; };
 		5209C11A1F7D5F440011B8D8 /* RegistrationVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */; };
 		5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209C11B1F7D68FF0011B8D8 /* PasswordRepairVC.swift */; };
@@ -20,6 +21,11 @@
 		52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */; };
 		52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */; };
 		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
+		80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */; };
+		80BF9F671F8535ED00A48BDC /* QRVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F661F8535ED00A48BDC /* QRVC.storyboard */; };
+		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
+		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
+		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
 		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
@@ -51,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04536747ED48264BA062E0E5 /* Pods_krugozor_visitorsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_krugozor_visitorsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3180E7C198A9672C96E6185D /* Pods-krugozor-visitorsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krugozor-visitorsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationVC.storyboard; sourceTree = "<group>"; };
 		5209C11B1F7D68FF0011B8D8 /* PasswordRepairVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRepairVC.swift; sourceTree = "<group>"; };
@@ -70,6 +78,11 @@
 		8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Network.swift"; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
 		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		80BF9F661F8535ED00A48BDC /* QRVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRVC.storyboard; sourceTree = "<group>"; };
+		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
+		80BF9F6A1F85367F00A48BDC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		80D691271F7D570A0011EC9D /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		80D691291F7D595F0011EC9D /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		80D6912B1F7D5A730011EC9D /* DataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTask.swift; sourceTree = "<group>"; };
@@ -89,6 +102,7 @@
 		D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = krugozor_visitorsAppUITests.swift; sourceTree = "<group>"; };
 		D26497511F79448E004C19A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D294FC971F7BCCEF00828782 /* LandingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
+		E9490EF3A7F8A4B6BC1E9FEB /* Pods-krugozor-visitorsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krugozor-visitorsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CF1C3012D43FC4E875B40C5 /* Pods_krugozor_visitorsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0661C3B4A2F9ADD7E2DE7359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04536747ED48264BA062E0E5 /* Pods_krugozor_visitorsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		52F3A4241F7ACDC100154DFF /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +157,7 @@
 		8059EBD81F7BE9B600159EFA /* UserModule */ = {
 			isa = PBXGroup;
 			children = (
+				80D691261F7D569F0011EC9D /* SessionManager */,
 				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
 				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
 				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
@@ -159,6 +183,68 @@
 			name = UserData;
 			sourceTree = "<group>";
 		};
+		80BF9F591F85323100A48BDC /* TabBarMain */ = {
+			isa = PBXGroup;
+			children = (
+				80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */,
+				80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */,
+			);
+			name = TabBarMain;
+			sourceTree = "<group>";
+		};
+		80BF9F5A1F85329100A48BDC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */,
+				5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */,
+				5209C11F1F7D75F70011B8D8 /* String+Extension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		80BF9F5D1F85351B00A48BDC /* MainMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				80BF9F591F85323100A48BDC /* TabBarMain */,
+				80BF9F611F85356400A48BDC /* AccountVC */,
+				80BF9F601F85355500A48BDC /* QRViewController */,
+				80BF9F5F1F85354F00A48BDC /* SecondVC */,
+				80BF9F5E1F85354600A48BDC /* FirstVC */,
+			);
+			name = MainMenuVC;
+			sourceTree = "<group>";
+		};
+		80BF9F5E1F85354600A48BDC /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FirstVC;
+			sourceTree = "<group>";
+		};
+		80BF9F5F1F85354F00A48BDC /* SecondVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SecondVC;
+			sourceTree = "<group>";
+		};
+		80BF9F601F85355500A48BDC /* QRViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80BF9F661F8535ED00A48BDC /* QRVC.storyboard */,
+				80BF9F6A1F85367F00A48BDC /* QRViewController.swift */,
+			);
+			name = QRViewController;
+			sourceTree = "<group>";
+		};
+		80BF9F611F85356400A48BDC /* AccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				80BF9F681F85360800A48BDC /* AccountVC.storyboard */,
+			);
+			name = AccountVC;
+			sourceTree = "<group>";
+		};
 		80D691261F7D569F0011EC9D /* SessionManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +256,15 @@
 			name = SessionManager;
 			sourceTree = "<group>";
 		};
+		AA59B88607E1A9CC79E3A9D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3180E7C198A9672C96E6185D /* Pods-krugozor-visitorsApp.debug.xcconfig */,
+				E9490EF3A7F8A4B6BC1E9FEB /* Pods-krugozor-visitorsApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D26497201F79448D004C19A9 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +273,8 @@
 				D264974E1F79448E004C19A9 /* krugozor-visitorsAppUITests */,
 				D264972A1F79448D004C19A9 /* Products */,
 				52F53F781F7D41CC0001BA17 /* Recovered References */,
+				AA59B88607E1A9CC79E3A9D7 /* Pods */,
+				0661C3B4A2F9ADD7E2DE7359 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +291,7 @@
 		D264972B1F79448D004C19A9 /* krugozor-visitorsApp */ = {
 			isa = PBXGroup;
 			children = (
+				80BF9F5A1F85329100A48BDC /* Extension */,
 				D264972E1F79448D004C19A9 /* ViewController.swift */,
 				D294FC911F7BCC6700828782 /* Modules */,
 				D294FC9C1F7BCDE900828782 /* Layers */,
@@ -244,7 +342,7 @@
 		D294FC911F7BCC6700828782 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				80D691261F7D569F0011EC9D /* SessionManager */,
+				80BF9F5D1F85351B00A48BDC /* MainMenuVC */,
 				8059EBD81F7BE9B600159EFA /* UserModule */,
 				D294FC901F7BCC5B00828782 /* Landing  */,
 				52F3A4241F7ACDC100154DFF /* Authorization */,
@@ -265,9 +363,6 @@
 				5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */,
 				5209C11B1F7D68FF0011B8D8 /* PasswordRepairVC.swift */,
 				5209C11D1F7D690C0011B8D8 /* PasswordRepairVC.storyboard */,
-				52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */,
-				5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */,
-				5209C11F1F7D75F70011B8D8 /* String+Extension.swift */,
 			);
 			name = Registration;
 			sourceTree = "<group>";
@@ -303,10 +398,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D26497541F79448E004C19A9 /* Build configuration list for PBXNativeTarget "krugozor-visitorsApp" */;
 			buildPhases = (
+				BE0387DDAFBCE8C3065C7E97 /* [CP] Check Pods Manifest.lock */,
 				D26497251F79448D004C19A9 /* Sources */,
 				D26497261F79448D004C19A9 /* Frameworks */,
 				D26497271F79448D004C19A9 /* Resources */,
 				D264975D1F7944C4004C19A9 /* Build Version Up */,
+				BAC14330656D0B5B702CF4F3 /* [CP] Embed Pods Frameworks */,
+				F276973B28D4548DFF77F817 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -407,9 +505,12 @@
 				52DB78ED1F7D47B000DE44B5 /* OnboardTemplateVC.storyboard in Resources */,
 				5209C11E1F7D690C0011B8D8 /* PasswordRepairVC.storyboard in Resources */,
 				5209C11A1F7D5F440011B8D8 /* RegistrationVC.storyboard in Resources */,
+				80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */,
 				52DB78EC1F7D47AC00DE44B5 /* OnboardPageVC.storyboard in Resources */,
 				D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */,
+				80BF9F671F8535ED00A48BDC /* QRVC.storyboard in Resources */,
 				52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */,
+				80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */,
 				D26497371F79448D004C19A9 /* Assets.xcassets in Resources */,
 				D26497321F79448D004C19A9 /* Main.storyboard in Resources */,
 			);
@@ -432,6 +533,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BAC14330656D0B5B702CF4F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE0387DDAFBCE8C3065C7E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-krugozor-visitorsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D264975D1F7944C4004C19A9 /* Build Version Up */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +583,21 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/bash\nbN=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbN=$(expr $bN + 1)\nbN=$(printf \"%d\" $bN)\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $bN\" \"$INFOPLIST_FILE\"";
 		};
+		F276973B28D4548DFF77F817 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -457,12 +609,14 @@
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
+				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
+				80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */,
 				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 			);
@@ -630,6 +784,7 @@
 		};
 		D26497551F79448E004C19A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3180E7C198A9672C96E6185D /* Pods-krugozor-visitorsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -648,6 +803,7 @@
 		};
 		D26497561F79448E004C19A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9490EF3A7F8A4B6BC1E9FEB /* Pods-krugozor-visitorsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
