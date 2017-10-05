@@ -9,7 +9,7 @@
 import CoreData
 
 extension UserModule {
-    
+
     /// Returns the login of the user with the last session
     func userLastSession () -> String? {
         if let context = container?.viewContext {
@@ -19,7 +19,7 @@ extension UserModule {
         print("Can't create a context")
         return nil
     }
-    
+
     /// Delete last session and all user info from memory
     func deleteUserSession () {
         if let context = container?.viewContext {
@@ -28,4 +28,3 @@ extension UserModule {
         print("Can't create a context")
     }
 }
-

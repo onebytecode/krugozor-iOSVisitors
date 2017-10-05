@@ -9,7 +9,7 @@
 import UIKit
 
 class OnboardTemplateVC: UIViewController {
-    
+
     static func storyboardInstance() -> OnboardTemplateVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "OnboardTemplateVC") as? OnboardTemplateVC
@@ -24,15 +24,14 @@ class OnboardTemplateVC: UIViewController {
             }
         }
     }
-    
+
     // MARK: - Outlets -
     @IBOutlet var contentLabel: UILabel?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         contentLabel?.text = contentModel.1
     }
-
 
 }
