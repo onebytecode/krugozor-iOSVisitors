@@ -29,7 +29,6 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
             let startingViewControllers = [firstController]
             self.setViewControllers(startingViewControllers, direction: .forward, animated: false, completion: nil)
         }
-
         setupPageControl()
     }
 
@@ -43,33 +42,22 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
 
     // MARK: - UIPageViewControllerDataSource methods -
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-
         let itemController = viewController as! OnboardTemplateVC
-
         if itemController.itemIndex > 0 {
-
             return getItemController(itemController.itemIndex - 1)
         }
-
         return nil
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-
         if let itemController = viewController as? OnboardTemplateVC {
-
         if itemController.itemIndex + 1 < contentImages.count {
-
             return getItemController(itemController.itemIndex + 1)
-
         } else if itemController.itemIndex + 1 == contentImages.count {
-
             let itemController2 = LogInVC.storyboardInstance()!
-
             return getItemController(itemController2.itemIndex + contentImages.count)
             }
         }
-
         return nil
     }
 
@@ -87,7 +75,6 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
                 return loginVC
             }
         }
-
         return nil
     }
 
@@ -103,21 +90,16 @@ class OnboardPageVC: UIPageViewController, UIPageViewControllerDelegate, UIPageV
     // MARK: - Additions -
     func currentControllerIndex() -> Int {
         let pageItemController = self.currentController()
-
         if let controller = pageItemController as? OnboardTemplateVC {
             return controller.itemIndex
         }
-
         return -1
     }
 
     func currentController() -> UIViewController? {
-
         if (self.viewControllers?.count)! > 0 {
             return self.viewControllers![0]
         }
-
         return nil
     }
-
 }

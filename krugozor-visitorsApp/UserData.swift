@@ -60,7 +60,7 @@ class UserData: NSManagedObject {
         let save = userSave
         save.name = userInfo.name
         save.surname = userInfo.surname
-        save.session = userInfo.session
+        save.session = userInfo.session!
         if let age = userInfo.age {
             save.age = Int16(age)
         }

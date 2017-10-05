@@ -30,8 +30,6 @@ class OnboardTemplateVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         contentLabel?.text = contentModel.1
     }
-
 }

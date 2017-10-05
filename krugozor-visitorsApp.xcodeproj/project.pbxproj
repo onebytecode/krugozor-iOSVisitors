@@ -21,6 +21,17 @@
 		52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */; };
 		52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */; };
 		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
+		8013BF331F861DA10018D9A6 /* UserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDB1F7BE9C800159EFA /* UserModule.swift */; };
+		8013BF341F861DA70018D9A6 /* UserModule+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */; };
+		8013BF351F861DA90018D9A6 /* UserModule+ServerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDC1F7BE9C800159EFA /* UserModule+ServerRequest.swift */; };
+		8013BF361F861DAD0018D9A6 /* RequestToServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBD91F7BE9C800159EFA /* RequestToServer.swift */; };
+		8013BF371F861DEF0018D9A6 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBE01F7BEA1100159EFA /* UserData.swift */; };
+		8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */; };
+		8013BF391F861E300018D9A6 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691271F7D570A0011EC9D /* ResponseError.swift */; };
+		8013BF3A1F861E320018D9A6 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D691291F7D595F0011EC9D /* Response.swift */; };
+		8013BF3B1F861E350018D9A6 /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
+		8013BF3C1F861E370018D9A6 /* TaskPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */; };
+		8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013BF3D1F8621AB0018D9A6 /* QRModel.swift */; };
 		80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */; };
 		80BF9F671F8535ED00A48BDC /* QRVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F661F8535ED00A48BDC /* QRVC.storyboard */; };
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
@@ -72,10 +83,11 @@
 		52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnboardTemplateVC.storyboard; sourceTree = "<group>"; };
 		52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTemplateVC.swift; sourceTree = "<group>"; };
 		52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		8013BF3D1F8621AB0018D9A6 /* QRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModel.swift; sourceTree = "<group>"; };
+		8059EBD91F7BE9C800159EFA /* RequestToServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestToServer.swift; sourceTree = "<group>"; };
 		8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+CoreData.swift"; sourceTree = "<group>"; };
 		8059EBDB1F7BE9C800159EFA /* UserModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModule.swift; sourceTree = "<group>"; };
-		8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+Network.swift"; sourceTree = "<group>"; };
+		8059EBDC1F7BE9C800159EFA /* UserModule+ServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+ServerRequest.swift"; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
 		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
@@ -158,10 +170,10 @@
 			isa = PBXGroup;
 			children = (
 				80D691261F7D569F0011EC9D /* SessionManager */,
-				8059EBD91F7BE9C800159EFA /* NetworkConnection.swift */,
+				8059EBD91F7BE9C800159EFA /* RequestToServer.swift */,
 				8059EBDB1F7BE9C800159EFA /* UserModule.swift */,
 				8059EBDA1F7BE9C800159EFA /* UserModule+CoreData.swift */,
-				8059EBDC1F7BE9C800159EFA /* UserModule+Network.swift */,
+				8059EBDC1F7BE9C800159EFA /* UserModule+ServerRequest.swift */,
 			);
 			name = UserModule;
 			sourceTree = "<group>";
@@ -233,6 +245,7 @@
 			children = (
 				80BF9F661F8535ED00A48BDC /* QRVC.storyboard */,
 				80BF9F6A1F85367F00A48BDC /* QRViewController.swift */,
+				8013BF3D1F8621AB0018D9A6 /* QRModel.swift */,
 			);
 			name = QRViewController;
 			sourceTree = "<group>";
@@ -606,19 +619,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
+				8013BF351F861DA90018D9A6 /* UserModule+ServerRequest.swift in Sources */,
 				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
+				8013BF371F861DEF0018D9A6 /* UserData.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
+				8013BF391F861E300018D9A6 /* ResponseError.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
+				8013BF3C1F861E370018D9A6 /* TaskPull.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
+				8013BF341F861DA70018D9A6 /* UserModule+CoreData.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
+				8013BF3B1F861E350018D9A6 /* DataTask.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				D294FC981F7BCCEF00828782 /* LandingVC.swift in Sources */,
 				80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */,
+				8013BF331F861DA10018D9A6 /* UserModule.swift in Sources */,
 				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
+				8013BF3A1F861E320018D9A6 /* Response.swift in Sources */,
+				8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
+				8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */,
+				8013BF361F861DAD0018D9A6 /* RequestToServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -774,7 +798,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -789,7 +813,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8953S4D45L;
+				DEVELOPMENT_TEAM = WX7EXQ2XD6;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -808,7 +832,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8953S4D45L;
+				DEVELOPMENT_TEAM = WX7EXQ2XD6;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
