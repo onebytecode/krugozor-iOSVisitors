@@ -27,44 +27,29 @@ class krugozor_visitorsAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
     func testExample() {
-
-        let app = XCUIApplication()
-        let element2 = app.otherElements.containing(.pageIndicator, identifier:"page 1 of 3").children(matching: .other).element
-        let element = element2.children(matching: .other).element.children(matching: .other).element
+        
+    }
+    
+    func testSegueBeetwinViewControllers () {
+        let element = XCUIApplication().otherElements.containing(.pageIndicator, identifier:"page 1 of 3").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
         element.swipeLeft()
-        // Почему падает тест
-        element.swipeLeft()
-        element2.children(matching: .other).element(boundBy: 0).children(matching: .other).element/*@START_MENU_TOKEN@*/.swipeRight()/*[[".swipeUp()",".swipeRight()"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        app.textFields["oliver@"].typeText("fffff@gmail.com")
-
+        let element2 = XCUIApplication().otherElements.containing(.pageIndicator, identifier:"page 2 of 3").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        element2.swipeLeft()
+        
+        let app = XCUIApplication().otherElements.containing(.pageIndicator, identifier:"page 3 of 3").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
+        
+        let oliverTextField = app.textFields["oliver@"]
+        oliverTextField.tap()
+        oliverTextField.typeText("wefefe@gwefe.de")
+        
         let passwordSecureTextField = app.secureTextFields["password"]
         passwordSecureTextField.tap()
         passwordSecureTextField.tap()
-        passwordSecureTextField.typeText("123123")
+        passwordSecureTextField.typeText("ацуацуа")
         app.buttons["Login"].tap()
-
-        let elementsQuery = app.scrollViews.otherElements
-        let alexTextField = elementsQuery.textFields["Alex"]
-        alexTextField.tap()
-        alexTextField.typeText("efwef")
-
-        let simonovTextField = elementsQuery.textFields["Simonov"]
-        simonovTextField.tap()
-        simonovTextField.tap()
-        simonovTextField.typeText("wefwef")
-
-        let textField = elementsQuery.textFields["+7 (925) 555-55-55"]
-        textField.tap()
-        textField.tap()
-        textField.typeText("79999999999")
-
-        let textField2 = elementsQuery.textFields["17.09.1995"]
-        textField2.tap()
-        textField2.tap()
-        textField2.typeText("11111991")
-        app/*@START_MENU_TOKEN@*/.buttons["Register"]/*[[".scrollViews.buttons[\"Register\"]",".buttons[\"Register\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        
+        XCUIApplication()/*@START_MENU_TOKEN@*/.buttons["Register"]/*[[".scrollViews.buttons[\"Register\"]",".buttons[\"Register\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
     }
-
 }
