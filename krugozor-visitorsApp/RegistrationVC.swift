@@ -175,7 +175,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         } else if textField == ageTF {
             return checkAge(textField, shouldChangeCharactersIn: range, replacementString: string)
         }
-
         return true
     }
 

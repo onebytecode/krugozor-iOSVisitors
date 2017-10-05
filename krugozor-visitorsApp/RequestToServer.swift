@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol NetworkConnectionProtocol {
-    static func shared() -> NetworkConnection
+protocol RequestToServerProtocol {
+    static func shared() -> RequestToServer
     func checkUserOnServer (byUID id: String) -> UserDataStruct
 }
 
-class NetworkConnection: NetworkConnectionProtocol {
+class RequestToServer: RequestToServerProtocol {
 
     // MARK: Singletone
-    private static var uniqueInstance: NetworkConnection?
+    private static var uniqueInstance: RequestToServer?
 
     private init() {}
 
-    static func shared() -> NetworkConnection {
+    static func shared() -> RequestToServer {
         if uniqueInstance == nil {
-            uniqueInstance = NetworkConnection()
+            uniqueInstance = RequestToServer()
         }
         return uniqueInstance!
     }
