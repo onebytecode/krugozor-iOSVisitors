@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol RequestToServerProtocol {
     static func shared() -> RequestToServer
