@@ -32,6 +32,8 @@
 		8013BF3B1F861E350018D9A6 /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
 		8013BF3C1F861E370018D9A6 /* TaskPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */; };
 		8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013BF3D1F8621AB0018D9A6 /* QRModel.swift */; };
+		808460661F876D8900CA3FEA /* BookingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460651F876D8900CA3FEA /* BookingVC.storyboard */; };
+		808460681F876DAA00CA3FEA /* ReferalVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460671F876DAA00CA3FEA /* ReferalVC.storyboard */; };
 		80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */; };
 		80BF9F671F8535ED00A48BDC /* QRVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F661F8535ED00A48BDC /* QRVC.storyboard */; };
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
@@ -93,6 +95,8 @@
 		8059EBDC1F7BE9C800159EFA /* UserModule+ServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+ServerRequest.swift"; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
 		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		808460651F876D8900CA3FEA /* BookingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookingVC.storyboard; sourceTree = "<group>"; };
+		808460671F876DAA00CA3FEA /* ReferalVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReferalVC.storyboard; sourceTree = "<group>"; };
 		80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
 		80BF9F661F8535ED00A48BDC /* QRVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QRVC.storyboard; sourceTree = "<group>"; };
 		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
@@ -226,24 +230,26 @@
 				80BF9F591F85323100A48BDC /* TabBarMain */,
 				80BF9F611F85356400A48BDC /* AccountVC */,
 				80BF9F601F85355500A48BDC /* QRViewController */,
-				80BF9F5F1F85354F00A48BDC /* SecondVC */,
-				80BF9F5E1F85354600A48BDC /* FirstVC */,
+				80BF9F5F1F85354F00A48BDC /* BookingVC */,
+				80BF9F5E1F85354600A48BDC /* ReferalVC */,
 			);
 			name = MainMenuVC;
 			sourceTree = "<group>";
 		};
-		80BF9F5E1F85354600A48BDC /* FirstVC */ = {
+		80BF9F5E1F85354600A48BDC /* ReferalVC */ = {
 			isa = PBXGroup;
 			children = (
+				808460671F876DAA00CA3FEA /* ReferalVC.storyboard */,
 			);
-			name = FirstVC;
+			name = ReferalVC;
 			sourceTree = "<group>";
 		};
-		80BF9F5F1F85354F00A48BDC /* SecondVC */ = {
+		80BF9F5F1F85354F00A48BDC /* BookingVC */ = {
 			isa = PBXGroup;
 			children = (
+				808460651F876D8900CA3FEA /* BookingVC.storyboard */,
 			);
-			name = SecondVC;
+			name = BookingVC;
 			sourceTree = "<group>";
 		};
 		80BF9F601F85355500A48BDC /* QRViewController */ = {
@@ -526,6 +532,8 @@
 				5209C11A1F7D5F440011B8D8 /* RegistrationVC.storyboard in Resources */,
 				80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */,
 				52DB78EC1F7D47AC00DE44B5 /* OnboardPageVC.storyboard in Resources */,
+				808460681F876DAA00CA3FEA /* ReferalVC.storyboard in Resources */,
+				808460661F876D8900CA3FEA /* BookingVC.storyboard in Resources */,
 				D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */,
 				80BF9F671F8535ED00A48BDC /* QRVC.storyboard in Resources */,
 				52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */,

@@ -11,6 +11,7 @@ import Foundation
 protocol RequestToServerProtocol {
     static func shared() -> RequestToServer
     func checkUserOnServer (byUID id: String) -> UserDataStruct
+    func registredNewUser (userData: UserDataStruct)
 }
 
 class RequestToServer: RequestToServerProtocol {
@@ -54,5 +55,12 @@ class RequestToServer: RequestToServerProtocol {
     fileprivate func registerNewUser () -> UserDataStruct {
         // I suggest to create a closure, that will initialize the method in the view controller, that will eventually return the data structure that we need
         return UserDataStruct() // Requires replacement
+    }
+    
+    /// Registred new User in Server
+    func registredNewUser (userData: UserDataStruct) {
+        // сконфигурировать запрос
+        // добавить в alamofire
+        // использовать Session Manager
     }
 }

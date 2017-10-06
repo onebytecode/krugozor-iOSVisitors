@@ -4,5 +4,6 @@ use_frameworks!
 target 'krugozor-visitorsApp' do
   
 	pod "QRCode"
+	pod "Alamofire"
 
 end
