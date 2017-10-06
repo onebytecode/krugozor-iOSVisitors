@@ -14,5 +14,10 @@ extension UserModule {
         network = RequestToServer.shared()
         return (network?.checkUserOnServer(byUID: id))!
     }
+    
+    func sendUserInfoToServer (newUserInfo: UserDataStruct) {
+        network = RequestToServer.shared()
+        network?.registredNewUser(userData: newUserInfo)
+    }
 }
 

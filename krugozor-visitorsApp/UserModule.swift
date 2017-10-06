@@ -11,6 +11,7 @@ import UIKit
 
 protocol UserModuleProtocol {
     func saveUserData (newUserInfo: UserDataStruct)
+    func registrationNewUser (newUser: UserDataStruct)
     func restoreUserData () -> UserDataStruct?
     func restoreUserData (fetchBy filter: UserRequestType, withText text: String) -> UserDataStruct?
 }
@@ -28,5 +29,11 @@ class UserModule: UserModuleProtocol {
         } else {
             return checkUserInServer(byUID: id)
         }
+    }
+    
+    /// Sends request to memory and server
+    func registrationNewUser (newUser: UserDataStruct) {
+        saveUserData (newUserInfo: newUser)
+        sendUserInfoToServer (newUserInfo: newUser)
     }
 }

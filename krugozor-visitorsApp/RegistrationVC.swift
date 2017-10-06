@@ -18,31 +18,16 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Properties -
     var isKBShown: Bool = false
     var kbFrameSize: CGFloat = 0
+    var userModule: UserModuleProtocol!
 
     // MARK: - Outlets -
-    @IBOutlet weak var nameTF: UITextField! {
-        didSet {
-            nameTF.useUnderline()
-        }
-    }
+    @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
 
-    @IBOutlet weak var lastNameTF: UITextField! {
-        didSet {
-            lastNameTF.useUnderline()
-        }
-    }
+    @IBOutlet weak var lastNameTF: UITextField! { didSet { lastNameTF.useUnderline() } }
 
-    @IBOutlet weak var phoneTF: UITextField! {
-        didSet {
-            phoneTF.useUnderline()
-        }
-    }
+    @IBOutlet weak var phoneTF: UITextField! { didSet { phoneTF.useUnderline() } }
 
-    @IBOutlet weak var ageTF: UITextField! {
-        didSet {
-            ageTF.useUnderline()
-        }
-    }
+    @IBOutlet weak var ageTF: UITextField! { didSet { ageTF.useUnderline() } }
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatarImg: UIImageView!
@@ -121,7 +106,16 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Actions -
     @IBAction func registerBtn(_ sender: UIButton) {
         self.view.endEditing(true)
-        segueToAppMainMenu ()
+        sendUserData ()
+    }
+    
+    /// Send User Data to Server
+    private func sendUserData () {
+        if fieldsCheck() {
+            userModule = UserModule()
+            userModule.registrationNewUser(newUser: UserDataStruct()) // заменить UserDataStruct() на сконфигурированный тип
+            segueToAppMainMenu ()
+        }
     }
 
     /// Segue to TabBarViewController
@@ -129,6 +123,12 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         if let newVC = TabBarViewController.storyboardInstance() {
             self.present(newVC, animated: true, completion: nil)
         }
+    }
+    
+    //FIXME: - Дописать метод с проверками
+    /// Checking user input fields - Доработать
+    func fieldsCheck () -> Bool {
+        return true
     }
 
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {

@@ -29,8 +29,10 @@ class QRViewController: UIViewController {
 
     /// Create and encrypt QR code
     fileprivate func showQRCode () {
+        let uid = model.getUID()
+        guard uid != "" else { return } // Удалить строку если не видно QR кода
         qrCodeImage.image = {
-            var qrCode = QRCode(model.getUID())!
+            var qrCode = QRCode(uid)!
             qrCode.size = self.qrCodeImage.bounds.size
             qrCode.errorCorrection = .High
             return qrCode.image
