@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopDateVC" customModule="krugozor_visitorsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="Mba-TW-O9K" id="oMe-gJ-vXE"/>
+                <outlet property="view" destination="iN0-l3-epB" id="su4-s3-8hB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QU9-TS-QBb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mba-TW-O9K">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="162" id="2Rg-0k-dzJ"/>
+                            </constraints>
+                            <date key="date" timeIntervalSinceReferenceDate="-662713970.96177006">
+                                <!--1980-01-01 16:47:09 +0000-->
+                            </date>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-qW-HJq">
+                            <rect key="frame" x="172" y="172" width="30" height="30"/>
+                            <state key="normal" title="OK"/>
+                            <connections>
+                                <action selector="okAction:" destination="-1" eventType="touchUpInside" id="Txh-Yg-3U8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="3TR-Ug-JPj"/>
+                        <constraint firstItem="hbA-qW-HJq" firstAttribute="top" secondItem="Mba-TW-O9K" secondAttribute="bottom" constant="10" id="D0T-WK-Ez6"/>
+                        <constraint firstItem="Mba-TW-O9K" firstAttribute="top" secondItem="QU9-TS-QBb" secondAttribute="top" id="YJv-7r-EaR"/>
+                        <constraint firstAttribute="trailing" secondItem="Mba-TW-O9K" secondAttribute="trailing" id="djf-2K-BaK"/>
+                        <constraint firstItem="hbA-qW-HJq" firstAttribute="centerX" secondItem="QU9-TS-QBb" secondAttribute="centerX" id="eEi-Kd-JPd"/>
+                        <constraint firstItem="Mba-TW-O9K" firstAttribute="leading" secondItem="QU9-TS-QBb" secondAttribute="leading" id="u4c-v7-ai2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QU9-TS-QBb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Vw0-1k-5ig"/>
+                <constraint firstItem="QU9-TS-QBb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hOh-H7-10c"/>
+                <constraint firstItem="QU9-TS-QBb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u9Q-O3-Mt0"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
+        </view>
+    </objects>
+</document>
