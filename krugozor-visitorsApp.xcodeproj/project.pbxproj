@@ -40,8 +40,6 @@
 		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
 		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
-		D264972F1F79448D004C19A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972E1F79448D004C19A9 /* ViewController.swift */; };
-		D26497321F79448D004C19A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497301F79448D004C19A9 /* Main.storyboard */; };
 		D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D26497331F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld */; };
 		D26497371F79448D004C19A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26497361F79448D004C19A9 /* Assets.xcassets */; };
 		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
@@ -108,8 +106,6 @@
 		80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPull.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D264972E1F79448D004C19A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D26497311F79448D004C19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D26497341F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = krugozor_visitorsApp.xcdatamodel; sourceTree = "<group>"; };
 		D26497361F79448D004C19A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D26497391F79448D004C19A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -317,7 +313,6 @@
 			isa = PBXGroup;
 			children = (
 				80BF9F5A1F85329100A48BDC /* Extension */,
-				D264972E1F79448D004C19A9 /* ViewController.swift */,
 				D294FC911F7BCC6700828782 /* Modules */,
 				D294FC9C1F7BCDE900828782 /* Layers */,
 				D294FC8F1F7BCC2F00828782 /* Supporting Files */,
@@ -348,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				D264972C1F79448D004C19A9 /* AppDelegate.swift */,
-				D26497301F79448D004C19A9 /* Main.storyboard */,
 				D26497381F79448D004C19A9 /* LaunchScreen.storyboard */,
 				D26497361F79448D004C19A9 /* Assets.xcassets */,
 				D264973B1F79448D004C19A9 /* Info.plist */,
@@ -539,7 +533,6 @@
 				52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */,
 				80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */,
 				D26497371F79448D004C19A9 /* Assets.xcassets in Resources */,
-				D26497321F79448D004C19A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +629,6 @@
 			files = (
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				8013BF351F861DA90018D9A6 /* UserModule+ServerRequest.swift in Sources */,
-				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				8013BF371F861DEF0018D9A6 /* UserData.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
@@ -696,14 +688,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D26497301F79448D004C19A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D26497311F79448D004C19A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D26497381F79448D004C19A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
