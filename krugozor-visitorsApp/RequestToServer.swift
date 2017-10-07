@@ -13,6 +13,7 @@ protocol RequestToServerProtocol {
     static func shared() -> RequestToServer
     func checkUserOnServer (byUID id: String) -> UserDataStruct
     func registredNewUser (userData: UserDataStruct)
+    func requestForForgotten(email: String)
 }
 
 class RequestToServer: RequestToServerProtocol {
@@ -33,23 +34,8 @@ class RequestToServer: RequestToServerProtocol {
 
     /// Checks for the presence of a registered user, if it does not find one, creates a new one
     func checkUserOnServer (byUID id: String) -> UserDataStruct {
-        if responseToServerByID(id) {
-            return responseGetDataFromUID(id)
-        } else {
-            return registerNewUser ()
-        }
-    }
-
-    /// Request of UID of user to the server
-    fileprivate func responseToServerByID (_ id: String) -> Bool {
-        // enter response text
-        return true // Requires replacement
-    }
-
-    // Here we need to create a data structure that will be stored on the server as information about our user
-    fileprivate func responseGetDataFromUID (_ id: String) -> UserDataStruct {
-        //response text to get data
-        return UserDataStruct() // Requires replacement
+        //FIXME: Response to server, and get or not user data
+        return UserDataStruct()
     }
 
     // Initializes the process of registering a new user
@@ -63,5 +49,9 @@ class RequestToServer: RequestToServerProtocol {
         // сконфигурировать запрос
         // добавить в alamofire
         // использовать Session Manager
+    }
+    
+    func requestForForgotten(email: String) {
+        // сконфигурировать запрос для забытого email
     }
 }

@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LogInVC: UIViewController, UITextFieldDelegate {
+class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
+    
+    var model: LoginVCModelProtocol!
 
     static func storyboardInstance() -> LogInVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -22,8 +24,6 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTF: UITextField! {
         didSet {
             emailTF.useUnderline()
-
-            // TODO: В поле электронки показываем электронный адрес последнего сеанса
         }
     }
 
@@ -36,6 +36,9 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emailTF.addTarget(self, action: #selector(LogInVC.textFieldDidChange(textField:)), for: .editingChanged)
+        model = LoginVCModel()
+        model.delegate = self
+        model.viewIsLoad()
     }
 
     // MARK: - Actions -
@@ -107,8 +110,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     }
 
     @objc func textFieldDidChange(textField: UITextField) {
-        // TODO check server for registered users by email
+        guard let email = textField.text, email.contains(".") else { return } // с точкой разумнее проверять ИМХО
+        model.userExistenceCheck(email)
         print("ask server to check email: \(textField.text!)")
 
     }
+}
+
+protocol LogInVCDelegate {
+    weak var emailTF: UITextField! {get set}
 }

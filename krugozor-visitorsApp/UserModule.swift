@@ -14,6 +14,8 @@ protocol UserModuleProtocol {
     func registrationNewUser (newUser: UserDataStruct)
     func restoreUserData () -> UserDataStruct?
     func restoreUserData (fetchBy filter: UserRequestType, withText text: String) -> UserDataStruct?
+    func recoverPassword (by id: String)
+    func checkUserInServer (byUID id: String) -> UserDataStruct?
 }
 
 class UserModule: UserModuleProtocol {
@@ -23,7 +25,7 @@ class UserModule: UserModuleProtocol {
 
     /// Checks the presence of the user in CoreData, if it is not there, goes to the server checks there.
     /// Need response in GCD not main treads
-    func checkUserByUID (_ id: String) -> UserDataStruct {
+    func checkUserByUID (_ id: String) -> UserDataStruct? {
         if let userInfo = restoreUserData(fetchBy: .email, withText: id) {
             return userInfo
         } else {

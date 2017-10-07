@@ -26,7 +26,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="MwH-SE-WGH"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="QR" id="hd4-HD-Jpm"/>
+                    <tabBarItem key="tabBarItem" title="QR" id="4Yu-zM-K30"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="qrCodeImage" destination="cT4-QJ-cYi" id="XeM-vm-FF8"/>
                     </connections>

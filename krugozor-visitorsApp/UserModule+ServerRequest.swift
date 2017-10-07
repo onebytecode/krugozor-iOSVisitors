@@ -10,14 +10,20 @@ import Foundation
 
 extension UserModule {
 
-    func checkUserInServer (byUID id: String) -> UserDataStruct {
+    func checkUserInServer (byUID id: String) -> UserDataStruct? {
         network = RequestToServer.shared()
-        return (network?.checkUserOnServer(byUID: id))!
+        return (network?.checkUserOnServer(byUID: id))
     }
     
     func sendUserInfoToServer (newUserInfo: UserDataStruct) {
         network = RequestToServer.shared()
         network?.registredNewUser(userData: newUserInfo)
+    }
+    
+    func recoverPassword (by email: String) {
+        guard email.isEmpty else { return }
+        network = RequestToServer.shared()
+        network?.requestForForgotten(email: email)
     }
 }
 
