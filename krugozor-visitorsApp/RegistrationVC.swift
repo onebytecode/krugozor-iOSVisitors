@@ -18,6 +18,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Properties -
     var isKBShown: Bool = false
     var kbFrameSize: CGFloat = 0
+    var popDatePicker : PopDatePicker?
     var userModule: UserModuleProtocol!
     
     // MARK: - Outlets -
@@ -37,6 +38,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         
         phoneTF?.addPoleForButtonsToKeyboard(myAction: #selector(phoneTF.resignFirstResponder), buttonNeeds: true)
         ageTF?.addPoleForButtonsToKeyboard(myAction: #selector(ageTF.resignFirstResponder), buttonNeeds: true)
+        popDatePicker = PopDatePicker(forTextField: ageTF)
         // imgUser gesture
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         avatarImg?.isUserInteractionEnabled = true
@@ -150,6 +152,34 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - TextFieldDelegate -
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return true
+    }
+    
+    func resign() {
+        nameTF.resignFirstResponder()
+        lastNameTF.resignFirstResponder()
+        phoneTF.resignFirstResponder()
+        ageTF.resignFirstResponder()
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if (textField === ageTF) {
+            resign()
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+            let initDate : Date? = formatter.date(from: ageTF.text!)
+            
+            let dataChangedCallback : PopDatePicker.PopDatePickerCallback = { (newDate : Date, forTextField : UITextField) -> () in
+                
+                forTextField.text = (newDate.toString() ?? "?") as String
+            }
+            
+            popDatePicker!.pick(self, initDate: initDate, dataChanged: dataChangedCallback)
+            return false
+        }
+        else {
+            return true
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
