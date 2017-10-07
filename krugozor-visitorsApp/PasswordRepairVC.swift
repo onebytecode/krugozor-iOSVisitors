@@ -32,6 +32,7 @@ class PasswordRepairVC: UIViewController {
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
         print("resetPswd")
+        //FIXME: Отправка на сервер
     }
 
     @IBAction func backBtn(_ sender: UIButton) {

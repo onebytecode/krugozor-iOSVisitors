@@ -37,7 +37,6 @@ class krugozor_visitorsAppUITests: XCTestCase {
         element.swipeLeft()
         let element2 = XCUIApplication().otherElements.containing(.pageIndicator, identifier:"page 2 of 3").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
         element2.swipeLeft()
-        
         let app = XCUIApplication().otherElements.containing(.pageIndicator, identifier:"page 3 of 3").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element
         
         let oliverTextField = app.textFields["oliver@"]

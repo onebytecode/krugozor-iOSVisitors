@@ -22,7 +22,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTF: UITextField! {
         didSet {
             emailTF.useUnderline()
-
+            // FIXME: Здесь получить последнего пользователя
             // TODO: В поле электронки показываем электронный адрес последнего сеанса
         }
     }
@@ -108,6 +108,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
 
     @objc func textFieldDidChange(textField: UITextField) {
         // TODO check server for registered users by email
+        // FIXME: Запрос на сервере
         print("ask server to check email: \(textField.text!)")
 
     }
