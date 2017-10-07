@@ -32,6 +32,7 @@
 		8013BF3B1F861E350018D9A6 /* DataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912B1F7D5A730011EC9D /* DataTask.swift */; };
 		8013BF3C1F861E370018D9A6 /* TaskPull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D6912D1F7D5BAA0011EC9D /* TaskPull.swift */; };
 		8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013BF3D1F8621AB0018D9A6 /* QRModel.swift */; };
+		806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1CFA1F8944E50000C074 /* LoginVCModel.swift */; };
 		808460661F876D8900CA3FEA /* BookingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460651F876D8900CA3FEA /* BookingVC.storyboard */; };
 		808460681F876DAA00CA3FEA /* ReferalVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460671F876DAA00CA3FEA /* ReferalVC.storyboard */; };
 		80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */; };
@@ -93,6 +94,7 @@
 		8059EBDC1F7BE9C800159EFA /* UserModule+ServerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserModule+ServerRequest.swift"; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
 		8059EBE01F7BEA1100159EFA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		806C1CFA1F8944E50000C074 /* LoginVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCModel.swift; sourceTree = "<group>"; };
 		808460651F876D8900CA3FEA /* BookingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookingVC.storyboard; sourceTree = "<group>"; };
 		808460671F876DAA00CA3FEA /* ReferalVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReferalVC.storyboard; sourceTree = "<group>"; };
 		80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 				52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */,
 				52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */,
 				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
+				806C1CFA1F8944E50000C074 /* LoginVCModel.swift */,
 				52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */,
 				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
 				5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */,
@@ -638,6 +641,7 @@
 				8013BF3C1F861E370018D9A6 /* TaskPull.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				8013BF341F861DA70018D9A6 /* UserModule+CoreData.swift in Sources */,
+				806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
 				8013BF3B1F861E350018D9A6 /* DataTask.swift in Sources */,

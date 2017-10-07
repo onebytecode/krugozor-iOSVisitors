@@ -9,6 +9,8 @@
 import UIKit
 
 class PasswordRepairVC: UIViewController {
+    
+    var userModule: UserModuleProtocol!
 
     static func storyboardInstance() -> PasswordRepairVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -26,13 +28,13 @@ class PasswordRepairVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userModule = UserModule()
     }
 
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
-        print("resetPswd")
-        //FIXME: Отправка на сервер
+        guard let id = emailTF.text else { return }
+        userModule.recoverPassword(by: id)
     }
 
     @IBAction func backBtn(_ sender: UIButton) {

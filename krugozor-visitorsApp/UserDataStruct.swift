@@ -13,6 +13,7 @@ struct UserDataStruct {
     var surname: String?
     var email: String?
     var gender: Bool?
+    /// Is this user last used the session
     var session: Bool?
     var age: Int?
 
