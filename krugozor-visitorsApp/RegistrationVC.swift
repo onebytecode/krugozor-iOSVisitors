@@ -20,7 +20,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
     var userModule: UserModuleProtocol!
-    var model = RegistrationVCModel()
+    var model = RegistrationModel()
     
     // MARK: - Outlets -
     @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
@@ -92,6 +92,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         avatarImg.contentMode = .scaleAspectFill
         avatarImg.layer.cornerRadius = avatarImg.frame.height / 2
         avatarImg.clipsToBounds = true
+        model.userDataStruct.photoImageOrigin = UIImageJPEGRepresentation(avatarImg.image!, 1.0)
         dismiss(animated: true, completion: nil)
     }
     
@@ -116,8 +117,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         if fieldsCheck() {
             userModule = UserModule()
             //FIXME: - Отправлять настоящую юзер дату, заполни там все поля втч session
-            userModule.registrationNewUser(newUser: UserDataStruct()) // заменить UserDataStruct() на сконфигурированный тип
+            userModule.registrationNewUser(newUser: model.userDataStruct) // заменить UserDataStruct() на сконфигурированный тип
             segueToAppMainMenu ()
+        } else {
+            errorAlert(title: "Ошибка!", message: "Поля не могут быть пустыми!", actionTitle: "ОК")
         }
     }
     
@@ -131,7 +134,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     //FIXME: - Дописать метод с проверками
     /// Checking user input fields - Доработать
     func fieldsCheck () -> Bool {
-        return true
+        return model.checkAllFields()
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -173,9 +176,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             let dataChangedCallback : PopDatePicker.PopDatePickerCallback = { (newDate : Date, forTextField : UITextField) -> () in
                 
                 forTextField.text = (newDate.toString() ?? "?") as String
+                self.model.userDataStruct.birthDate = forTextField.text 
             }
             
             popDatePicker!.pick(self, initDate: initDate, dataChanged: dataChangedCallback)
+            
             return false
         }
         else {
@@ -202,7 +207,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == phoneTF {
-            let result = model.checkPhoneNumber(textField.text!, in: range, replacement: string)
+            let result = String().checkPhoneNumber(textField.text!, in: range, replacement: string)
             textField.text = result.1
             return result.0
         }
@@ -213,6 +218,14 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == phoneTF && textField.text == "" {
             textField.text = "+7 "
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        if textField == nameTF {
+            model.userDataStruct.name = nameTF.text!
+        } else if textField == phoneTF {
+            model.userDataStruct.phoneNumber = phoneTF.text!
         }
     }
     
