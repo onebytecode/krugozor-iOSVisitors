@@ -110,7 +110,7 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
     }
 
     @objc func textFieldDidChange(textField: UITextField) {
-        guard let email = textField.text, email.contains(".") else { return } // с точкой разумнее проверять ИМХО
+        guard let email = textField.text, email.isValidEmail() else { return } // с точкой разумнее проверять ИМХО
         model.userExistenceCheck(email)
         print("ask server to check email: \(textField.text!)")
 

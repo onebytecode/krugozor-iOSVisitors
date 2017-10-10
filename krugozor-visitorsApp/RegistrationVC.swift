@@ -20,6 +20,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
     var userModule: UserModuleProtocol!
+    var model = RegistrationVCModel()
     
     // MARK: - Outlets -
     @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
@@ -35,7 +36,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         phoneTF?.addPoleForButtonsToKeyboard(myAction: #selector(phoneTF.resignFirstResponder), buttonNeeds: true)
         ageTF?.addPoleForButtonsToKeyboard(myAction: #selector(ageTF.resignFirstResponder), buttonNeeds: true)
         popDatePicker = PopDatePicker(forTextField: ageTF)
@@ -202,10 +202,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if textField == phoneTF {
-            return checkPhoneNumber(textField, shouldChangeCharactersIn: range, replacementString: string)
-        } else if textField == ageTF {
-            return checkAge(textField, shouldChangeCharactersIn: range, replacementString: string)
+            let result = model.checkPhoneNumber(textField.text!, in: range, replacement: string)
+            textField.text = result.1
+            return result.0
         }
+        
         return true
     }
     
@@ -223,124 +224,5 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         let okAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
         alertView.addAction(okAction)
         present(alertView, animated: true, completion: nil)
-    }
-    
-    func checkPhoneNumber(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let validationSet = NSCharacterSet.decimalDigits.inverted
-        let components = string.components(separatedBy: validationSet)
-        
-        guard components.count == 1 else { return false }
-        
-        guard var newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
-        
-        let validComponents = newString.components(separatedBy: validationSet)
-        newString = validComponents.joined(separator: "")
-        
-        let areaMaxLength = 4
-        let numberMaxLength = 7
-        
-        if newString.count > (areaMaxLength + numberMaxLength + 7) {
-            return false
-        }
-        
-        var resultString = ""
-        let areaLength = min(newString.count, areaMaxLength)
-        
-        if areaLength > 0 {
-            let start = newString.index(newString.startIndex, offsetBy: 1)
-            let end = newString.index(newString.startIndex, offsetBy: areaLength)
-            resultString = "\(newString[start..<end])"
-            
-        }
-        
-        if newString.count > areaLength {
-            let numberLength = min((newString.count - areaMaxLength), numberMaxLength)
-            
-            let start = newString.index(newString.startIndex, offsetBy: areaLength)
-            let end = newString.index(newString.startIndex, offsetBy: areaLength + numberLength)
-            let number = "\(newString[start..<end])"
-            
-            resultString = "\(resultString)\(number)"
-        }
-        
-        resultString.insert(contentsOf: "+7", at: String.Index.init(encodedOffset: 0))
-        
-        if newString.count > 1 {
-            resultString.insert(contentsOf: " (", at: String.Index.init(encodedOffset: 2))
-            if newString.count > 4 {
-                resultString.insert(contentsOf: ") ", at: String.Index.init(encodedOffset: 7))
-                if newString.count > 7 {
-                    resultString.insert("-", at: String.Index.init(encodedOffset: 12))
-                    if newString.count > 9 {
-                        resultString.insert("-", at: String.Index.init(encodedOffset: 15))
-                    }
-                }
-            }
-        }
-
-        textField.text = resultString
-        
-        return false
-    }
-    
-    func checkAge(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let validationSet = NSCharacterSet.decimalDigits.inverted
-        let components = string.components(separatedBy: validationSet)
-        
-        guard components.count == 1 else { return false }
-        
-        guard var newString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) else { return false }
-        
-        let validComponents = newString.components(separatedBy: validationSet)
-        newString = validComponents.joined(separator: "")
-        
-        let dateMaxLength = 2
-        let monthMaxLength = 2
-        let yearMaxLength = 4
-        
-        if newString.count > (dateMaxLength + monthMaxLength + yearMaxLength) {
-            return false
-        }
-        
-        var resultString = ""
-        let dateLength = min(newString.count, dateMaxLength)
-        
-        if dateLength > 0 {
-            let start = newString.index(newString.startIndex, offsetBy: 0)
-            let end = newString.index(newString.startIndex, offsetBy: dateLength)
-            resultString = "\(newString[start..<end])"
-            
-        }
-        
-        if newString.count > dateLength {
-            let monthLength = min((newString.count - dateMaxLength), monthMaxLength)
-            
-            let start = newString.index(newString.startIndex, offsetBy: dateLength)
-            let end = newString.index(newString.startIndex, offsetBy: dateLength + monthLength)
-            let number = "\(newString[start..<end])"
-            
-            resultString = "\(resultString)\(number)"
-        }
-        
-        if newString.count > dateLength + monthMaxLength {
-            let number = "\(newString[newString.index(newString.startIndex, offsetBy: (dateLength + monthMaxLength))..<newString.index(newString.startIndex, offsetBy: newString.count)])"
-            resultString = "\(resultString)\(number)"
-            
-        }
-        
-        if resultString.count > 2 {
-            resultString.insert(".", at: String.Index.init(encodedOffset: 2))
-            
-            if resultString.count > 4 {
-                resultString.insert(".", at: String.Index.init(encodedOffset: 5))
-            }
-        }
-        
-        textField.text = resultString
-        
-        return false
-        
     }
 }
