@@ -17,6 +17,7 @@
 		5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */; };
 		5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */; };
 		52A026B11F893C320080235C /* PopDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A026B01F893C320080235C /* PopDateVC.xib */; };
+		52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */; };
 		52DB78EC1F7D47AC00DE44B5 /* OnboardPageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */; };
 		52DB78ED1F7D47B000DE44B5 /* OnboardTemplateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */; };
 		52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */; };
@@ -87,6 +88,7 @@
 		52A026AA1F8571E40080235C /* PopDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopDateViewController.swift; sourceTree = "<group>"; };
 		52A026AE1F8572D20080235C /* PopDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopDateViewController.xib; sourceTree = "<group>"; };
 		52A026B01F893C320080235C /* PopDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopDateVC.xib; sourceTree = "<group>"; };
+		52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInVC.storyboard; sourceTree = "<group>"; };
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
 				806C1CFA1F8944E50000C074 /* LoginVCModel.swift */,
 				52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */,
+				52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */,
 				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
 				5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */,
 				5209C11B1F7D68FF0011B8D8 /* PasswordRepairVC.swift */,
@@ -646,7 +649,6 @@
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				8013BF351F861DA90018D9A6 /* UserModule+ServerRequest.swift in Sources */,
 				5227D8A91F893E4300F0AA84 /* PopDateVC.swift in Sources */,
-				D264972F1F79448D004C19A9 /* ViewController.swift in Sources */,
 				8013BF371F861DEF0018D9A6 /* UserData.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
@@ -669,6 +671,7 @@
 				8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
 				5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */,
+				52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */,
 				5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */,
 				8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */,
 				8013BF361F861DAD0018D9A6 /* RequestToServer.swift in Sources */,

@@ -16,6 +16,9 @@ struct UserDataStruct {
     /// Is this user last used the session
     var session: Bool?
     var age: Int?
+    
+    var phoneNumber: String?
+    var birthDate: String?
 
     /// URL of smallest avatar image
     var photoURLBanner: String?
