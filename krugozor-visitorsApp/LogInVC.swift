@@ -65,6 +65,10 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
         passwordTF.resignFirstResponder()
 
         if let registrationVC = RegistrationVC.storyboardInstance() {
+            registrationVC.model = RegistrationModel()
+            registrationVC.model.userDataStruct.email = emailTF.text
+            // FIXME: добавить еще пароль для переноса в структуре на экран регистрации
+            // registrationVC.model.userDataStruct.password = passwordTF.text
             self.present(registrationVC, animated: true, completion: nil)
 
         }
@@ -110,10 +114,8 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
     }
 
     @objc func textFieldDidChange(textField: UITextField) {
-        guard let email = textField.text, email.isValidEmail() else { return } // с точкой разумнее проверять ИМХО
+        guard let email = textField.text, email.isValidEmail() else { return } 
         model.userExistenceCheck(email)
-        print("ask server to check email: \(textField.text!)")
-
     }
 }
 
