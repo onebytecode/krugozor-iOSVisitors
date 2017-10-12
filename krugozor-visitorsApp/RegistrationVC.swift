@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     
     static func storyboardInstance() -> RegistrationVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -16,7 +16,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     // MARK: - Properties -
-    var isKBShown: Bool = false
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
     var userModule: UserModuleProtocol!
@@ -44,6 +43,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         avatarImg?.isUserInteractionEnabled = true
         avatarImg?.addGestureRecognizer(tapGestureRecognizer)
         
+        let tapGestureHideKeyboard = UITapGestureRecognizer(target: self, action: #selector(handleScreenTapHideKeyboard(sender:)))
+        self.view.addGestureRecognizer(tapGestureHideKeyboard)
+        
+        self.scrollView.delegate = self
         registerForKeyboardNotifications()
     }
     
@@ -56,35 +59,32 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func registerForKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(kbWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(kbWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
     func removeKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
-    @objc func kbWillShow(_ notification: Notification) {
-        let userInfo = notification.userInfo
-        let kbFrame = (userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        kbFrameSize = kbFrame.height
-        UIView.animate(withDuration:0.3) {
-            if !self.isKBShown {
-                let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: self.kbFrameSize, right: 0)
-                self.scrollView.contentInset = contentInsets
-            }
-        }
-        self.isKBShown = true
+    @objc func handleScreenTapHideKeyboard(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
-    @objc func kbWillHide() {
-        UIView.animate(withDuration:0.3) {
-            if self.isKBShown {
-                self.scrollView.contentInset = .zero
-            }
-        }
-        self.isKBShown = false
+    @objc func keyboardWillChange(_ notification: NSNotification) {
+        let duration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        let curve = notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! UInt
+        let curFrame = (notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        let targetFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let deltaY =  curFrame.origin.y - targetFrame.origin.y
+        
+        UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIViewKeyframeAnimationOptions(rawValue: curve), animations: {
+            
+            let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: deltaY, right: 0)
+            self.scrollView.contentInset = contentInsets
+            
+            
+        }, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -240,4 +240,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         alertView.addAction(okAction)
         present(alertView, animated: true, completion: nil)
     }
+    
+    
 }
