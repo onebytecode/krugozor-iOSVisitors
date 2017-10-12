@@ -18,7 +18,7 @@ class RegistrationModel: RegistrationProtocol {
     
     func checkAllFields() -> Bool {
         // FIXME: Проверять поля пользователя для продолжения либо регистрации, либо входа
-        guard userDataStruct.name != nil && userDataStruct.phoneNumber != nil && userDataStruct.birthDate != nil && userDataStruct.photoImageOrigin != nil else { print("some fields are empty"); return false }
+        guard userDataStruct.name != nil && userDataStruct.phoneNumber != nil && userDataStruct.birthDate != nil else { print("some fields are empty"); return false }
         print("all fields are full")
         return true
     }

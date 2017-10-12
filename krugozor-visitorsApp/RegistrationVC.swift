@@ -20,7 +20,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
     var userModule: UserModuleProtocol!
-    var model = RegistrationModel()
+    var model: RegistrationModel!
     
     // MARK: - Outlets -
     @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
@@ -131,7 +131,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         }
     }
     
-    //FIXME: - Дописать метод с проверками
+    //Дописал метод с проверками
     /// Checking user input fields - Доработать
     func fieldsCheck () -> Bool {
         return model.checkAllFields()
@@ -226,6 +226,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             model.userDataStruct.name = nameTF.text!
         } else if textField == phoneTF {
             model.userDataStruct.phoneNumber = phoneTF.text!
+        } else if textField == lastNameTF {
+            model.userDataStruct.surname = lastNameTF.text!
         }
     }
     

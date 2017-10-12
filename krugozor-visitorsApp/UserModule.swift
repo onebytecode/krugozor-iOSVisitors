@@ -35,7 +35,7 @@ class UserModule: UserModuleProtocol {
     
     /// Sends request to memory and server
     func registrationNewUser (newUser: UserDataStruct) {
-        saveUserData (newUserInfo: newUser)
+        //saveUserData (newUserInfo: newUser)
         sendUserInfoToServer (newUserInfo: newUser)
     }
 }
