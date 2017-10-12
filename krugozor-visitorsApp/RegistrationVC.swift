@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
+class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate, Alertable {
     
     static func storyboardInstance() -> RegistrationVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -120,7 +120,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             userModule.registrationNewUser(newUser: model.userDataStruct) // заменить UserDataStruct() на сконфигурированный тип
             segueToAppMainMenu ()
         } else {
-            errorAlert(title: "Ошибка!", message: "Поля не могут быть пустыми!", actionTitle: "ОК")
+            
+            showAlert(title: "Ошибка!", message: "Поля не могут быть пустыми!", actionTitle: "ОК")
         }
     }
     
@@ -230,16 +231,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             model.userDataStruct.surname = lastNameTF.text!
         }
     }
-    
-    // MARK: - Private methods -
-    func errorAlert(title: String, message: String, actionTitle: String) {
-        let alertView = UIAlertController(title: title,
-                                          message: message,
-                                          preferredStyle:. alert)
-        let okAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
-        alertView.addAction(okAction)
-        present(alertView, animated: true, completion: nil)
-    }
-    
+
     
 }
