@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
+class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate, Alertable {
     
     var model: LoginVCModelProtocol!
 
@@ -46,17 +46,17 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
 
         // проверка email и пароля на пустые поля
         guard (emailTF.text != "" && passwordTF.text != "") else {
-            errorAlert(title: "Warning!", message: "Email's or password's field is empty", actionTitle: "Ok")
+            showAlert(title: "Warning!", message: "Email's or password's field is empty", actionTitle: "Ok")
             return
         }
 
         guard (emailTF.text?.isValidEmail())! else {
-            errorAlert(title: "Warning!", message: "Email is incorrect", actionTitle: "Ok")
+            showAlert(title: "Warning!", message: "Email is incorrect", actionTitle: "Ok")
             return
         }
 
         guard let digits = passwordTF.text?.count, digits >= 6 else {
-            errorAlert(title: "Warning!", message: "Minimum password length shoud be 6 characters", actionTitle: "Ok")
+            showAlert(title: "Warning!", message: "Minimum password length shoud be 6 characters", actionTitle: "Ok")
             return
         }
 
@@ -104,14 +104,6 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate {
     }
 
     // MARK: - Private methods -
-    func errorAlert(title: String, message: String, actionTitle: String) {
-        let alertView = UIAlertController(title: title,
-                                          message: message,
-                                          preferredStyle:. alert)
-        let okAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
-        alertView.addAction(okAction)
-        present(alertView, animated: true, completion: nil)
-    }
 
     @objc func textFieldDidChange(textField: UITextField) {
         guard let email = textField.text, email.isValidEmail() else { return } 
