@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1851692D1F8FF76800264B4B /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1851692C1F8FF76800264B4B /* Alertable.swift */; };
 		3CF1C3012D43FC4E875B40C5 /* Pods_krugozor_visitorsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04536747ED48264BA062E0E5 /* Pods_krugozor_visitorsApp.framework */; };
 		5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */; };
 		5209C11A1F7D5F440011B8D8 /* RegistrationVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		04536747ED48264BA062E0E5 /* Pods_krugozor_visitorsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_krugozor_visitorsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1851692C1F8FF76800264B4B /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		3180E7C198A9672C96E6185D /* Pods-krugozor-visitorsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krugozor-visitorsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationVC.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,8 @@
 				52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */,
 				5209C1171F7D535C0011B8D8 /* UITextField+Extension.swift */,
 				5209C11F1F7D75F70011B8D8 /* String+Extension.swift */,
+				5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */,
+				1851692C1F8FF76800264B4B /* Alertable.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -396,7 +400,6 @@
 				5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */,
 				5209C11B1F7D68FF0011B8D8 /* PasswordRepairVC.swift */,
 				5209C11D1F7D690C0011B8D8 /* PasswordRepairVC.storyboard */,
-				5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */,
 				5227D8A81F893E4300F0AA84 /* PopDateVC.swift */,
 				5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */,
 				52A026B01F893C320080235C /* PopDateVC.xib */,
@@ -670,6 +673,7 @@
 				8013BF3A1F861E320018D9A6 /* Response.swift in Sources */,
 				8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */,
 				D26497351F79448D004C19A9 /* krugozor_visitorsApp.xcdatamodeld in Sources */,
+				1851692D1F8FF76800264B4B /* Alertable.swift in Sources */,
 				5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */,
 				52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */,
 				5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */,
@@ -837,7 +841,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTYV272Z4;
+				DEVELOPMENT_TEAM = 358V8FBM3U;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -856,7 +860,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3PTYV272Z4;
+				DEVELOPMENT_TEAM = 358V8FBM3U;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
