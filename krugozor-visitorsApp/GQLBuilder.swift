@@ -1,5 +1,5 @@
 //
-//  VisitorLogInData.swift
+//  GQLBuilder.swift
 //  krugozor-visitorsApp
 //
 //  Created by Alexander Danilin on 21/10/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VisitorLogInData {
-    
+/// Builds And Manages GQL Parameters For APIManager
+class GQLBuilder {
     
 }

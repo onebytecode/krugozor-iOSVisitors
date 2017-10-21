@@ -21,5 +21,4 @@ class Visitor: Object {
     @objc dynamic var email = ""
     @objc dynamic var phoneNumber = ""
     @objc dynamic var sessionToken = ""
-
 }

@@ -1,5 +1,5 @@
 //
-//  VisitorLogInData.swift
+//  LogInService.swift
 //  krugozor-visitorsApp
 //
 //  Created by Alexander Danilin on 21/10/2017.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct VisitorLogInData {
-    
+class LogInManager {
     
 }

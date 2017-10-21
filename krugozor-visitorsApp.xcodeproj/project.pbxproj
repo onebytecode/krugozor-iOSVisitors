@@ -49,6 +49,27 @@
 		D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
+		D23A36B21F9B84300025FEFE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B11F9B84300025FEFE /* APIManager.swift */; };
+		D23A36B31F9B84300025FEFE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B11F9B84300025FEFE /* APIManager.swift */; };
+		D23A36B41F9B84300025FEFE /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B11F9B84300025FEFE /* APIManager.swift */; };
+		D23A36B61F9B84BF0025FEFE /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */; };
+		D23A36B71F9B84BF0025FEFE /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */; };
+		D23A36B81F9B84BF0025FEFE /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */; };
+		D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B91F9B85540025FEFE /* GQLBuilder.swift */; };
+		D23A36BB1F9B85540025FEFE /* GQLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B91F9B85540025FEFE /* GQLBuilder.swift */; };
+		D23A36BC1F9B85540025FEFE /* GQLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36B91F9B85540025FEFE /* GQLBuilder.swift */; };
+		D23A36BE1F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
+		D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
+		D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
+		D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
+		D23A36C31F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
+		D23A36C41F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
+		D23A36C61F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
+		D23A36C71F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
+		D23A36C81F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
+		D23A36CA1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
+		D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
+		D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D26497371F79448D004C19A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26497361F79448D004C19A9 /* Assets.xcassets */; };
 		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
@@ -109,6 +130,13 @@
 		D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorLogInData.swift; sourceTree = "<group>"; };
 		D23A36A91F9B81E00025FEFE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D23A36AD1F9B81FE0025FEFE /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
+		D23A36B11F9B84300025FEFE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		D23A36B91F9B85540025FEFE /* GQLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLBuilder.swift; sourceTree = "<group>"; };
+		D23A36BD1F9B85CA0025FEFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
+		D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
+		D23A36C91F9B8B260025FEFE /* VisitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorManager.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26497361F79448D004C19A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -274,6 +302,7 @@
 		D23A36A31F9B81370025FEFE /* VisitorManager */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36C91F9B8B260025FEFE /* VisitorManager.swift */,
 			);
 			name = VisitorManager;
 			sourceTree = "<group>";
@@ -403,6 +432,8 @@
 		D2B23D691F9B756E0078B0AF /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36B11F9B84300025FEFE /* APIManager.swift */,
+				D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -410,6 +441,7 @@
 		D2B23D6B1F9B75850078B0AF /* GQL */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36B91F9B85540025FEFE /* GQLBuilder.swift */,
 			);
 			name = GQL;
 			sourceTree = "<group>";
@@ -417,6 +449,7 @@
 		D2B23D6C1F9B758F0078B0AF /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36BD1F9B85CA0025FEFE /* DataManager.swift */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -450,6 +483,7 @@
 		D2B23D711F9B75FD0078B0AF /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */,
 				8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */,
 			);
 			name = Registration;
@@ -458,6 +492,7 @@
 		D2B23D721F9B76120078B0AF /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */,
 				D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */,
 			);
 			name = LogIn;
@@ -698,10 +733,13 @@
 			files = (
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				5227D8A91F893E4300F0AA84 /* PopDateVC.swift in Sources */,
+				D23A36C61F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				D23A36A61F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
+				D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
+				D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */,
@@ -712,12 +750,16 @@
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */,
 				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
+				D23A36B21F9B84300025FEFE /* APIManager.swift in Sources */,
 				8013BF381F861DFE0018D9A6 /* VisitorRegistationData.swift in Sources */,
 				D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */,
 				1851692D1F8FF76800264B4B /* Alertable.swift in Sources */,
+				D23A36B61F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */,
 				52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */,
+				D23A36CA1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */,
+				D23A36BE1F9B85CA0025FEFE /* DataManager.swift in Sources */,
 				8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,9 +769,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */,
+				D23A36C31F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
+				D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
+				D23A36C71F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
+				D23A36B71F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
 				D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D23A36B31F9B84300025FEFE /* APIManager.swift in Sources */,
+				D23A36BB1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
+				D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */,
 				D23A36A71F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,9 +788,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */,
+				D23A36C41F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
+				D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
+				D23A36C81F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
+				D23A36B81F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
 				D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D23A36B41F9B84300025FEFE /* APIManager.swift in Sources */,
+				D23A36BC1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
+				D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */,
 				D23A36A81F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

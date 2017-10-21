@@ -1,5 +1,5 @@
 //
-//  VisitorLogInData.swift
+//  DataManager.swift
 //  krugozor-visitorsApp
 //
 //  Created by Alexander Danilin on 21/10/2017.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VisitorLogInData {
-    
+/// Manages All Data In App; Guarantees Data Relevance
+class DataManager {
     
 }
