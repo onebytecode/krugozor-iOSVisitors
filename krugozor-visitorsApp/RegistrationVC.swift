@@ -115,9 +115,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     /// Send User Data to Server
     private func sendUserData () {
         if fieldsCheck() {
-            userModule = UserModule()
-            //FIXME: - Отправлять настоящую юзер дату, заполни там все поля втч session
-            userModule.registrationNewUser(newUser: model.userDataStruct) // заменить UserDataStruct() на сконфигурированный тип
+            //userModule = UserModule()
+            //userModule.registrationNewUser(newUser: model.userDataStruct)
             segueToAppMainMenu ()
         } else {
             

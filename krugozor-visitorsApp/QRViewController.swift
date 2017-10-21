@@ -24,7 +24,7 @@ class QRViewController: UIViewController {
     /// Establishing links between abstract class
     private func buildingDependencies () {
         model = QRModel()
-        model.userModule = UserModule()
+        //model.userModule = UserModule()
     }
 
     /// Create and encrypt QR code
