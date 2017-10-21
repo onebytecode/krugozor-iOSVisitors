@@ -220,10 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				80BF9F591F85323100A48BDC /* TabBarMain */,
-				80BF9F611F85356400A48BDC /* Account */,
 				80BF9F601F85355500A48BDC /* QR */,
 				80BF9F5F1F85354F00A48BDC /* Booking */,
 				80BF9F5E1F85354600A48BDC /* Referal */,
+				80BF9F611F85356400A48BDC /* Account */,
 			);
 			name = Main;
 			sourceTree = "<group>";

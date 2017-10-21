@@ -10,10 +10,12 @@ import Foundation
 
 protocol VisitorManaging {
     
+    
 }
 
 
 class VisitorManager {
+    
     
     
 }
