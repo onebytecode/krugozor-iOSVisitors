@@ -15,8 +15,7 @@ struct UserDataStruct {
     var gender: Bool?
     
     /// Is this user last used the session
-    var session: Boo
-    l?
+    var session: Bool?
     var age: Int?
     
     var phoneNumber: String?

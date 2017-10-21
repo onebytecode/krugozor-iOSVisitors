@@ -18,11 +18,11 @@ class QRModel: QRModelProtocol {
 //    var userModule: UserModuleProtocol!
     
     func getUID () -> String {
-        guard let uid = userModule.restoreUserData()?.email else {
-            print("Error - no User Data in Memory")
-            return ""
-        }
-        return encodeUID(uid: uid)
+//        guard let uid = userModule.restoreUserData()?.email else {
+//            print("Error - no User Data in Memory")
+//            return ""
+//        }
+        return ""//encodeUID(uid: uid)
     }
     
     fileprivate func encodeUID (uid: String) -> String {

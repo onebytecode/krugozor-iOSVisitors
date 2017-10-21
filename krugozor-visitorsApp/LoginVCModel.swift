@@ -27,19 +27,19 @@ class LoginVCModel: LoginVCModelProtocol {
     }
     
     func viewIsLoad () {
-        userModule = UserModule()
+        //userModule = UserModule()
         showEmail ()
     }
     
     /// Show user email
     func showEmail () {
-        guard let lastUser = userModule.restoreUserData()?.email else { return }
-        delegate.emailTF.text = lastUser
+        //guard let lastUser = userModule.restoreUserData()?.email else { return }
+        //delegate.emailTF.text = lastUser
     }
     
     /// Check email on server
     func userExistenceCheck (_ email: String) {
-        guard let info = userModule.checkUserInServer(byUID: email) else { return }
-        userFullInfo = info
+        //guard let info = userModule.checkUserInServer(byUID: email) else { return }
+        //userFullInfo = info
     }
 }

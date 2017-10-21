@@ -28,13 +28,15 @@ class PasswordRepairVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userModule = UserModule()
+        // FIXME: add some logic to use new API methods
+        //userModule = UserModule()
     }
 
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
         guard let id = emailTF.text else { return }
-        userModule.recoverPassword(by: id)
+        // FIXME: lets mind about where we can store this method
+        //userModule.recoverPassword(by: id)
     }
 
     @IBAction func backBtn(_ sender: UIButton) {
