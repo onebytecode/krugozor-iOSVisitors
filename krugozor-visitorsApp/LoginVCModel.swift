@@ -16,7 +16,8 @@ protocol LoginVCModelProtocol {
 
 class LoginVCModel: LoginVCModelProtocol {
     
-    var userModule: UserModuleProtocol!
+//    var userModule: UserModuleProtocol!
+   
     var delegate: LogInVCDelegate!
     
     var userFullInfo: UserDataStruct? {

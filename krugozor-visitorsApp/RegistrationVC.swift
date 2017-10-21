@@ -18,7 +18,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Properties -
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
-    var userModule: UserModuleProtocol!
+//    var userModule: UserModuleProtocol!
     var model: RegistrationModel!
     
     // MARK: - Outlets -

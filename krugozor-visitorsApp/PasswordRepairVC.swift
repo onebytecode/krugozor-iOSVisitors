@@ -10,7 +10,7 @@ import UIKit
 
 class PasswordRepairVC: UIViewController {
     
-    var userModule: UserModuleProtocol!
+    //var userModule: UserModuleProtocol!
 
     static func storyboardInstance() -> PasswordRepairVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)

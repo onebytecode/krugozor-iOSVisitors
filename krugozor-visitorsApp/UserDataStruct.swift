@@ -13,6 +13,7 @@ struct UserDataStruct {
     var surname: String?
     var email: String?
     var gender: Bool?
+    
     /// Is this user last used the session
     var session: Bool?
     var age: Int?
@@ -32,19 +33,19 @@ struct UserDataStruct {
     // Returns of state of object
     var isEmpty: Bool
 
-    init (userData: UserData) {
-        self.name = userData.name
-        self.surname = userData.surname
-        self.age = Int(userData.age)
-        self.email = userData.email
-        self.gender = userData.gender
-        self.session = userData.session
-        self.photoImageBanner = userData.photoImageBanner
-        self.photoImageOrigin = userData.photoImageOrigin
-        self.photoURLBanner = userData.photoURLBanner
-        self.photoURLOrigin = userData.photoURLOrigin
-        self.isEmpty = false
-    }
+//    init (userData: UserData) {
+//        self.name = userData.name
+//        self.surname = userData.surname
+//        self.age = Int(userData.age)
+//        self.email = userData.email
+//        self.gender = userData.gender
+//        self.session = userData.session
+//        self.photoImageBanner = userData.photoImageBanner
+//        self.photoImageOrigin = userData.photoImageOrigin
+//        self.photoURLBanner = userData.photoURLBanner
+//        self.photoURLOrigin = userData.photoURLOrigin
+//        self.isEmpty = false
+//    }
 
     /// Init empty object of type UserDataStruct with mark "empty"
     init () {

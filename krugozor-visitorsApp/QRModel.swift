@@ -9,13 +9,13 @@
 import Foundation
 
 protocol QRModelProtocol {
-    var userModule: UserModuleProtocol! {get set}
+//    var userModule: UserModuleProtocol! {get set}
     func getUID () -> String
 }
 
 class QRModel: QRModelProtocol {
     
-    var userModule: UserModuleProtocol!
+//    var userModule: UserModuleProtocol!
     
     func getUID () -> String {
         guard let uid = userModule.restoreUserData()?.email else {
