@@ -27,7 +27,7 @@
 		52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7A1F7D43460001BA17 /* OnboardPageVC.swift */; };
 		52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */; };
 		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
-		8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */; };
+		8013BF381F861DFE0018D9A6 /* VisitorRegistationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */; };
 		8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013BF3D1F8621AB0018D9A6 /* QRModel.swift */; };
 		806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1CFA1F8944E50000C074 /* LoginVCModel.swift */; };
 		808460661F876D8900CA3FEA /* BookingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460651F876D8900CA3FEA /* BookingVC.storyboard */; };
@@ -37,6 +37,18 @@
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
 		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
 		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
+		D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
+		D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
+		D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
+		D23A36A61F9B81D10025FEFE /* VisitorLogInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */; };
+		D23A36A71F9B81D10025FEFE /* VisitorLogInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */; };
+		D23A36A81F9B81D10025FEFE /* VisitorLogInData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */; };
+		D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
+		D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
+		D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
+		D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
+		D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
+		D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264972C1F79448D004C19A9 /* AppDelegate.swift */; };
 		D26497371F79448D004C19A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D26497361F79448D004C19A9 /* Assets.xcassets */; };
 		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
@@ -84,7 +96,7 @@
 		52F53F7D1F7D43580001BA17 /* OnboardTemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardTemplateVC.swift; sourceTree = "<group>"; };
 		52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8013BF3D1F8621AB0018D9A6 /* QRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModel.swift; sourceTree = "<group>"; };
-		8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataStruct.swift; sourceTree = "<group>"; };
+		8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorRegistationData.swift; sourceTree = "<group>"; };
 		806C1CFA1F8944E50000C074 /* LoginVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCModel.swift; sourceTree = "<group>"; };
 		808460651F876D8900CA3FEA /* BookingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookingVC.storyboard; sourceTree = "<group>"; };
 		808460671F876DAA00CA3FEA /* ReferalVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReferalVC.storyboard; sourceTree = "<group>"; };
@@ -93,6 +105,10 @@
 		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
 		80BF9F6A1F85367F00A48BDC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D23A369F1F9B80070025FEFE /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
+		D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorLogInData.swift; sourceTree = "<group>"; };
+		D23A36A91F9B81E00025FEFE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		D23A36AD1F9B81FE0025FEFE /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26497361F79448D004C19A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +262,22 @@
 			name = PasswordRepair;
 			sourceTree = "<group>";
 		};
+		D23A369E1F9B7FF00025FEFE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D23A369F1F9B80070025FEFE /* Visitor.swift */,
+				D23A36AD1F9B81FE0025FEFE /* Visit.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D23A36A31F9B81370025FEFE /* VisitorManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VisitorManager;
+			sourceTree = "<group>";
+		};
 		D26497201F79448D004C19A9 = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +303,6 @@
 		D264972B1F79448D004C19A9 /* krugozor-visitorsApp */ = {
 			isa = PBXGroup;
 			children = (
-				8059EBDD1F7BE9E300159EFA /* UserDataStruct.swift */,
 				D294FC911F7BCC6700828782 /* Screen Modules */,
 				D2B23D681F9B54950078B0AF /* Services */,
 				D294FC9C1F7BCDE900828782 /* Layers */,
@@ -363,6 +394,7 @@
 		D2B23D681F9B54950078B0AF /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36A31F9B81370025FEFE /* VisitorManager */,
 				D2B23D6E1F9B75A40078B0AF /* Authorizationing */,
 			);
 			name = Services;
@@ -392,6 +424,7 @@
 		D2B23D6D1F9B75980078B0AF /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				D23A369E1F9B7FF00025FEFE /* Models */,
 			);
 			name = Realm;
 			sourceTree = "<group>";
@@ -409,6 +442,7 @@
 		D2B23D701F9B75DF0078B0AF /* Session */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36A91F9B81E00025FEFE /* SessionManager.swift */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -416,6 +450,7 @@
 		D2B23D711F9B75FD0078B0AF /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */,
 			);
 			name = Registration;
 			sourceTree = "<group>";
@@ -423,6 +458,7 @@
 		D2B23D721F9B76120078B0AF /* LogIn */ = {
 			isa = PBXGroup;
 			children = (
+				D23A36A51F9B81D00025FEFE /* VisitorLogInData.swift */,
 			);
 			name = LogIn;
 			sourceTree = "<group>";
@@ -591,11 +627,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-krugozor-visitorsApp/Pods-krugozor-visitorsApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCode/QRCode.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCode.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -658,18 +698,22 @@
 			files = (
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				5227D8A91F893E4300F0AA84 /* PopDateVC.swift in Sources */,
+				D23A36A61F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */,
+				D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */,
+				D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,
 				80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */,
 				52F53F7E1F7D43580001BA17 /* OnboardTemplateVC.swift in Sources */,
-				8013BF381F861DFE0018D9A6 /* UserDataStruct.swift in Sources */,
+				8013BF381F861DFE0018D9A6 /* VisitorRegistationData.swift in Sources */,
+				D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */,
 				1851692D1F8FF76800264B4B /* Alertable.swift in Sources */,
 				5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */,
 				52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */,
@@ -682,7 +726,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */,
 				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
+				D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */,
+				D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D23A36A71F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,7 +738,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */,
 				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
+				D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */,
+				D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D23A36A81F9B81D10025FEFE /* VisitorLogInData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
