@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol DataManaging {
+    
+}
+
 /// Manages All Data In App; Guarantees Data Relevance
 class DataManager {
     

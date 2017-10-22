@@ -34,7 +34,7 @@ class PasswordRepairVC: UIViewController {
 
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
-        guard let id = emailTF.text else { return }
+        //guard let id = emailTF.text else { return }
         // FIXME: lets mind about where we can store this method
         //userModule.recoverPassword(by: id)
     }

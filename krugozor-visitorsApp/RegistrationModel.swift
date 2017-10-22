@@ -14,11 +14,11 @@ protocol RegistrationProtocol {
 
 class RegistrationModel: RegistrationProtocol {
     
-    var userDataStruct = UserDataStruct()
+    var visitorRegData = VisitorRegistrationData!
     
     func checkAllFields() -> Bool {
         // FIXME: Проверять поля пользователя для продолжения либо регистрации, либо входа
-        guard userDataStruct.name != nil && userDataStruct.phoneNumber != nil && userDataStruct.birthDate != nil else { print("some fields are empty"); return false }
+        guard visitorRegData.lname != nil && visitorRegData.phoneNumber != nil && visitorRegData.birthDate != nil else { print("some fields are empty"); return false }
         print("all fields are full")
         return true
     }

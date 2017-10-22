@@ -20,11 +20,11 @@ class LoginVCModel: LoginVCModelProtocol {
    
     var delegate: LogInVCDelegate!
     
-    var userFullInfo: UserDataStruct? {
-        didSet {
-            //FIXME: Дописать. Вызывает в случае если пользователь найден на сервере и получены все данные
-        }
-    }
+//    var userFullInfo: UserDataStruct? {
+//        didSet {
+//            //FIXME: Дописать. Вызывает в случае если пользователь найден на сервере и получены все данные
+//        }
+//    }
     
     func viewIsLoad () {
         //userModule = UserModule()

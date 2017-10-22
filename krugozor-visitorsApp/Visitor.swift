@@ -14,7 +14,6 @@ class Visitor: Object {
     @objc dynamic var id = 0
     @objc dynamic var fname = ""
     @objc dynamic var lname = ""
-    @objc dynamic var name = ""
     @objc dynamic var patronymic = ""
     @objc dynamic var gender = ""
     @objc dynamic var birthdate = ""

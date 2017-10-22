@@ -8,6 +8,11 @@
 
 import Foundation
 
+protocol registrationManaging {
+    
+}
+
 class registrationManager {
+    
     
 }
