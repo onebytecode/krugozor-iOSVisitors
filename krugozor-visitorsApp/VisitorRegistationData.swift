@@ -28,8 +28,6 @@ struct VisitorRegistrationData {
 //    /// Image of largest avatar
 //    var photoImageOrigin: Data?
 
-
-
     init (fname: String!, lname: String?, patronymic: String?, email: String!, gender: String?, birthDate: String?, phoneNumber: String! ) {
         
         self.fname = fname
