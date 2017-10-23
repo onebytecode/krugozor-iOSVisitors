@@ -8,9 +8,9 @@
 
 import UIKit
 
-class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate, Alertable {
+class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
     
-    var model: LoginVCModelProtocol!
+    var model: VisitorManager!
 
     static func storyboardInstance() -> LogInVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -36,9 +36,8 @@ class LogInVC: UIViewController, UITextFieldDelegate, LogInVCDelegate, Alertable
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emailTF.addTarget(self, action: #selector(LogInVC.textFieldDidChange(textField:)), for: .editingChanged)
-        model = LoginVCModel()
-        model.delegate = self
-        model.viewIsLoad()
+        model = VisitorManager()
+        emailTF.text = model.
     }
 
     // MARK: - Actions -

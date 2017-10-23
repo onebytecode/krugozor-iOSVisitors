@@ -28,9 +28,9 @@ class VisitorManager  {
     var apiManager:  APIManaging!
     var dataManager: DataManaging!
     
-//    func getLastVisitorEmail() -> String? {
-//
-//    }
+    func getLastVisitorEmail() -> String? {
+        return nil
+    }
 //
 //    func isRegisteredVisitor(_ email: String) -> [Any]? {
 //
