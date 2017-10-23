@@ -18,7 +18,6 @@
 		5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */; };
 		5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */; };
 		52A026B11F893C320080235C /* PopDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A026B01F893C320080235C /* PopDateVC.xib */; };
-		52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */; };
 		52DB78EC1F7D47AC00DE44B5 /* OnboardPageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */; };
 		52DB78ED1F7D47B000DE44B5 /* OnboardTemplateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */; };
 		52DB78EF1F7D4A0300DE44B5 /* LogInVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */; };
@@ -29,7 +28,6 @@
 		52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */; };
 		8013BF381F861DFE0018D9A6 /* VisitorRegistationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */; };
 		8013BF3E1F8621AB0018D9A6 /* QRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013BF3D1F8621AB0018D9A6 /* QRModel.swift */; };
-		806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806C1CFA1F8944E50000C074 /* LoginVCModel.swift */; };
 		808460661F876D8900CA3FEA /* BookingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460651F876D8900CA3FEA /* BookingVC.storyboard */; };
 		808460681F876DAA00CA3FEA /* ReferalVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808460671F876DAA00CA3FEA /* ReferalVC.storyboard */; };
 		80BF9F5C1F8534C200A48BDC /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */; };
@@ -107,7 +105,6 @@
 		5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopDatePicker.swift; sourceTree = "<group>"; };
 		5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		52A026B01F893C320080235C /* PopDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopDateVC.xib; sourceTree = "<group>"; };
-		52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
 		52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInVC.storyboard; sourceTree = "<group>"; };
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
@@ -118,7 +115,6 @@
 		52F53F7F1F7D436D0001BA17 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		8013BF3D1F8621AB0018D9A6 /* QRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRModel.swift; sourceTree = "<group>"; };
 		8059EBDD1F7BE9E300159EFA /* VisitorRegistationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorRegistationData.swift; sourceTree = "<group>"; };
-		806C1CFA1F8944E50000C074 /* LoginVCModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCModel.swift; sourceTree = "<group>"; };
 		808460651F876D8900CA3FEA /* BookingVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BookingVC.storyboard; sourceTree = "<group>"; };
 		808460671F876DAA00CA3FEA /* ReferalVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ReferalVC.storyboard; sourceTree = "<group>"; };
 		80BF9F5B1F8534C200A48BDC /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
@@ -275,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				52F3A4251F7ACE1300154DFF /* LogInVC.swift */,
-				806C1CFA1F8944E50000C074 /* LoginVCModel.swift */,
 				52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */,
 			);
 			name = LogIn;
@@ -383,7 +378,6 @@
 		D294FC921F7BCC8500828782 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				52A3F9D71F8D423200AA9968 /* RegistrationModel.swift */,
 				52F3A4271F7ACE5700154DFF /* RegistrationVC.swift */,
 				5209C1191F7D5F440011B8D8 /* RegistrationVC.storyboard */,
 				5227D8A81F893E4300F0AA84 /* PopDateVC.swift */,
@@ -523,6 +517,7 @@
 				D264975D1F7944C4004C19A9 /* Build Version Up */,
 				BAC14330656D0B5B702CF4F3 /* [CP] Embed Pods Frameworks */,
 				F276973B28D4548DFF77F817 /* [CP] Copy Pods Resources */,
+				52FE81AA1F9E610500978465 /* Custom Warning Error Script */,
 			);
 			buildRules = (
 			);
@@ -653,6 +648,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		52FE81AA1F9E610500978465 /* Custom Warning Error Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Custom Warning Error Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"";
+		};
 		BAC14330656D0B5B702CF4F3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -742,7 +751,6 @@
 				D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
-				806C1CFB1F8944E50000C074 /* LoginVCModel.swift in Sources */,
 				D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */,
 				D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
@@ -756,7 +764,6 @@
 				1851692D1F8FF76800264B4B /* Alertable.swift in Sources */,
 				D23A36B61F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */,
-				52A3F9D81F8D423200AA9968 /* RegistrationModel.swift in Sources */,
 				D23A36CA1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */,
 				D23A36BE1F9B85CA0025FEFE /* DataManager.swift in Sources */,
@@ -943,7 +950,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 358V8FBM3U;
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -962,7 +969,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 358V8FBM3U;
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = "krugozor-visitorsApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

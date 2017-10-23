@@ -18,18 +18,13 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Properties -
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
-//    var userModule: UserModuleProtocol!
-    var model: RegistrationModel!
+    var model: VisitorRegistrationData!
     
     // MARK: - Outlets -
     @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
-    
     @IBOutlet weak var lastNameTF: UITextField! { didSet { lastNameTF.useUnderline() } }
-    
     @IBOutlet weak var phoneTF: UITextField! { didSet { phoneTF.useUnderline() } }
-    
     @IBOutlet weak var ageTF: UITextField! { didSet { ageTF.useUnderline() } }
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var avatarImg: UIImageView!
     
@@ -59,7 +54,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     func registerForKeyboardNotifications() {
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
     }
     
@@ -83,7 +77,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: deltaY, right: 0)
             self.scrollView.contentInset = contentInsets
             
-            
         }, completion: nil)
     }
     
@@ -92,7 +85,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         avatarImg.contentMode = .scaleAspectFill
         avatarImg.layer.cornerRadius = avatarImg.frame.height / 2
         avatarImg.clipsToBounds = true
-        model.userDataStruct.photoImageOrigin = UIImageJPEGRepresentation(avatarImg.image!, 1.0)
+        model.photoImageOrigin = UIImageJPEGRepresentation(avatarImg.image!, 1.0)
         dismiss(animated: true, completion: nil)
     }
     
@@ -115,12 +108,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     /// Send User Data to Server
     private func sendUserData () {
         if fieldsCheck() {
-            //userModule = UserModule()
-            //userModule.registrationNewUser(newUser: model.userDataStruct)
-            segueToAppMainMenu ()
+            let visitorManager = VisitorManager()
+            let result = visitorManager.registerNewVisitor(model.fname, lname: model.lname ?? "", phone: model.phoneNumber, dateOfBirth: model.phoneNumber)
+            if result { segueToAppMainMenu () }
         } else {
-            
-            showAlert(title: "Ошибка!", message: "Поля не могут быть пустыми!", actionTitle: "ОК")
+            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
         }
     }
     
@@ -132,9 +124,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     
     //Дописал метод с проверками
-    /// Checking user input fields - Доработать
+    /// Checking user input fields
     func fieldsCheck () -> Bool {
-        return model.checkAllFields()
+        let registrationManager = RegistrationManager()
+        registrationManager.visitorModel = model
+        return registrationManager.checkAllFields()
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
@@ -173,10 +167,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             formatter.timeStyle = .none
             let initDate : Date? = formatter.date(from: ageTF.text!)
             
-            let dataChangedCallback : PopDatePicker.PopDatePickerCallback = { (newDate : Date, forTextField : UITextField) -> () in
+            let dataChangedCallback : PopDatePicker.PopDatePickerCallback = { [weak self] (newDate : Date, forTextField : UITextField) -> () in
                 
                 forTextField.text = (newDate.toString() ?? "?") as String
-                self.model.userDataStruct.birthDate = forTextField.text 
+                self?.model.birthDate = forTextField.text
             }
             
             popDatePicker!.pick(self, initDate: initDate, dataChanged: dataChangedCallback)
@@ -223,11 +217,11 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         if textField == nameTF {
-            model.userDataStruct.name = nameTF.text!
+            model.fname = nameTF.text!
         } else if textField == phoneTF {
-            model.userDataStruct.phoneNumber = phoneTF.text!
+            model.phoneNumber = phoneTF.text!
         } else if textField == lastNameTF {
-            model.userDataStruct.surname = lastNameTF.text!
+            model.lname = lastNameTF.text!
         }
     }
 
