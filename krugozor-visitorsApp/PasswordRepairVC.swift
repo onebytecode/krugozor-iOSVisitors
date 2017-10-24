@@ -8,9 +8,9 @@
 
 import UIKit
 
-class PasswordRepairVC: UIViewController {
+class PasswordRepairVC: UIViewController, Alertable {
     
-    var userModule: VisitorManaging!
+    var model = VisitorManager()
 
     static func storyboardInstance() -> PasswordRepairVC? {
         let storyboard = UIStoryboard(name: String(describing: self), bundle: nil)
@@ -18,25 +18,30 @@ class PasswordRepairVC: UIViewController {
     }
 
     // MARK: - Properties -
+    var email: String?
+
+    // MARK: - Outlets -
     @IBOutlet weak var emailTF: UITextField! {
         didSet {
+            emailTF.text = email ?? ""
             emailTF.useUnderline()
         }
     }
-
-    // MARK: - Outlets -
-
+    @IBOutlet weak var backBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // FIXME: add some logic to use new API methods
-        //userModule = UserModule()
+        
     }
 
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
-        //guard let id = emailTF.text else { return }
-        // FIXME: lets mind about where we can store this method
-        //userModule.recoverPassword(by: id)
+        guard emailTF.text != "" else { showAlert(title: AlertTitle.emptyField.rawValue, message: "Введите e-mail для сброса пароля. Поле с e-mail не может быть пустым!", actionTitle: AlertActionTitle.ok.rawValue); return }
+        emailTF.resignFirstResponder()
+        let reset = model.resetVistorEmail(emailTF.text!)
+        showAlertWithHandler(title: AlertTitle.resetPassword.rawValue, message: "Ваш пароль будет сброшен. Новый пароль будет выслан на указанную Вами почту", actionTitle: AlertActionTitle.ok.rawValue) { [weak self] in
+            if reset { self?.backBtn.sendActions(for: .touchUpInside) }
+        }
     }
 
     @IBAction func backBtn(_ sender: UIButton) {

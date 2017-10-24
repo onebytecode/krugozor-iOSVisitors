@@ -17,6 +17,8 @@ struct VisitorRegistrationData {
     var gender: String?
     var birthDate: String?
     var phoneNumber: String!
+    var password: String!
+    var photoImageOrigin: Data?
 
 // FIXME: Implement Visitor Avatar Handling
 //    /// URL of smallest avatar image
@@ -37,5 +39,10 @@ struct VisitorRegistrationData {
         self.gender = gender
         self.birthDate = birthDate
         self.phoneNumber = phoneNumber
+    }
+    
+    init(email: String, password: String) {
+        self.email = email
+        self.password = password
     }
 }

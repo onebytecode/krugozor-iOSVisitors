@@ -8,11 +8,20 @@
 
 import Foundation
 
-protocol registrationManaging {
+protocol RegistrationManaging {
+    
+    // check if all fileds for correct registration are filled up
+    func checkAllFields() -> Bool
     
 }
 
-class registrationManager {
+class RegistrationManager {
     
+    var visitorModel: VisitorRegistrationData!
     
+    func checkAllFields() -> Bool {
+        guard visitorModel.fname != nil && visitorModel.phoneNumber != nil && visitorModel.birthDate != nil else { print("RegistrationManager -> some fields are empty"); return false }
+        print("RegistrationManager -> all fields are full")
+        return true
+    }
 }
