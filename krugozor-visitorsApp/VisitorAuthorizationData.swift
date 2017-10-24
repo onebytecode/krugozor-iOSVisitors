@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VisitorRegistrationData {
+struct VisitorData {
     
     var fname: String!
     var lname: String?
@@ -18,19 +18,9 @@ struct VisitorRegistrationData {
     var birthDate: String?
     var phoneNumber: String!
     var password: String!
-    var photoImageOrigin: Data?
+    var avatar: Data?
 
-// FIXME: Implement Visitor Avatar Handling
-//    /// URL of smallest avatar image
-//    var photoURLBanner: String?
-//    /// Image of smallest avatar
-//    var photoImageBanner: Data?
-//    /// URL of largest avatar image
-//    var photoURLOrigin: String?
-//    /// Image of largest avatar
-//    var photoImageOrigin: Data?
-
-    init (fname: String!, lname: String?, patronymic: String?, email: String!, gender: String?, birthDate: String?, phoneNumber: String! ) {
+    init(fname: String!, lname: String?, patronymic: String?, email: String!, gender: String?, birthDate: String?, phoneNumber: String!, avatar: Data?) {
         
         self.fname = fname
         self.lname = lname
@@ -42,6 +32,7 @@ struct VisitorRegistrationData {
     }
     
     init(email: String, password: String) {
+        
         self.email = email
         self.password = password
     }

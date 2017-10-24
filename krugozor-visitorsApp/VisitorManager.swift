@@ -19,7 +19,7 @@ protocol VisitorManaging {
     // 5. reset current email
     func resetVistorEmail(_ email: String) -> Bool
     // convert emalTF.text & passwordTF.text to VisitorRegistrationDataModel for transfering it to another VC
-    func parseDataToModel(_ email: String, _ password: String) -> VisitorRegistrationData
+    func parseDataToModel(_ email: String, _ password: String) -> VisitorAuthorizationData
 }
 
 
@@ -42,7 +42,7 @@ class VisitorManager  {
     func visitorLogIn(_ email: String, password: String) {
         // TODO: send visitors email & password to get token response
         // save sessionToken in the DB or UserDefaults, I think it needn't to return it's value...
-        let sessionToken = ""
+        _ = ""
     }
     
     func registerNewVisitor(_ fname: String, lname: String?, phone: String, dateOfBirth: String) -> Bool {
@@ -55,8 +55,8 @@ class VisitorManager  {
         return true
     }
     
-    func parseDataToModel(_ email: String, _ password: String) -> VisitorRegistrationData {
-        let model = VisitorRegistrationData(email: email, password: password)
+    func parseDataToModel(_ email: String, _ password: String) -> VisitorAuthorizationData {
+        let model = VisitorAuthorizationData(email: email, password: password)
         return model
     }
     

@@ -18,7 +18,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     // MARK: - Properties -
     var kbFrameSize: CGFloat = 0
     var popDatePicker : PopDatePicker?
-    var model: VisitorRegistrationData!
+    var model: VisitorAuthorizationData!
     
     // MARK: - Outlets -
     @IBOutlet weak var nameTF: UITextField! { didSet { nameTF.useUnderline() } }
