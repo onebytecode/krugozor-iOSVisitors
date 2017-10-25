@@ -10,7 +10,7 @@ import Foundation
 
 protocol VisitorManaging {
     
-    func currentVisitorEmail() -> String?
+    func currentVisitorEmail() -> String?   // WARNING: Using After Authorization Only!
     func isRegisteredVisitor(_ email: String, _ password: String) -> Bool
     // 3. send visitor's email & password -> get sessionToken response
     func visitorLogIn(_ email: String, password: String)
@@ -25,17 +25,30 @@ protocol VisitorManaging {
 
 class VisitorManager  {
     
-    var apiManager:  APIManaging!
-    var dataManager: DataManaging!
+    let apiManager = APIManager()
+    let dataManager = DataManager()
     
-    func currentVisitorEmail() -> String? {
-        
-        return nil
+    
+    
+    
+    
+    public func currentVisitorEmail() throws  -> String? {
+
+        do {
+            guard let currentVisitor = try dataManager.currentVisitor() else {log.error(DataErrors.noCurrentVisior); throw DataErrors.noCurrentVisior}
+            return currentVisitor.email
+        } catch let error {
+            log.error(error)
+            throw error
+        }
     }
 
-    func isRegisteredVisitor(_ email: String, _ password: String) -> Bool {
-        // if is TRUE, ask to get sessionToken
-        visitorLogIn(email, password: password)
+    
+    
+    
+    func isRegisteredVisitorFor(email: String) -> Bool {
+        
+        
         return false
     }
     

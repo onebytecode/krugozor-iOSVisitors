@@ -37,7 +37,7 @@ class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
         super.viewDidLoad()
         self.emailTF.addTarget(self, action: #selector(LogInVC.textFieldDidChange(textField:)), for: .editingChanged)
         model = VisitorManager()
-        emailTF.text = model.currentVisitorEmail() ?? ""
+        // emailTF.text = model.currentVisitorEmail() ?? ""
     }
 
     // MARK: - Actions -
@@ -64,7 +64,7 @@ class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
         passwordTF.resignFirstResponder()
         
         // check if visitor is registered, open app; if no - open registration VC
-        if model.isRegisteredVisitor(emailTF.text!, passwordTF.text!) {
+        if model.isRegisteredVisitorFor(email: emailTF.text!) {
             if let newVC = TabBarViewController.storyboardInstance() {
                 self.present(newVC, animated: true, completion: nil)
             }

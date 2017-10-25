@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol APIManaging {
     
@@ -15,5 +16,8 @@ protocol APIManaging {
 /// Default Layer Class For Server Interaction
 class APIManager {
     
-    
+    func isRegisteredVisitorFor(email: String) -> Bool {
+        
+        return false
+    }
 }
