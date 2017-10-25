@@ -85,7 +85,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
         avatarImg.contentMode = .scaleAspectFill
         avatarImg.layer.cornerRadius = avatarImg.frame.height / 2
         avatarImg.clipsToBounds = true
-        model.photoImageOrigin = UIImageJPEGRepresentation(avatarImg.image!, 1.0)
+        model.avatar = UIImageJPEGRepresentation(avatarImg.image!, 1.0)
         dismiss(animated: true, completion: nil)
     }
     
@@ -128,7 +128,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func fieldsCheck () -> Bool {
         let registrationManager = RegistrationManager()
         registrationManager.visitorModel = model
-        return registrationManager.checkAllFields()
+        return true
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {

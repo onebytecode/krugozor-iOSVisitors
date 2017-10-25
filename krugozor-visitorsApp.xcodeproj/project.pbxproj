@@ -35,6 +35,12 @@
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
 		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
 		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
+		D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
+		D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
+		D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
+		D20B5CC11FA0781200F0D0E4 /* GQLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */; };
+		D20B5CC21FA0781200F0D0E4 /* GQLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */; };
+		D20B5CC31FA0781200F0D0E4 /* GQLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */; };
 		D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
@@ -119,6 +125,8 @@
 		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
 		80BF9F6A1F85367F00A48BDC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLVisitor.swift; sourceTree = "<group>"; };
+		D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLMethods.swift; sourceTree = "<group>"; };
 		D23A369F1F9B80070025FEFE /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
 		D23A36A91F9B81E00025FEFE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D23A36AD1F9B81FE0025FEFE /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
@@ -261,6 +269,15 @@
 				E9490EF3A7F8A4B6BC1E9FEB /* Pods-krugozor-visitorsApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D20B5CB31FA0748000F0D0E4 /* GQLResources */ = {
+			isa = PBXGroup;
+			children = (
+				D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */,
+				D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */,
+			);
+			name = GQLResources;
 			sourceTree = "<group>";
 		};
 		D23A369C1F9B78860025FEFE /* LogIn */ = {
@@ -432,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				D23A36B91F9B85540025FEFE /* GQLBuilder.swift */,
+				D20B5CB31FA0748000F0D0E4 /* GQLResources */,
 			);
 			name = GQL;
 			sourceTree = "<group>";
@@ -741,8 +759,10 @@
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
+				D20B5CC11FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
 				D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
+				D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */,
@@ -771,12 +791,14 @@
 			files = (
 				D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */,
 				D23A36C31F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
+				D20B5CC21FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				D23A36C71F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				D23A36B71F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
 				D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B31F9B84300025FEFE /* APIManager.swift in Sources */,
 				D23A36BB1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
 				D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */,
@@ -789,12 +811,14 @@
 			files = (
 				D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */,
 				D23A36C41F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
+				D20B5CC31FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				D23A36C81F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				D23A36B81F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
 				D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */,
+				D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B41F9B84300025FEFE /* APIManager.swift in Sources */,
 				D23A36BC1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
 				D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */,

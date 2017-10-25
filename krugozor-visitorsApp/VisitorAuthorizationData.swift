@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct VisitorData {
+struct VisitorAuthorizationData {
     
     var fname: String!
     var lname: String?
