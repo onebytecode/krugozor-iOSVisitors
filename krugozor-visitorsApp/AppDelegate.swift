@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch let error {
             log.error(error)
         }
-        
+
         return true
     }
 
