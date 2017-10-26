@@ -13,13 +13,14 @@ protocol GQLMethod {
     func methodType () -> String
 }
 
-enum Query: String {
+enum Query: String, GQLMethod {
     
     func methodType() -> String {
         return "query{"
     }
     
-    case visitor = "Visitor"
+    case visitor = "getVisitor"
+    case visit = "getVisit"
 }
 
 
@@ -28,7 +29,6 @@ enum Mutation: String, GQLMethod {
     func methodType() -> String {
         return "mutation{"
     }
-    
     
     case registerNewVisitor = "registerNewVisitor"
     case visitorLogIn = "visitorLogIn"

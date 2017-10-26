@@ -14,15 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
-        do {
-            let GQL = try GQLBuilder.buildGQLParamFor(query: nil, mutation: Mutation.registerNewVisitor)
-            print(GQL)
-        } catch GQLErrors.noMethod {
-            print ("NO METHOD ERROR")
-        } catch let error  {
-            print("ERROR => \(error)")
-        }
         
         return true
     }
