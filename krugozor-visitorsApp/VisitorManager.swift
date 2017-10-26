@@ -13,6 +13,7 @@ import Foundation
 //  For Version 1.0.0
 //  TODO: Errors
 //  TODO: Functions Return Escaping
+//  TODO: Logging
 
 public enum VisitorManagerErrors: String, Error {
   case Error
