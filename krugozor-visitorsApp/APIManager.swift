@@ -10,14 +10,12 @@ import Foundation
 import Alamofire
 
 protocol APIManaging {
-    
+    func isVisitorRegisteredBy(email: String) -> Bool
+    func visitorLogInWith(data: VisitorAuthorizationData) -> String
+    func visitorRegistrationWith(data: VisitorAuthorizationData) -> String
 }
 
 /// Default Layer Class For Server Interaction
 class APIManager {
     
-    func isRegisteredVisitorFor(email: String) -> Bool {
-        
-        return false
-    }
 }

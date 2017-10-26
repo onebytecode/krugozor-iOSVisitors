@@ -45,8 +45,6 @@
 		D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
-		D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
-		D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
 		D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
@@ -63,11 +61,7 @@
 		D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
 		D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
 		D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
-		D23A36C31F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
-		D23A36C41F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
 		D23A36C61F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
-		D23A36C71F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
-		D23A36C81F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
 		D23A36CA1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
 		D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
 		D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
@@ -473,36 +467,12 @@
 		D2B23D6E1F9B75A40078B0AF /* Authorizationing */ = {
 			isa = PBXGroup;
 			children = (
-				D2B23D711F9B75FD0078B0AF /* Registration */,
-				D2B23D721F9B76120078B0AF /* LogIn */,
-				D2B23D701F9B75DF0078B0AF /* Session */,
-			);
-			name = Authorizationing;
-			sourceTree = "<group>";
-		};
-		D2B23D701F9B75DF0078B0AF /* Session */ = {
-			isa = PBXGroup;
-			children = (
-				D23A36A91F9B81E00025FEFE /* SessionManager.swift */,
-			);
-			name = Session;
-			sourceTree = "<group>";
-		};
-		D2B23D711F9B75FD0078B0AF /* Registration */ = {
-			isa = PBXGroup;
-			children = (
 				D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */,
+				D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */,
+				D23A36A91F9B81E00025FEFE /* SessionManager.swift */,
 				8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */,
 			);
-			name = Registration;
-			sourceTree = "<group>";
-		};
-		D2B23D721F9B76120078B0AF /* LogIn */ = {
-			isa = PBXGroup;
-			children = (
-				D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */,
-			);
-			name = LogIn;
+			name = Authorizationing;
 			sourceTree = "<group>";
 		};
 		D2B23D731F9B78290078B0AF /* Onboarding */ = {
@@ -792,13 +762,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */,
-				D23A36C31F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				D20B5CC21FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
-				D23A36C71F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				D23A36B71F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */,
-				D23A36AB1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */,
 				D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B31F9B84300025FEFE /* APIManager.swift in Sources */,
@@ -812,13 +779,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */,
-				D23A36C41F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				D20B5CC31FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
-				D23A36C81F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				D23A36B81F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
 				D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */,
-				D23A36AC1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */,
 				D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B41F9B84300025FEFE /* APIManager.swift in Sources */,

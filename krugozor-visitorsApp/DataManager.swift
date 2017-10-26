@@ -15,17 +15,27 @@ public enum DataErrors: String, Error {
 
 protocol DataManaging {
     
-    func currentVisitor () throws -> Visitor 
+    func currentVisitor () throws -> Visitor?
+    func fetchVisitorBy(sessionToken: String) throws -> Visitor
 }
 
 /// Manages All Data In App; Guarantees Data Relevance
-class DataManager {
-    
-    
-    public func currentVisitor () throws -> Visitor? {
-    
+class DataManager: DataManaging {
+   
+    // MARK: DataManaging Protocol
+    func currentVisitor() throws -> Visitor? {
         let realm = try Realm()
         guard let currentVisitor = realm.object(ofType: Visitor.self, forPrimaryKey: 1) else { log.error(DataErrors.noCurrentVisior.rawValue); throw DataErrors.noCurrentVisior }
         return currentVisitor
     }
+    
+    
+    func fetchVisitorBy(sessionToken: String) throws -> Visitor {
+        
+        // JUST A STUB !!!
+        let realm = try Realm()
+        guard let currentVisitor = realm.object(ofType: Visitor.self, forPrimaryKey: 1) else { log.error(DataErrors.noCurrentVisior.rawValue); throw DataErrors.noCurrentVisior }
+        return currentVisitor
+    }
+
 }
