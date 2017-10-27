@@ -7,13 +7,13 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol APIManaging {
-    
+ 
 }
 
 /// Default Layer Class For Server Interaction
 class APIManager {
-    
     
 }
