@@ -8,7 +8,18 @@
 
 import Foundation
 
-class LogInManager {
+protocol LogInManaging {
     
-    
+    func visitorLogInWith(data: VisitorAuthorizationData)  -> String?
 }
+
+class LogInManager: LogInManaging {
+    
+    
+    // MARK: LogInManaging Protocol
+    public func visitorLogInWith(data: VisitorAuthorizationData)  -> String? {
+        return ""
+    }
+}
+
+

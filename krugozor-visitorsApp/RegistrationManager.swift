@@ -10,12 +10,21 @@ import Foundation
 
 protocol RegistrationManaging {
     
-    
+    func isVisitorRegisteredBy(email: String) -> Bool?
+    func visitorRegistrationWith(data: VisitorAuthorizationData) -> String?
 }
 
-class RegistrationManager {
+class RegistrationManager: RegistrationManaging {
+  
     
-    var visitorModel: VisitorAuthorizationData!
-    
+    // MARK: RegistrationManaging Protocol
+    func isVisitorRegisteredBy(email: String) -> Bool? {
+        return false
 
+    }
+    
+    func visitorRegistrationWith(data: VisitorAuthorizationData) -> String? {
+        return ""
+
+    }
 }

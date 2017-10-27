@@ -37,7 +37,7 @@ class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
         super.viewDidLoad()
         self.emailTF.addTarget(self, action: #selector(LogInVC.textFieldDidChange(textField:)), for: .editingChanged)
         model = VisitorManager()
-        emailTF.text = model.currentVisitorEmail() ?? ""
+        // emailTF.text = model.currentVisitorEmail() ?? ""
     }
 
     // MARK: - Actions -
@@ -64,16 +64,16 @@ class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
         passwordTF.resignFirstResponder()
         
         // check if visitor is registered, open app; if no - open registration VC
-        if model.isRegisteredVisitor(emailTF.text!, passwordTF.text!) {
-            if let newVC = TabBarViewController.storyboardInstance() {
-                self.present(newVC, animated: true, completion: nil)
-            }
-        } else {
-            if let registrationVC = RegistrationVC.storyboardInstance() {
-                registrationVC.model = model.parseDataToModel(emailTF.text!, passwordTF.text!)
-                self.present(registrationVC, animated: true, completion: nil)
-            }
-        }
+//        if model.isRegisteredVisitorFor(email: emailTF.text!) {
+//            if let newVC = TabBarViewController.storyboardInstance() {
+//                self.present(newVC, animated: true, completion: nil)
+//            }
+//        } else {
+//            if let registrationVC = RegistrationVC.storyboardInstance() {
+//                registrationVC.model = model.parseDataToModel(emailTF.text!, passwordTF.text!)
+//                self.present(registrationVC, animated: true, completion: nil)
+//            }
+//        }
     }
 
     @IBAction func forgotPswdBtn(_ sender: UIButton) {

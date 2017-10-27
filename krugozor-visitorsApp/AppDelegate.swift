@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        self.SwiftyBeaverSetUp()
+        let vm = VisitorManager()
+        do {
+            try print (vm.currentVisitorEmail())
+        } catch let error {
+            log.error(error)
+        }
+
         return true
     }
 
@@ -38,5 +49,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         
+    }
+    
+    private func SwiftyBeaverSetUp () {
+        // add log destination
+        let console = ConsoleDestination()
+
+        // use custom format and set console output to short time, log level & message
+        console.format = "$DHH:mm:ss.SSS$d $C$L$c $N.$F:$l - $M"
+
+        // add the destinations to SwiftyBeaver
+        log.addDestination(console)
     }
 }

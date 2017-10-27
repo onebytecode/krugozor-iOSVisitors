@@ -36,12 +36,12 @@ class PasswordRepairVC: UIViewController, Alertable {
 
     // MARK: - Actions -
     @IBAction func resetPswdBtn(_ sender: UIButton) {
-        guard emailTF.text != "" else { showAlert(title: AlertTitle.emptyField.rawValue, message: "Введите e-mail для сброса пароля. Поле с e-mail не может быть пустым!", actionTitle: AlertActionTitle.ok.rawValue); return }
-        emailTF.resignFirstResponder()
-        let reset = model.resetVistorEmail(emailTF.text!)
-        showAlertWithHandler(title: AlertTitle.resetPassword.rawValue, message: "Ваш пароль будет сброшен. Новый пароль будет выслан на указанную Вами почту", actionTitle: AlertActionTitle.ok.rawValue) { [weak self] in
-            if reset { self?.backBtn.sendActions(for: .touchUpInside) }
-        }
+//        guard emailTF.text != "" else { showAlert(title: AlertTitle.emptyField.rawValue, message: "Введите e-mail для сброса пароля. Поле с e-mail не может быть пустым!", actionTitle: AlertActionTitle.ok.rawValue); return }
+//        emailTF.resignFirstResponder()
+//        let reset = model.resetVistorEmail(emailTF.text!)
+//        showAlertWithHandler(title: AlertTitle.resetPassword.rawValue, message: "Ваш пароль будет сброшен. Новый пароль будет выслан на указанную Вами почту", actionTitle: AlertActionTitle.ok.rawValue) { [weak self] in
+//            if reset { self?.backBtn.sendActions(for: .touchUpInside) }
+//        }
     }
 
     @IBAction func backBtn(_ sender: UIButton) {

@@ -107,13 +107,13 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     /// Send User Data to Server
     private func sendUserData () {
-        if fieldsCheck() {
-            let visitorManager = VisitorManager()
-            let result = visitorManager.registerNewVisitor(model.fname, lname: model.lname ?? "", phone: model.phoneNumber, dateOfBirth: model.phoneNumber)
-            if result { segueToAppMainMenu () }
-        } else {
-            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
-        }
+//        if fieldsCheck() {
+//            let visitorManager = VisitorManager()
+//            let result = visitorManager.registerNewVisitor(model.fname, lname: model.lname ?? "", phone: model.phoneNumber, dateOfBirth: model.phoneNumber)
+//            if result { segueToAppMainMenu () }
+//        } else {
+//            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
+//        }
     }
     
     /// Segue to TabBarViewController
@@ -126,8 +126,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     //Дописал метод с проверками
     /// Checking user input fields
     func fieldsCheck () -> Bool {
-        let registrationManager = RegistrationManager()
-        registrationManager.visitorModel = model
+//        let registrationManager = RegistrationManager()
+//        registrationManager.visitorModel = model
         return true
     }
     
