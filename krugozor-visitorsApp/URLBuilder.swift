@@ -12,5 +12,7 @@ import Foundation
 /// Builds and Manages URL For API Manager
 class URLBuilder {
     
+    static let host = "http://77.244.213.164:8080"
+    static let gqlHost = host + "/gql"
     
 }

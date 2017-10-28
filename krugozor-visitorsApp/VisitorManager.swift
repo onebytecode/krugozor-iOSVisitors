@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Version 0.0.1
+/// Version 0.0.2
 
 //  For Version 1.0.0
 //  TODO: Errors
@@ -39,7 +39,7 @@ class VisitorManager  {
     public func currentVisitorEmail() throws  -> String? {
 
         do {
-            guard let currentVisitor = try dataManager.currentVisitor() else { log.error(DataErrors.noCurrentVisior); throw DataErrors.noCurrentVisior}
+            guard let currentVisitor = try dataManager.currentVisitor() else { log.error(DataErrors.noCurrentVisior); throw DataErrors.noCurrentVisior }
             return currentVisitor.email
         } catch let error {
             log.error(error)
@@ -47,10 +47,11 @@ class VisitorManager  {
         }
     }
 
-    public func isRegisteredVisitorFor(email: String) throws -> Bool {
-        
-        guard let response = registrationManager.isVisitorRegisteredBy(email: email) else { throw VisitorManagerErrors.Error }
-        return response
+    public func isRegisteredVisitorFor(email: String, completion: @escaping (_ result: Bool) -> Void) {
+
+        apiManager.isVisitorRegisteredBy(email: email) { (result) in
+            completion(result)
+        }
     }
     
     func visitorLogInWith(data: VisitorAuthorizationData) throws  -> Visitor {

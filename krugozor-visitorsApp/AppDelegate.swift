@@ -19,13 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.SwiftyBeaverSetUp()
-        let vm = VisitorManager()
-        do {
-            try print (vm.currentVisitorEmail())
-        } catch let error {
-            log.error(error)
-        }
-
+    
         return true
     }
 

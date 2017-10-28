@@ -21,5 +21,7 @@ target 'krugozor-visitorsApp' do
 	pod "Alamofire"
   pod 'RealmSwift'
 	pod 'SwiftyBeaver'
+	pod 'SwiftyJSON'
+
 
 end

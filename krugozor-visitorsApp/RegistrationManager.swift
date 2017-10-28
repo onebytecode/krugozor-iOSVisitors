@@ -10,16 +10,19 @@ import Foundation
 
 protocol RegistrationManaging {
     
-    func isVisitorRegisteredBy(email: String) -> Bool?
+    func isVisitorRegisteredBy(email: String, completion: @escaping (_ result: Bool) -> Void)
     func visitorRegistrationWith(data: VisitorAuthorizationData) -> String?
 }
 
-class RegistrationManager: RegistrationManaging {
-  
+class RegistrationManager {
+    
+    let apiManager = APIManager()
     
     // MARK: RegistrationManaging Protocol
-    func isVisitorRegisteredBy(email: String) -> Bool? {
-        return false
+    func isVisitorRegisteredBy(email: String, completion: @escaping (_ result: Bool) -> Void) {
+        apiManager.isVisitorRegisteredBy(email: email) { (result) in
+            return result
+        }
     }
     
     func visitorRegistrationWith(data: VisitorAuthorizationData) -> String? {
