@@ -31,6 +31,15 @@ struct VisitorAuthorizationData {
         self.phoneNumber = phoneNumber
     }
     
+    init(fname: String!, lname: String?, email: String!, birthDate: String?, phoneNumber: String!, avatar: Data?) {
+        
+        self.fname = fname
+        self.lname = lname
+        self.email = email
+        self.birthDate = birthDate
+        self.phoneNumber = phoneNumber
+    }
+    
     init(email: String, password: String) {
         
         self.email = email

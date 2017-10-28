@@ -9,6 +9,7 @@
 import UIKit
 
 public enum AlertTitle: String {
+    case oyBedaBeda = "Ой беда-беда!"
     case emptyField = "Пустое поле!"
     case wrongValue = "Неверное значение!"
     case resetPassword = "Сброс пароля"

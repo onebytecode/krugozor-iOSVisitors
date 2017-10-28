@@ -62,7 +62,6 @@ class VisitorManager  {
     }
     
     func registerNewVisitor(data: VisitorAuthorizationData) throws -> Visitor {
-        
         guard let sessionToken = registrationManager.visitorRegistrationWith(data: data) else { throw VisitorManagerErrors.Error }
         do {
             let visitor = try dataManager.fetchVisitorBy(sessionToken: sessionToken); return visitor

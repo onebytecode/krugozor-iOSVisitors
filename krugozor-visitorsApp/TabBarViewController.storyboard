@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,9 +20,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="z6d-ep-CqC" kind="relationship" relationship="viewControllers" id="5S6-68-IU8"/>
-                        <segue destination="bV3-Uk-lFB" kind="relationship" relationship="viewControllers" id="vLC-SD-2hY"/>
-                        <segue destination="bU4-UG-hcz" kind="relationship" relationship="viewControllers" id="LPI-u7-UGe"/>
-                        <segue destination="AOm-cG-7Jr" kind="relationship" relationship="viewControllers" id="qGA-u2-SvO"/>
+                        <segue destination="bU4-UG-hcz" kind="relationship" relationship="viewControllers" id="6hC-h9-loE"/>
+                        <segue destination="AOm-cG-7Jr" kind="relationship" relationship="viewControllers" id="gLP-AI-0b8"/>
+                        <segue destination="bV3-Uk-lFB" kind="relationship" relationship="viewControllers" id="EJQ-4x-xct"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HM2-MV-sla" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -37,17 +37,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0y-GQ-ck1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="-378"/>
+            <point key="canvasLocation" x="129" y="-386"/>
         </scene>
         <!--AccountVC-->
         <scene sceneID="Z10-HA-7lz">
             <objects>
                 <viewControllerPlaceholder storyboardName="AccountVC" id="bV3-Uk-lFB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4BE-uZ-FQP"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="4BE-uZ-FQP"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5b8-53-CcW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="-259"/>
+            <point key="canvasLocation" x="112" y="-55"/>
         </scene>
         <!--BookingVC-->
         <scene sceneID="RCA-FB-b7b">
@@ -57,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lF4-Ld-HFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-140"/>
+            <point key="canvasLocation" x="129" y="-295"/>
         </scene>
         <!--ReferalVC-->
         <scene sceneID="yhd-ws-FuP">
@@ -67,7 +67,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyl-OV-zme" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134" y="-25"/>
+            <point key="canvasLocation" x="113" y="-164"/>
         </scene>
     </scenes>
 </document>

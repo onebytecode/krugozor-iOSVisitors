@@ -17,6 +17,7 @@
 		5227D8A91F893E4300F0AA84 /* PopDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8A81F893E4300F0AA84 /* PopDateVC.swift */; };
 		5227D8AB1F893ED700F0AA84 /* PopDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */; };
 		5227D8AD1F8943F500F0AA84 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */; };
+		5242D1BC1FA3A2FE006D6661 /* AccountTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5242D1BB1FA3A2FE006D6661 /* AccountTVC.swift */; };
 		52A026B11F893C320080235C /* PopDateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52A026B01F893C320080235C /* PopDateVC.xib */; };
 		52DB78EC1F7D47AC00DE44B5 /* OnboardPageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F791F7D43380001BA17 /* OnboardPageVC.storyboard */; };
 		52DB78ED1F7D47B000DE44B5 /* OnboardTemplateVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F53F7C1F7D43500001BA17 /* OnboardTemplateVC.storyboard */; };
@@ -101,6 +102,7 @@
 		5227D8A81F893E4300F0AA84 /* PopDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopDateVC.swift; sourceTree = "<group>"; };
 		5227D8AA1F893ED700F0AA84 /* PopDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopDatePicker.swift; sourceTree = "<group>"; };
 		5227D8AC1F8943F500F0AA84 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		5242D1BB1FA3A2FE006D6661 /* AccountTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTVC.swift; sourceTree = "<group>"; };
 		52A026B01F893C320080235C /* PopDateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopDateVC.xib; sourceTree = "<group>"; };
 		52DB78EE1F7D4A0300DE44B5 /* LogInVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInVC.storyboard; sourceTree = "<group>"; };
 		52F3A4251F7ACE1300154DFF /* LogInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				80BF9F681F85360800A48BDC /* AccountVC.storyboard */,
+				5242D1BB1FA3A2FE006D6661 /* AccountTVC.swift */,
 			);
 			name = Account;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
 				D20B5CC11FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
+				5242D1BC1FA3A2FE006D6661 /* AccountTVC.swift in Sources */,
 				D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
 				D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,

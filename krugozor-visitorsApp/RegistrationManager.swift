@@ -20,7 +20,6 @@ class RegistrationManager: RegistrationManaging {
     // MARK: RegistrationManaging Protocol
     func isVisitorRegisteredBy(email: String) -> Bool? {
         return false
-
     }
     
     func visitorRegistrationWith(data: VisitorAuthorizationData) -> String? {
