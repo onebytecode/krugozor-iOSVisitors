@@ -36,6 +36,7 @@
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
 		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
 		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
+		D20A68AB1FA6303400AF7DD8 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */; };
 		D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
 		D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
 		D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
@@ -45,7 +46,6 @@
 		D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
-		D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36A91F9B81E00025FEFE /* SessionManager.swift */; };
 		D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
@@ -61,8 +61,6 @@
 		D23A36BE1F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
 		D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
 		D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36BD1F9B85CA0025FEFE /* DataManager.swift */; };
-		D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */; };
-		D23A36C61F9B8B070025FEFE /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */; };
 		D23A36CA1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
 		D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
 		D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36C91F9B8B260025FEFE /* VisitorManager.swift */; };
@@ -121,17 +119,15 @@
 		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
 		80BF9F6A1F85367F00A48BDC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLVisitor.swift; sourceTree = "<group>"; };
 		D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLMethods.swift; sourceTree = "<group>"; };
 		D23A369F1F9B80070025FEFE /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
-		D23A36A91F9B81E00025FEFE /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		D23A36AD1F9B81FE0025FEFE /* Visit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visit.swift; sourceTree = "<group>"; };
 		D23A36B11F9B84300025FEFE /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		D23A36B91F9B85540025FEFE /* GQLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLBuilder.swift; sourceTree = "<group>"; };
 		D23A36BD1F9B85CA0025FEFE /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
-		D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
 		D23A36C91F9B8B260025FEFE /* VisitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorManager.swift; sourceTree = "<group>"; };
 		D26497291F79448D004C19A9 /* krugozor-visitorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "krugozor-visitorsApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D264972C1F79448D004C19A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -470,9 +466,7 @@
 		D2B23D6E1F9B75A40078B0AF /* Authorizationing */ = {
 			isa = PBXGroup;
 			children = (
-				D23A36C51F9B8B070025FEFE /* RegistrationManager.swift */,
-				D23A36C11F9B8ABF0025FEFE /* LogInManager.swift */,
-				D23A36A91F9B81E00025FEFE /* SessionManager.swift */,
+				D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */,
 				8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */,
 			);
 			name = Authorizationing;
@@ -732,19 +726,17 @@
 			files = (
 				52F53F7B1F7D43460001BA17 /* OnboardPageVC.swift in Sources */,
 				5227D8A91F893E4300F0AA84 /* PopDateVC.swift in Sources */,
-				D23A36C61F9B8B070025FEFE /* RegistrationManager.swift in Sources */,
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
+				D20A68AB1FA6303400AF7DD8 /* AuthorizationManager.swift in Sources */,
 				D20B5CC11FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				5242D1BC1FA3A2FE006D6661 /* AccountTVC.swift in Sources */,
 				D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
-				D23A36C21F9B8ABF0025FEFE /* LogInManager.swift in Sources */,
 				D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				5209C1201F7D75F70011B8D8 /* String+Extension.swift in Sources */,
 				D264972D1F79448D004C19A9 /* AppDelegate.swift in Sources */,
 				D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */,
-				D23A36AA1F9B81E00025FEFE /* SessionManager.swift in Sources */,
 				52F3A4261F7ACE1300154DFF /* LogInVC.swift in Sources */,
 				5209C1181F7D535C0011B8D8 /* UITextField+Extension.swift in Sources */,
 				52F3A4281F7ACE5700154DFF /* RegistrationVC.swift in Sources */,

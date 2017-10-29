@@ -14,5 +14,4 @@ class URLBuilder {
     
     static let host = "http://77.244.213.164:8080"
     static let gqlHost = host + "/gql"
-    
 }

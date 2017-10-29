@@ -67,7 +67,7 @@ class LogInVC: UIViewController, UITextFieldDelegate, Alertable {
         // check if visitor is registered, open app; if no - open registration VC
 //        guard let register = try? model.isRegisteredVisitorFor(email: emailTF.text!), register == true else {
 //            if let registrationVC = RegistrationVC.storyboardInstance() {
-//                registrationVC.model = model.parseDataToModel(emailTF.text!, passwordTF.text!)
+//                registrationVC.model = model.parseLoginDataToModel(emailTF.text!, passwordTF.text!)
 //                self.present(registrationVC, animated: true, completion: nil)
 //            }
 //            return
