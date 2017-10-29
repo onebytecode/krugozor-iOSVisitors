@@ -30,10 +30,10 @@ protocol VisitorManaging {
 
 class VisitorManager {
     
+    let authManager = AuthorizationManager()
     let apiManager = APIManager()
     let dataManager = DataManager()
-    let registrationManager = RegistrationManager()
-    let logInManager = LogInManager()
+   
     
     public func currentVisitorEmail() throws  -> String? {
         do {
@@ -46,18 +46,11 @@ class VisitorManager {
     }
     
     func visitorLogInWith(data: VisitorAuthorizationData) throws  -> Visitor {
-        
-        guard let sessionToken = logInManager.visitorLogInWith(data: data) else { throw VisitorManagerErrors.Error }
-        do {
-            let visitor = try dataManager.fetchVisitorBy(sessionToken: sessionToken); return visitor
-        } catch let error { throw error }
+   
     }
     
     func registerNewVisitor(data: VisitorAuthorizationData) throws -> Visitor {
-        guard let sessionToken = registrationManager.visitorRegistrationWith(data: data) else { throw VisitorManagerErrors.Error }
-        do {
-            let visitor = try dataManager.fetchVisitorBy(sessionToken: sessionToken); return visitor
-        } catch let error { throw error }
+ 
     }
     
     func parseRegistrationDataToModel() -> VisitorAuthorizationData {
@@ -68,15 +61,8 @@ class VisitorManager {
         let model = VisitorAuthorizationData(email: email, password: password)
         return model
     }
-    
-    /// Checks is Visitor with email registred in the system
-    ///
-    /// - Parameters:
-    ///   - email: email of visitor
-    ///   - completion: Tuple (Bool,Error) wich true -> Visitor is registred; false: visitor doesn't in the system
+
     public func isRegisteredVisitorFor(email: String, completion: @escaping (_ result: Bool, _ error: VisitorManagerErrors) -> Void) {
-        apiManager.isVisitorRegisteredBy(email: email) { (result) in
-            completion(result)
-        }
+      
     }
 }

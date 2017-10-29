@@ -375,8 +375,8 @@
 			isa = PBXGroup;
 			children = (
 				D2B23D731F9B78290078B0AF /* Onboarding */,
-				80BF9F5D1F85351B00A48BDC /* Main */,
 				52F3A4241F7ACDC100154DFF /* Authorization */,
+				80BF9F5D1F85351B00A48BDC /* Main */,
 			);
 			name = "Screen Modules";
 			sourceTree = "<group>";
