@@ -59,10 +59,11 @@ class GQLBuilder {
         finalString += "("
         
         for param in params {
-            finalString += param.key
-            finalString += ":"
-            finalString += ("\u{22}\(param.value!)\u{22}")
-            finalString += "," }
+            if param.value != nil {
+                finalString += param.key
+                finalString += ":"
+                finalString += ("\u{22}\(param.value!)\u{22}")
+                finalString += "," } }
 
         finalString = String(finalString.characters.dropLast())
         finalString += "){"

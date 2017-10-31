@@ -405,8 +405,8 @@
 		D2B23D641F9B50090078B0AF /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D2B23D691F9B756E0078B0AF /* APIManager */,
-				D2B23D6B1F9B75850078B0AF /* GQL */,
+				D23A36B11F9B84300025FEFE /* APIManager.swift */,
+				D2B23D691F9B756E0078B0AF /* Support */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -429,13 +429,13 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		D2B23D691F9B756E0078B0AF /* APIManager */ = {
+		D2B23D691F9B756E0078B0AF /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				D23A36B11F9B84300025FEFE /* APIManager.swift */,
 				D23A36B51F9B84BF0025FEFE /* URLBuilder.swift */,
+				D2B23D6B1F9B75850078B0AF /* GQL */,
 			);
-			name = APIManager;
+			name = Support;
 			sourceTree = "<group>";
 		};
 		D2B23D6B1F9B75850078B0AF /* GQL */ = {

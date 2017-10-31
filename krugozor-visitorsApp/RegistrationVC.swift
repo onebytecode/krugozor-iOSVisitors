@@ -107,13 +107,13 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     /// Send User Data to Server
     private func sendUserData () {
-        if fieldsCheck() {
-            let visitorManager = VisitorManager()
-            guard let _ = try? visitorManager.registerNewVisitor(data: model) else { showAlert(title: AlertTitle.oyBedaBeda.rawValue, message: "Похоже, у нас проблемы с созданием нового пользователя. Наши специалисты уже работают над этим. Постарайтесь зарегестрироваться позднее.", actionTitle: AlertActionTitle.ok.rawValue); return }
-            segueToAppMainMenu ()
-        } else {
-            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
-        }
+//        if fieldsCheck() {
+//            let visitorManager = VisitorManager()
+//            guard let _ = try? visitorManager.registerNewVisitor(data: model) else { showAlert(title: AlertTitle.oyBedaBeda.rawValue, message: "Похоже, у нас проблемы с созданием нового пользователя. Наши специалисты уже работают над этим. Постарайтесь зарегестрироваться позднее.", actionTitle: AlertActionTitle.ok.rawValue); return }
+//            segueToAppMainMenu ()
+//        } else {
+//            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
+//        }
     }
     
     /// Segue to TabBarViewController

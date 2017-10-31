@@ -45,17 +45,17 @@ class VisitorManager {
         }
     }
     
-    func visitorLogInWith(data: VisitorAuthorizationData) throws  -> Visitor {
-   
-    }
-    
-    func registerNewVisitor(data: VisitorAuthorizationData) throws -> Visitor {
- 
-    }
-    
-    func parseRegistrationDataToModel() -> VisitorAuthorizationData {
-        
-    }
+//    func visitorLogInWith(data: VisitorAuthorizationData) throws  -> Visitor {
+//   
+//    }
+//    
+//    func registerNewVisitor(data: VisitorAuthorizationData) throws -> Visitor {
+// 
+//    }
+//    
+//    func parseRegistrationDataToModel() -> VisitorAuthorizationData {
+//        
+//    }
     
     func parseLoginDataToModel(_ email: String, _ password: String) -> VisitorAuthorizationData {
         let model = VisitorAuthorizationData(email: email, password: password)
