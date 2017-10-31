@@ -45,4 +45,20 @@ struct VisitorAuthorizationData {
         self.email = email
         self.password = password
     }
+    
+    func arrayOfSelfParams () -> [(key: String, value: String?)] {
+        
+        var finalArray = [(key: String, value: String?)]()
+        
+        finalArray.append((key: "fname", value: self.fname))
+        finalArray.append((key: "lname", value: self.lname))
+        finalArray.append((key: "patronymic", value: self.patronymic))
+        finalArray.append((key: "email", value: self.email))
+        finalArray.append((key: "gender", value: self.gender))
+        finalArray.append((key: "birthDate", value: self.birthDate))
+        finalArray.append((key: "phoneNumber", value: self.phoneNumber))
+        finalArray.append((key: "password", value: self.password))
+
+        return finalArray
+    }
 }

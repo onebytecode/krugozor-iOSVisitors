@@ -20,6 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.SwiftyBeaverSetUp()
     
+        let api = APIManager()
+        
+        let visitor = VisitorAuthorizationData.init(fname: "Alex", lname: nil, email: "12123@123.123", birthDate: nil, phoneNumber: "123123", avatar: nil)
+        api.visitorRegistrationWith(data: visitor) { (sessionToken, error) in
+            log.debug(sessionToken)
+            log.error(error)
+        }
+        
+        
         return true
     }
 
