@@ -40,7 +40,7 @@ struct VisitorAuthorizationData {
         self.phoneNumber = phoneNumber
     }
     
-    init(email: String, password: String) {
+    init(email: String, password: String?) {
         
         self.email = email
         self.password = password
@@ -61,4 +61,6 @@ struct VisitorAuthorizationData {
 
         return finalArray
     }
+    
+ 
 }

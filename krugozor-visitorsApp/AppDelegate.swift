@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyBeaver
+import RealmSwift
 
 let log = SwiftyBeaver.self
 
@@ -15,19 +16,22 @@ let log = SwiftyBeaver.self
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    static let config = Realm.Configuration(schemaVersion: 0, migrationBlock: { _,_ in  })
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         self.SwiftyBeaverSetUp()
-    
-        let api = APIManager()
-        
-        let visitor = VisitorAuthorizationData.init(fname: "Alex", lname: nil, email: "12123@123.123", birthDate: nil, phoneNumber: "123123", avatar: nil)
-        api.visitorRegistrationWith(data: visitor) { (sessionToken, error) in
-            log.debug(sessionToken)
+      
+        do {
+            try Realm(configuration: AppDelegate.config)
+        } catch let error {
             log.error(error)
         }
-        
+
+        let api = DataManager()
+        api.fetchVisitorBy(sessionToken: "59fa014784c59b002b5219a9") { (visior, error) in
+            log.debug(visior)
+        }
+      
         
         return true
     }

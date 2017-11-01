@@ -12,13 +12,38 @@ import SwiftyJSON
 
 protocol APIManaging {
  
-    func isVisitorRegisteredBy(email: String, completion: @escaping (_ result: Bool) -> Void)
+    func isVisitorRegisteredBy(email: String, completion: @escaping ((_ result: String?, _ error: String?) -> Void))
     func visitorRegistrationWith(data: VisitorAuthorizationData, completion: @escaping ((_ sessionToken: String?, _ error: String?) -> Void))
     func visitorLogInWith(data: VisitorAuthorizationData, completion: @escaping ((_ sessionToken: String?, _ error: String?) -> Void))
 }
 
 /// Default Layer Class For Server Interaction
-class APIManager: APIManaging {
+class APIManager {
+    
+    public func fetchCurrentVisitorBy(sessionToken: String, completion: @escaping ((_ visitorModel: Visitor?, _ error: String?) -> Void)) {
+    
+        var gql = String()
+        let gqlParams = [GQLParam.init(key: "sessionToken", value: sessionToken)]
+        var gqlArgs = [GQLArgument]()
+        for i in Visitor.arrayOfSelfFields() { gqlArgs.append(GQLArgument.init(key: i))}
+    
+        do {
+            gql = try GQLBuilder.build(query: Query.visitor, mutation: nil, params: gqlParams, arguments: gqlArgs)
+        } catch let error {
+            log.error(error)
+        }
+        
+        let parameters: Parameters = ["query" : gql]
+        
+        Alamofire.request(URLBuilder.gqlHost, method: .get, parameters: parameters).responseJSON { response in
+            switch response.result {
+            case .success(let value): let json = JSON(value)
+            guard json["data"]["getVisitor"]["id"].string != nil else { return completion(nil, json["errors"][0]["message"].string)}
+                completion(self.parseVisitorToModelFrom(json: json["data"]["getVisitor"]), nil)
+            case .failure(let error): log.error(error); break
+            }
+        }
+    }
     
     /// Function Checks if Visitor in backend's base
     ///
@@ -81,7 +106,7 @@ class APIManager: APIManaging {
                         completion(sessionID, error)
                     })
                     
-                } else { log.error("Error"); completion(nil, json["errors"]["message"].string) }
+                } else { log.error("Error"); completion(nil, json["errors"][0]["message"].string) }
                 
             case .failure(let error): log.error(error); completion(nil, String(describing: error))
                 
@@ -114,11 +139,24 @@ class APIManager: APIManaging {
             switch response.result {
                 
                 case .success (let value): let json = JSON(value)
-                    guard let sessionToken = json["data"]["visitorLogIn"]["sessionToken"].string else { return completion(nil, json["errors"]["message"].string)}
+                guard let sessionToken = json["data"]["visitorLogIn"]["sessionToken"].string else { log.debug("");return completion(nil, json["errors"][0]["message"].string)}
                     return completion(sessionToken, nil)
                 
                 case .failure(let error): log.error(error); completion(nil, String(describing: error))
             }
         }
+    }
+    
+    private func parseVisitorToModelFrom(json:JSON) -> Visitor {
+        
+        let visitor = Visitor()
+        
+        visitor.email = json["email"].string!
+        visitor.fname = json["fname"].string!
+        visitor.serverID = json["id"].string!
+        visitor.phoneNumber = json["phoneNumber"].string!
+        visitor.sessionToken = json["sessionToken"].string!
+        
+        return visitor
     }
 }

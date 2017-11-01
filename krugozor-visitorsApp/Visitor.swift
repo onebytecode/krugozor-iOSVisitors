@@ -20,8 +20,15 @@ class Visitor: Object {
     @objc dynamic var email = ""
     @objc dynamic var phoneNumber = ""
     @objc dynamic var sessionToken = ""
+    @objc dynamic var serverID = ""
     
     override static func primaryKey() -> String? {
         return "id"
     }
+    
+    static func arrayOfSelfFields () -> [String] {
+        let array = ["id", "fname", "lname", "patronymic", "gender", "birthdate", "email", "phoneNumber", "sessionToken"]
+        return array
+    }
+    
 }

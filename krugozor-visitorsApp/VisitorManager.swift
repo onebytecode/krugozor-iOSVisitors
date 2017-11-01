@@ -16,15 +16,18 @@ import Foundation
 //  TODO: Logging
 
 public enum VisitorManagerErrors: String, Error {
-  case Error
+    case Error = ""
+    case Error2 = "2"
 }
 
 protocol VisitorManaging {
     
     func currentVisitorEmail() -> String?
-    func isRegisteredVisitor(_ email: String, _ password: String) -> Bool
-    func visitorLogInWith(data: VisitorAuthorizationData) -> Visitor
-    func registerNewVisitorBy(data: VisitorAuthorizationData) -> Visitor
+    
+    func isRegisteredVisitor(_ email: String, _ password: String, completion: @escaping ((_ result: Bool?, _ error: VisitorManagerErrors?) -> Void))
+    func visitorLogInWith(data: VisitorAuthorizationData, completion: @escaping ((_ sessionToken: String?, _ error: VisitorManagerErrors?) -> Void))
+    func registerNewVisitorBy(data: VisitorAuthorizationData, completion: @escaping ((_ visitor: Visitor?, _ error: VisitorManagerErrors?) -> Void))
+    
     func parseLoginDataToModel(_ email: String, _ password: String) -> VisitorAuthorizationData
 }
 
@@ -44,15 +47,21 @@ class VisitorManager {
             throw error
         }
     }
-    
-//    func visitorLogInWith(data: VisitorAuthorizationData) throws  -> Visitor {
-//   
-//    }
-//    
+
+    public func visitorLogInWith(data: VisitorAuthorizationData, completion: @escaping ((_ visitor: Visitor?, _ error: String?) -> Void)) {
+        apiManager.visitorLogInWith(data: data) { (sessionToken, error) in
+            guard (sessionToken != nil) else {return completion (nil, error)}
+            log.debug(sessionToken)
+            self.dataManager.fetchVisitorBy(sessionToken: sessionToken!, completion: { (visitor, error) in
+                guard (visitor != nil) else {log.error(error as Any); return completion (nil, error)}
+            })
+        }
+    }
+
 //    func registerNewVisitor(data: VisitorAuthorizationData) throws -> Visitor {
 // 
 //    }
-//    
+
 //    func parseRegistrationDataToModel() -> VisitorAuthorizationData {
 //        
 //    }
