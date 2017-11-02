@@ -36,11 +36,18 @@ class APIManager {
         let parameters: Parameters = ["query" : gql]
         
         Alamofire.request(URLBuilder.gqlHost, method: .get, parameters: parameters).responseJSON { response in
+            
             switch response.result {
-            case .success(let value): let json = JSON(value)
-            guard json["data"]["getVisitor"]["id"].string != nil else { return completion(nil, json["errors"][0]["message"].string)}
-                completion(self.parseVisitorToModelFrom(json: json["data"]["getVisitor"]), nil)
-            case .failure(let error): log.error(error); break
+                
+                case .success(let value): let json = JSON(value)
+            
+                    if json["data"]["getVisitor"]["id"].string != nil {
+                        completion(self.parseVisitorToModelFrom(json: json["data"]["getVisitor"]), nil)
+                    } else {
+                       completion(self.parseVisitorToModelFrom(json: json["data"]["getVisitor"]), nil)
+                    }
+                
+                case .failure(let error): log.error(error); break
             }
         }
     }
@@ -59,6 +66,7 @@ class APIManager {
         do {
          gql = try GQLBuilder.build(query: Query.visitor, mutation: nil, params: gqlParams, arguments: gqlArgumant)
         } catch let error { log.error(error) }
+        
         let parameters: Parameters = ["query" : gql]
         
         Alamofire.request(URLBuilder.gqlHost, method: .get, parameters: parameters).responseJSON { response in
@@ -148,15 +156,18 @@ class APIManager {
     }
     
     private func parseVisitorToModelFrom(json:JSON) -> Visitor {
-        
+
         let visitor = Visitor()
         
-        visitor.email = json["email"].string!
-        visitor.fname = json["fname"].string!
-        visitor.serverID = json["id"].string!
-        visitor.phoneNumber = json["phoneNumber"].string!
-        visitor.sessionToken = json["sessionToken"].string!
-        
+        for i in Visitor.arrayOfSelfFields() {
+            if json[i].string != nil {
+                if i == "id" {
+                    visitor["serverID"] = json[i].string
+                } else  {
+                    visitor[i] = json[i].string
+                }
+            }
+        }
         return visitor
     }
 }

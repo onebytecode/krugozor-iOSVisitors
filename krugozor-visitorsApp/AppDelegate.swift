@@ -26,12 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch let error {
             log.error(error)
         }
-
-        let api = DataManager()
-        api.fetchVisitorBy(sessionToken: "59fa014784c59b002b5219a9") { (visior, error) in
-            log.debug(visior)
-        }
-      
         
         return true
     }

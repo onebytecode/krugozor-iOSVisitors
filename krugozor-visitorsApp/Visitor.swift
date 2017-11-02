@@ -27,7 +27,7 @@ class Visitor: Object {
     }
     
     static func arrayOfSelfFields () -> [String] {
-        let array = ["id", "fname", "lname", "patronymic", "gender", "birthdate", "email", "phoneNumber", "sessionToken"]
+        let array = [ "id", "fname", "lname", "patronymic", "gender", "birthdate", "email", "phoneNumber", "sessionToken"]
         return array
     }
     

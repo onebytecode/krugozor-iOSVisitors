@@ -72,7 +72,6 @@ class GQLBuilder {
         finalString += "\n"
         for argument in arguments { finalString += argument.key; finalString += "\n" }
         finalString += "}}"
-        
 
         return finalString
     }

@@ -37,9 +37,9 @@ class DataManager: DataManaging {
             guard visitor != nil else { log.error(error); return completion(nil, error)}
             
             let realm = try! Realm()
-            
+            guard visitor != nil else { log.error("error"); return }
             try! realm.write {
-                realm.add(visitor!)
+                realm.add(visitor!, update: true)
                 completion(visitor, nil)
             }
         }

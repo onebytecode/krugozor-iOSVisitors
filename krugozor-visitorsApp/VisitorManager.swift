@@ -53,7 +53,9 @@ class VisitorManager {
             guard (sessionToken != nil) else {return completion (nil, error)}
             log.debug(sessionToken)
             self.dataManager.fetchVisitorBy(sessionToken: sessionToken!, completion: { (visitor, error) in
+                
                 guard (visitor != nil) else {log.error(error as Any); return completion (nil, error)}
+                completion(visitor, nil)
             })
         }
     }
