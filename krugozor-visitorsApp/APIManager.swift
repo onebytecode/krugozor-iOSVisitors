@@ -10,9 +10,13 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+public enum ApiManagerErrors: String, Error {
+    case Error1 = "1"
+}
+
 protocol APIManaging {
  
-    func isVisitorRegisteredBy(email: String, completion: @escaping ((_ result: String?, _ error: String?) -> Void))
+    func isVisitorRegisteredBy(email: String, completion: @escaping ((_ result: Bool?, _ error: String?) -> Void))
     func visitorRegistrationWith(data: VisitorAuthorizationData, completion: @escaping ((_ sessionToken: String?, _ error: String?) -> Void))
     func visitorLogInWith(data: VisitorAuthorizationData, completion: @escaping ((_ sessionToken: String?, _ error: String?) -> Void))
 }
@@ -57,8 +61,8 @@ class APIManager {
     /// - Parameters:
     ///   - email: Visitor email
     ///   - completion: Bool: true -> Visitor in a base; false -> Visitor needs for registation
-    public func isVisitorRegisteredBy(email: String, completion: @escaping (_ result: Bool) -> Void) {
-        
+    public func isVisitorRegisteredBy(email: String, completion: @escaping (_ result: Bool?, _ error: ApiManagerErrors?) -> Void) {
+    
         let gqlParams = [GQLParam.init(key: GQLVisitor.email.rawValue, value: email)]
         let gqlArgumant = [GQLArgument.init(key: "id")]
         var gql = String()
@@ -74,9 +78,9 @@ class APIManager {
                 case .success(let value):
                     let json = JSON(value)
                     if json["data"]["getVisitor"]["id"].string != nil {
-                        completion(true)
+                        completion(true, nil)
                     } else {
-                        completion(false) }
+                        completion(false, nil) }
                 case .failure(let error):
                     log.error(error)
             }

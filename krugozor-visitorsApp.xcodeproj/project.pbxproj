@@ -36,7 +36,6 @@
 		80BF9F691F85360800A48BDC /* AccountVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BF9F681F85360800A48BDC /* AccountVC.storyboard */; };
 		80BF9F6B1F85367F00A48BDC /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6A1F85367F00A48BDC /* QRViewController.swift */; };
 		80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */; };
-		D20A68AB1FA6303400AF7DD8 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */; };
 		D20B5CB01FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
 		D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
 		D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */; };
@@ -44,8 +43,6 @@
 		D20B5CC21FA0781200F0D0E4 /* GQLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */; };
 		D20B5CC31FA0781200F0D0E4 /* GQLMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */; };
 		D23A36A01F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
-		D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
-		D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 		D23A36AE1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36AF1F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
 		D23A36B01F9B81FE0025FEFE /* Visit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A36AD1F9B81FE0025FEFE /* Visit.swift */; };
@@ -69,6 +66,10 @@
 		D264973A1F79448D004C19A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26497381F79448D004C19A9 /* LaunchScreen.storyboard */; };
 		D26497451F79448E004C19A9 /* krugozor_visitorsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26497441F79448E004C19A9 /* krugozor_visitorsAppTests.swift */; };
 		D26497501F79448E004C19A9 /* krugozor_visitorsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D264974F1F79448E004C19A9 /* krugozor_visitorsAppUITests.swift */; };
+		D2AB3AEC1FAB334700146B72 /* VisitorAuthorizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */; };
+		D2AB3AED1FAB334700146B72 /* VisitorAuthorizationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */; };
+		D2BA2D8C1FAB083800D17C03 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
+		D2BA2D8D1FAB083900D17C03 /* Visitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A369F1F9B80070025FEFE /* Visitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +120,6 @@
 		80BF9F681F85360800A48BDC /* AccountVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AccountVC.storyboard; sourceTree = "<group>"; };
 		80BF9F6A1F85367F00A48BDC /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		80BF9F6C1F853BB400A48BDC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		D20B5CAF1FA0712D00F0D0E4 /* GQLVisitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLVisitor.swift; sourceTree = "<group>"; };
 		D20B5CC01FA0781200F0D0E4 /* GQLMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GQLMethods.swift; sourceTree = "<group>"; };
 		D23A369F1F9B80070025FEFE /* Visitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visitor.swift; sourceTree = "<group>"; };
@@ -304,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				D23A36C91F9B8B260025FEFE /* VisitorManager.swift */,
+				8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */,
 			);
 			name = VisitorManager;
 			sourceTree = "<group>";
@@ -424,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				D23A36A31F9B81370025FEFE /* VisitorManager */,
-				D2B23D6E1F9B75A40078B0AF /* Authorizationing */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -461,15 +461,6 @@
 				D23A369E1F9B7FF00025FEFE /* Models */,
 			);
 			name = Realm;
-			sourceTree = "<group>";
-		};
-		D2B23D6E1F9B75A40078B0AF /* Authorizationing */ = {
-			isa = PBXGroup;
-			children = (
-				D20A68AA1FA6303400AF7DD8 /* AuthorizationManager.swift */,
-				8059EBDD1F7BE9E300159EFA /* VisitorAuthorizationData.swift */,
-			);
-			name = Authorizationing;
 			sourceTree = "<group>";
 		};
 		D2B23D731F9B78290078B0AF /* Onboarding */ = {
@@ -729,7 +720,6 @@
 				5209C11C1F7D68FF0011B8D8 /* PasswordRepairVC.swift in Sources */,
 				52F53F801F7D436E0001BA17 /* UIColor+Extension.swift in Sources */,
 				80BF9F6D1F853BB400A48BDC /* TabBarViewController.swift in Sources */,
-				D20A68AB1FA6303400AF7DD8 /* AuthorizationManager.swift in Sources */,
 				D20B5CC11FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				5242D1BC1FA3A2FE006D6661 /* AccountTVC.swift in Sources */,
 				D23A36BA1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
@@ -759,7 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23A36A11F9B80070025FEFE /* Visitor.swift in Sources */,
+				D2AB3AED1FAB334700146B72 /* VisitorAuthorizationData.swift in Sources */,
 				D20B5CC21FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CB1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				D23A36B71F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
@@ -768,6 +758,7 @@
 				D20B5CB11FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B31F9B84300025FEFE /* APIManager.swift in Sources */,
 				D23A36BB1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
+				D2BA2D8C1FAB083800D17C03 /* Visitor.swift in Sources */,
 				D23A36BF1F9B85CA0025FEFE /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -776,7 +767,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23A36A21F9B80070025FEFE /* Visitor.swift in Sources */,
+				D2AB3AEC1FAB334700146B72 /* VisitorAuthorizationData.swift in Sources */,
 				D20B5CC31FA0781200F0D0E4 /* GQLMethods.swift in Sources */,
 				D23A36CC1F9B8B260025FEFE /* VisitorManager.swift in Sources */,
 				D23A36B81F9B84BF0025FEFE /* URLBuilder.swift in Sources */,
@@ -785,6 +776,7 @@
 				D20B5CB21FA0712D00F0D0E4 /* GQLVisitor.swift in Sources */,
 				D23A36B41F9B84300025FEFE /* APIManager.swift in Sources */,
 				D23A36BC1F9B85540025FEFE /* GQLBuilder.swift in Sources */,
+				D2BA2D8D1FAB083900D17C03 /* Visitor.swift in Sources */,
 				D23A36C01F9B85CA0025FEFE /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
