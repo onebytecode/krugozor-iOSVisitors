@@ -15,28 +15,28 @@ struct VisitorAuthorizationData {
     var patronymic: String?
     var email: String!
     var gender: String?
-    var birthDate: String?
+    var birthdate: String?
     var phoneNumber: String!
     var password: String!
     var avatar: Data?
 
-    init(fname: String!, lname: String?, patronymic: String?, email: String!, gender: String?, birthDate: String?, phoneNumber: String!, avatar: Data?) {
+    init(fname: String!, lname: String?, patronymic: String?, email: String!, gender: String?, birthdate: String?, phoneNumber: String!, avatar: Data?) {
         
         self.fname = fname
         self.lname = lname
         self.patronymic = patronymic
         self.email = email
         self.gender = gender
-        self.birthDate = birthDate
+        self.birthdate = birthdate
         self.phoneNumber = phoneNumber
     }
     
-    init(fname: String!, lname: String?, email: String!, birthDate: String?, phoneNumber: String!, avatar: Data?) {
+    init(fname: String!, lname: String?, email: String!, birthdate: String?, phoneNumber: String!, avatar: Data?) {
         
         self.fname = fname
         self.lname = lname
         self.email = email
-        self.birthDate = birthDate
+        self.birthdate = birthdate
         self.phoneNumber = phoneNumber
     }
     
@@ -55,7 +55,7 @@ struct VisitorAuthorizationData {
         finalArray.append((key: "patronymic", value: self.patronymic))
         finalArray.append((key: "email", value: self.email))
         finalArray.append((key: "gender", value: self.gender))
-        finalArray.append((key: "birthDate", value: self.birthDate))
+        finalArray.append((key: "birthdate", value: self.birthdate))
         finalArray.append((key: "phoneNumber", value: self.phoneNumber))
         finalArray.append((key: "password", value: self.password))
 

@@ -107,13 +107,15 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     /// Send User Data to Server
     private func sendUserData () {
-//        if fieldsCheck() {
-//            let visitorManager = VisitorManager()
-//            guard let _ = try? visitorManager.registerNewVisitor(data: model) else { showAlert(title: AlertTitle.oyBedaBeda.rawValue, message: "Похоже, у нас проблемы с созданием нового пользователя. Наши специалисты уже работают над этим. Постарайтесь зарегестрироваться позднее.", actionTitle: AlertActionTitle.ok.rawValue); return }
-//            segueToAppMainMenu ()
-//        } else {
-//            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
-//        }
+        if fieldsCheck() {
+            let visitorManager = VisitorManager()
+            visitorManager.registerNewVisitorBy(data: model, completion: { [weak self] (visitor, error) in
+                guard error == nil else { self?.showAlert(title: AlertTitle.oyBedaBeda.rawValue, message: "Похоже, у нас проблемы с созданием нового пользователя. Наши специалисты уже работают над этим. Постарайтесь зарегестрироваться позднее.", actionTitle: AlertActionTitle.ok.rawValue); return }
+                self?.segueToAppMainMenu ()
+            })
+        } else {
+            showAlert(title: AlertTitle.emptyField.rawValue, message: "Поля не могут быть пустыми!", actionTitle: AlertActionTitle.ok.rawValue)
+        }
     }
     
     /// Segue to TabBarViewController
@@ -169,7 +171,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate, UIImagePickerContro
             let dataChangedCallback : PopDatePicker.PopDatePickerCallback = { [weak self] (newDate : Date, forTextField : UITextField) -> () in
                 
                 forTextField.text = (newDate.toString() ?? "?") as String
-                self?.model.birthDate = forTextField.text
+                self?.model.birthdate = forTextField.text
             }
             
             popDatePicker!.pick(self, initDate: initDate, dataChanged: dataChangedCallback)
